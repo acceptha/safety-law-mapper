@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hattuping/safety-law-mapper/schemas/law.schema.json",
+  "title": "Law registry entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["law_id", "name_ko", "type", "administered_by", "source_url"],
+  "properties": {
+    "law_id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name_ko": { "type": "string", "minLength": 1 },
+    "name_short": { "type": ["string", "null"] },
+    "type": { "enum": ["act", "decree", "rule", "notice"] },
+    "administered_by": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string", "format": "uri", "pattern": "^https?://" }
+  }
+}

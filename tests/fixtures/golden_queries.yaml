@@ -1,0 +1,27 @@
+# Golden query fixtures: regression contract for the matcher.
+# Each case: query -> mappings that MUST appear, articles that MUST be included.
+- name: confined-space-welding-query
+  query:
+    keywords: [밀폐공간, 용접]
+  must_include_mappings: [confined-space-welding, confined-space-work, welding-cutting]
+  top_mapping: confined-space-welding
+  must_include_articles:
+    - { mapping_id: confined-space-welding, law_id: osh-rule, article_ref: 제619조 }
+    - { mapping_id: confined-space-welding, law_id: osh-rule, article_ref: 제241조의2 }
+- name: confined-space-only
+  query:
+    keywords: [밀폐공간]
+  must_include_mappings: [confined-space-work]
+  must_include_articles:
+    - { mapping_id: confined-space-work, law_id: osh-rule, article_ref: 제619조 }
+    - { mapping_id: confined-space-work, law_id: osh-rule, article_ref: 제619조의2 }
+- name: welding-only
+  query:
+    keywords: [용접]
+  must_include_mappings: [welding-cutting]
+  must_include_articles:
+    - { mapping_id: welding-cutting, law_id: osh-rule, article_ref: 제241조의2 }
+- name: category-query
+  query:
+    category: confined-space
+  must_include_mappings: [confined-space-work, confined-space-welding]

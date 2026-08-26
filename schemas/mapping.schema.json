@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hattuping/safety-law-mapper/schemas/mapping.schema.json",
+  "title": "Work-type to law mapping entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mapping_id", "work_type", "applicable_laws", "last_verified"],
+  "properties": {
+    "mapping_id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "work_type": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name_ko", "category", "keywords"],
+      "properties": {
+        "name_ko": { "type": "string", "minLength": 1 },
+        "category": {
+          "enum": [
+            "hot-work", "confined-space", "work-at-height", "lifting",
+            "excavation", "electrical", "chemical-handling", "machinery",
+            "demolition", "transport"
+          ]
+        },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      }
+    },
+    "conditions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min_employees": { "type": ["integer", "null"], "minimum": 1 },
+        "max_employees": { "type": ["integer", "null"], "minimum": 1 },
+        "substances": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "uniqueItems": true
+        },
+        "equipment": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "uniqueItems": true
+        }
+      }
+    },
+    "applicable_laws": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["law_id", "articles"],
+        "properties": {
+          "law_id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "articles": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["article_ref", "obligation_type", "summary_ko", "valid_from", "source_url"],
+              "properties": {
+                "article_ref": { "type": "string", "pattern": "^제[0-9]+조(의[0-9]+)?$" },
+                "article_title": { "type": ["string", "null"] },
+                "obligation_type": {
+                  "enum": [
+                    "general", "appointment", "measurement", "education",
+                    "report", "permit", "inspection", "provision"
+                  ]
+                },
+                "obligation_subject": {
+                  "anyOf": [
+                    { "type": "null" },
+                    { "enum": ["employer", "principal-contractor", "supervisor", "worker", "owner"] }
+                  ]
+                },
+                "summary_ko": { "type": "string", "minLength": 1 },
+                "valid_from": { "type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+                "valid_until": {
+                  "anyOf": [
+                    { "type": "null" },
+                    { "type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+                  ]
+                },
+                "source_url": { "type": "string", "format": "uri", "pattern": "^https?://" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "url"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri", "pattern": "^https?://" }
+        }
+      }
+    },
+    "last_verified": {
+      "anyOf": [
+        { "type": "null" },
+        { "type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+      ]
+    },
+    "verified_by": { "type": ["string", "null"] }
+  }
+}
