@@ -1,5 +1,11 @@
 # safety-law-mapper (안전법규 매핑 엔진)
 
+[![PyPI](https://img.shields.io/pypi/v/safety-law-mapper)](https://pypi.org/project/safety-law-mapper/)
+[![CI](https://github.com/acceptha/safety-law-mapper/actions/workflows/ci.yml/badge.svg)](https://github.com/acceptha/safety-law-mapper/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/pypi/pyversions/safety-law-mapper)](https://pypi.org/project/safety-law-mapper/)
+[![License: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
+[![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
+
 **작업 상황을 입력하면 적용되는 한국 안전 법령·조항을 찾아주는 규칙 기반 오픈소스 매핑 엔진**입니다.
 
 기존 법령 검색 도구는 전부 "법령 → 내용" 방향입니다. 이 프로젝트는 **"작업 상황 → 적용 조항"이라는 역방향 매핑**을 구조화된 오픈 데이터(YAML)로 만들고, 이를 검색하는 CLI/라이브러리를 제공합니다.
