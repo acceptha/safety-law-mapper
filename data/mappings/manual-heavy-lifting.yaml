@@ -1,0 +1,42 @@
+mapping_id: manual-heavy-lifting
+work_type:
+  name_ko: 중량물 인력 취급 작업
+  category: lifting
+  keywords: [중량물, 인력운반, 들기작업, 근골격계, 요통]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제663조
+        article_title: 중량물의 제한
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 인력 들기작업 시 과도한 무게로 목·허리 등 근골격계에 무리한 부담을 주지 않도록 조치
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제663조
+      - article_ref: 제665조
+        article_title: 중량의 표시 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 5킬로그램 이상 중량물 인력 들기작업 시 물품의 중량·무게중심 표시 등 조치
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제665조
+      - article_ref: 제666조
+        article_title: 작업자세 등
+        obligation_type: education
+        obligation_subject: employer
+        summary_ko: 중량물 들기작업 시 무게중심을 낮추는 등 신체 부담을 줄이는 자세를 근로자에게 안내
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제666조
+references:
+  - title: KOSHA 근골격계질환 예방자료
+    url: https://www.kosha.or.kr/kosha/data/musculoskeletal.do
+last_verified: "2026-08-26"
+verified_by: hattuping

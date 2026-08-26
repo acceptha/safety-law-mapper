@@ -1,0 +1,42 @@
+mapping_id: scaffold-assembly
+work_type:
+  name_ko: 비계 조립·해체 작업
+  category: work-at-height
+  keywords: [비계, 조립, 해체, 작업발판, 강관비계, 달비계]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제56조
+        article_title: 작업발판의 구조
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 높이 2미터 이상 비계 작업장소에 기준에 맞는 작업발판 설치
+        valid_from: "2017-12-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제56조
+      - article_ref: 제57조
+        article_title: 비계 등의 조립·해체 및 변경
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 달비계 또는 높이 5미터 이상 비계의 조립·해체·변경 시 관리감독자 지휘 등 준수사항 이행
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제57조
+      - article_ref: 제58조
+        article_title: 비계의 점검 및 보수
+        obligation_type: inspection
+        obligation_subject: employer
+        summary_ko: 기상 악화로 작업 중지 후 또는 조립·해체·변경 후 작업 재개 전 비계 점검·보수
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제58조
+references:
+  - title: KOSHA 비계 안전작업 자료
+    url: https://www.kosha.or.kr/kosha/data/construction.do
+last_verified: "2026-08-26"
+verified_by: hattuping

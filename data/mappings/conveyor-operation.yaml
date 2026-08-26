@@ -1,0 +1,42 @@
+mapping_id: conveyor-operation
+work_type:
+  name_ko: 컨베이어 작업
+  category: machinery
+  keywords: [컨베이어, 이송, 롤러, 말림, 협착]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: [conveyor]
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제191조
+        article_title: 이탈 등의 방지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 정전·전압강하 등에 따른 화물·운반구의 이탈 및 역주행 방지 장치 구비
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제191조
+      - article_ref: 제192조
+        article_title: 비상정지장치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 신체 말림 등 위험 시 즉시 운전을 정지할 수 있는 비상정지장치 설치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제192조
+      - article_ref: 제193조
+        article_title: 낙하물에 의한 위험 방지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 화물 낙하 위험 시 컨베이어에 덮개 또는 울 설치 등 낙하 방지 조치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제193조
+references:
+  - title: KOSHA 컨베이어 안전작업 자료
+    url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
+last_verified: "2026-08-26"
+verified_by: hattuping

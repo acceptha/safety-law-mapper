@@ -1,0 +1,50 @@
+mapping_id: electrical-work
+work_type:
+  name_ko: 전기작업 (감전 위험 작업)
+  category: electrical
+  keywords: [전기, 감전, 정전, 활선, 충전부, 접지]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제301조
+        article_title: 전기 기계·기구 등의 충전부 방호
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 작업·통행 중 접촉 위험이 있는 전기 기계·기구의 충전부에 방호 조치
+        valid_from: "2019-10-15"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제301조
+      - article_ref: 제302조
+        article_title: 전기 기계·기구의 접지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 누전에 의한 감전 방지를 위해 금속제 외함·외피·철대 등에 접지
+        valid_from: "2021-11-19"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제302조
+      - article_ref: 제319조
+        article_title: 정전전로에서의 전기작업
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 노출 충전부 부근 작업 시 감전 우려가 있으면 작업 전 해당 전로 차단
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제319조
+      - article_ref: 제323조
+        article_title: 절연용 보호구 등의 사용
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 절연용 보호구·방호구·활선작업용 기구를 사용목적에 적합한 것으로 사용
+        valid_from: "2021-05-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제323조
+references:
+  - title: KOSHA 전기재해 예방자료
+    url: https://www.kosha.or.kr/kosha/data/electricity.do
+last_verified: "2026-08-26"
+verified_by: hattuping

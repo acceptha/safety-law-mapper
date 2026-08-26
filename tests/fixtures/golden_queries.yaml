@@ -52,3 +52,44 @@
   must_include_mappings: [excavation-work]
   must_include_articles:
     - { mapping_id: excavation-work, law_id: osh-rule, article_ref: 제339조 }
+- name: electrical-query
+  query:
+    keywords: [감전, 전기]
+  must_include_mappings: [electrical-work]
+  top_mapping: electrical-work
+  must_include_articles:
+    - { mapping_id: electrical-work, law_id: osh-rule, article_ref: 제319조 }
+- name: scaffold-query
+  query:
+    keywords: [비계]
+  must_include_mappings: [scaffold-assembly]
+  must_include_articles:
+    - { mapping_id: scaffold-assembly, law_id: osh-rule, article_ref: 제57조 }
+- name: ladder-query
+  query:
+    keywords: [사다리]
+  must_include_mappings: [ladder-work]
+  must_include_articles:
+    - { mapping_id: ladder-work, law_id: osh-rule, article_ref: 제24조 }
+- name: heavy-lifting-query
+  query:
+    keywords: [중량물]
+  must_include_mappings: [manual-heavy-lifting]
+  must_include_articles:
+    - { mapping_id: manual-heavy-lifting, law_id: osh-rule, article_ref: 제665조 }
+- name: conveyor-query
+  query:
+    keywords: [컨베이어]
+  must_include_mappings: [conveyor-operation]
+  must_include_articles:
+    - { mapping_id: conveyor-operation, law_id: osh-rule, article_ref: 제192조 }
+- name: press-query
+  query:
+    keywords: [프레스]
+  must_include_mappings: [press-operation]
+  must_include_articles:
+    - { mapping_id: press-operation, law_id: osh-rule, article_ref: 제103조 }
+- name: category-work-at-height
+  query:
+    category: work-at-height
+  must_include_mappings: [work-at-height, scaffold-assembly, ladder-work]
