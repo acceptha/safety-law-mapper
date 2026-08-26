@@ -1,0 +1,50 @@
+mapping_id: confined-space-work
+work_type:
+  name_ko: 밀폐공간 작업
+  category: confined-space
+  keywords: [밀폐공간, 산소결핍, 질식, 탱크, 맨홀]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제619조
+        article_title: 밀폐공간 작업 프로그램의 수립·시행
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 밀폐공간 작업 전 작업 프로그램(유해공기 확인, 출입금지 표지 등) 수립·시행
+        valid_from: "2012-03-05"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제619조
+      - article_ref: 제619조의2
+        article_title: 산소 및 유해가스 농도의 측정
+        obligation_type: measurement
+        obligation_subject: employer
+        summary_ko: 작업 시작 전 및 작업 중 산소·유해가스 농도 측정, 적정공기 유지 확인
+        valid_from: "2017-03-03"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제619조의2
+      - article_ref: 제620조
+        article_title: 환기 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 작업 전·작업 중 적정공기 상태 유지를 위한 환기 실시
+        valid_from: "2012-03-05"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제620조
+      - article_ref: 제623조
+        article_title: 감시인의 배치 등
+        obligation_type: appointment
+        obligation_subject: employer
+        summary_ko: 밀폐공간 외부에 감시인 배치, 작업자와 상시 연락체계 유지
+        valid_from: "2012-03-05"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제623조
+references:
+  - title: KOSHA GUIDE H-80 밀폐공간 작업 프로그램 시행에 관한 기술지침
+    url: https://www.kosha.or.kr/kosha/data/guidanceH.do
+last_verified: null
+verified_by: null
