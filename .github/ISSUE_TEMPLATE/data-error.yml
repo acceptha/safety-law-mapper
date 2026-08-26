@@ -1,0 +1,26 @@
+name: ⚠️ 데이터 오류 신고
+description: 잘못된 조항 인용, 낡은 시행일, 개정 미반영 등 매핑 데이터의 오류를 신고합니다
+title: "[data-error] <매핑 ID 또는 조문>"
+labels: ["data", "bug"]
+body:
+  - type: input
+    id: mapping-id
+    attributes:
+      label: 매핑 ID
+      placeholder: 예) confined-space-welding
+    validations:
+      required: true
+  - type: textarea
+    id: what-wrong
+    attributes:
+      label: 무엇이 잘못되었나요
+      description: 어떤 조문/필드가 어떻게 틀렸는지 적어주세요.
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: 근거 링크 (law.go.kr)
+      placeholder: https://www.law.go.kr/법령/...
+    validations:
+      required: true

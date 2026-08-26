@@ -1,0 +1,42 @@
+name: 📋 매핑 데이터 추가 제안
+description: 새 작업 유형의 매핑 추가를 제안하거나 작업을 시작합니다
+title: "[data] <작업 유형> 매핑 추가"
+labels: ["data"]
+body:
+  - type: input
+    id: work-type
+    attributes:
+      label: 작업 유형 (한국어)
+      placeholder: 예) 도장 작업
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 카테고리
+      options:
+        - hot-work
+        - confined-space
+        - work-at-height
+        - lifting
+        - excavation
+        - electrical
+        - chemical-handling
+        - machinery
+        - demolition
+        - transport
+        - (해당 없음 — 어휘 확장 필요)
+    validations:
+      required: true
+  - type: textarea
+    id: articles
+    attributes:
+      label: 관련 조문 후보
+      description: 아는 범위에서 적어주세요. 작성 시 law.go.kr 원문 대조는 필수입니다.
+      placeholder: 예) 산업안전보건기준에 관한 규칙 제420조~
+  - type: checkboxes
+    id: will-work
+    attributes:
+      label: 작업 의사
+      options:
+        - label: 제가 직접 PR을 올리겠습니다

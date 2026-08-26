@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 기여 방법이 궁금해요
+    url: https://github.com/acceptha/safety-law-mapper/blob/main/docs/CONTRIBUTING.md
+    about: 매핑 1건 추가하는 법을 10분 안에 따라할 수 있는 가이드
