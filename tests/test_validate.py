@@ -55,8 +55,8 @@ def test_bad_date_range_is_caught(tmp_path):
     data = _copy_data(tmp_path)
     f = data / "mappings" / "welding-cutting.yaml"
     txt = f.read_text(encoding="utf-8").replace(
-        'valid_from: "2019-12-26"\n        valid_until: null',
-        'valid_from: "2019-12-26"\n        valid_until: "2018-01-01"',
+        'valid_from: "2025-09-01"\n        valid_until: null',
+        'valid_from: "2025-09-01"\n        valid_until: "2018-01-01"',
     )
     f.write_text(txt, encoding="utf-8")
     report = validate_data(data, SCHEMA_DIR)

@@ -16,7 +16,7 @@ applicable_laws:
         obligation_type: general
         obligation_subject: employer
         summary_ko: 통풍·환기가 충분하지 않은 장소에서의 화재위험작업 시 화재예방 조치
-        valid_from: "2019-12-26"
+        valid_from: "2025-09-01"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제241조
       - article_ref: 제241조의2
@@ -24,11 +24,11 @@ applicable_laws:
         obligation_type: appointment
         obligation_subject: employer
         summary_ko: 화재 위험이 있는 용접·용단 작업 장소에 화재감시자 지정·배치
-        valid_from: "2017-03-03"
+        valid_from: "2021-05-28"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제241조의2
 references:
   - title: KOSHA GUIDE 용접·용단 작업 안전
     url: https://www.kosha.or.kr/kosha/data/guidance.do
-last_verified: null
-verified_by: null
+last_verified: "2026-08-26"
+verified_by: hattuping
