@@ -28,6 +28,38 @@ applicable_laws:
         valid_from: "2025-12-01"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제619조의2
+      - article_ref: 제620조
+        article_title: 환기 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 용접 흄·유해가스 발생 및 산소 소모를 고려해 작업 전·작업 중 적정공기 상태 유지 환기 (환기 곤란 시 공기호흡기·송기마스크 지급)
+        valid_from: "2017-03-03"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제620조
+      - article_ref: 제623조
+        article_title: 감시인의 배치 등
+        obligation_type: appointment
+        obligation_subject: employer
+        summary_ko: 밀폐공간 외부에 감시인 배치, 작업자와 상시 연락 설비 유지 (이상 시 관할 소방관서 신고)
+        valid_from: "2025-12-01"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제623조
+      - article_ref: 제629조
+        article_title: 용접 등에 관한 조치
+        obligation_type: measurement
+        obligation_subject: employer
+        summary_ko: 탱크·보일러·반응탑 내부 등 통풍 불충분 장소의 용접·용단 시 가스농도 측정(불활성가스 사용 시 산소농도)·환기로 적정공기 유지, 곤란 시 공기호흡기·송기마스크 지급·착용
+        valid_from: "2017-03-03"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제629조
+      - article_ref: 제240조
+        article_title: 유류 등이 있는 배관이나 용기의 용접 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 위험물·인화성 유류·인화성 고체가 있을 우려가 있는 배관·탱크·드럼 등은 사전 제거 등 폭발·화재 예방조치 후에만 화재위험작업 허용
+        valid_from: "2019-12-26"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제240조
       - article_ref: 제241조
         article_title: 화재위험작업 시의 준수사항
         obligation_type: general
