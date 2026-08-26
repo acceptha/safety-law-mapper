@@ -25,3 +25,30 @@
   query:
     category: confined-space
   must_include_mappings: [confined-space-work, confined-space-welding]
+- name: forklift-query
+  query:
+    keywords: [지게차]
+  must_include_mappings: [forklift-operation]
+  top_mapping: forklift-operation
+  must_include_articles:
+    - { mapping_id: forklift-operation, law_id: osh-rule, article_ref: 제180조 }
+    - { mapping_id: forklift-operation, law_id: osh-rule, article_ref: 제38조 }
+- name: height-query
+  query:
+    keywords: [추락, 고소작업]
+  must_include_mappings: [work-at-height]
+  top_mapping: work-at-height
+  must_include_articles:
+    - { mapping_id: work-at-height, law_id: osh-rule, article_ref: 제42조 }
+- name: crane-query
+  query:
+    keywords: [크레인]
+  must_include_mappings: [crane-lifting]
+  must_include_articles:
+    - { mapping_id: crane-lifting, law_id: osh-rule, article_ref: 제146조 }
+- name: excavation-query
+  query:
+    keywords: [굴착]
+  must_include_mappings: [excavation-work]
+  must_include_articles:
+    - { mapping_id: excavation-work, law_id: osh-rule, article_ref: 제339조 }

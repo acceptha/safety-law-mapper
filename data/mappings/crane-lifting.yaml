@@ -1,0 +1,58 @@
+mapping_id: crane-lifting
+work_type:
+  name_ko: 크레인 양중 작업
+  category: lifting
+  keywords: [크레인, 타워크레인, 양중, 인양, 줄걸이, 하물]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: [crane]
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제133조
+        article_title: 정격하중 등의 표시
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 양중기·달기구에 정격하중, 운전속도, 경고표시 등을 보기 쉬운 곳에 부착
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제133조
+      - article_ref: 제134조
+        article_title: 방호장치의 조정
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 과부하방지장치·권과방지장치·비상정지장치·제동장치 등 방호장치가 정상 작동되도록 조정
+        valid_from: "2019-04-19"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제134조
+      - article_ref: 제140조
+        article_title: 폭풍에 의한 이탈 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 순간풍속 초당 30미터 초과 예상 시 옥외 주행 크레인 이탈방지장치 작동 등 조치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제140조
+      - article_ref: 제142조
+        article_title: 타워크레인의 지지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 타워크레인을 자립고 이상 높이로 설치 시 벽체 지지 (부득이한 경우 와이어로프 지지)
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제142조
+      - article_ref: 제146조
+        article_title: 크레인 작업 시의 조치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 인양 하물 끌어당김 금지 등 크레인 작업 시 준수사항 이행 및 근로자 준수 조치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제146조
+references:
+  - title: KOSHA 크레인 재해예방 자료
+    url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
+last_verified: "2026-08-26"
+verified_by: hattuping

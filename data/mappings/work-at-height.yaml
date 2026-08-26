@@ -1,0 +1,42 @@
+mapping_id: work-at-height
+work_type:
+  name_ko: 고소작업 (추락 위험 작업)
+  category: work-at-height
+  keywords: [고소작업, 추락, 개구부, 안전대, 작업발판, 안전난간]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제42조
+        article_title: 추락의 방지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 추락 위험 장소에 작업발판 설치, 곤란 시 추락방호망 설치 또는 안전대 착용 등 조치
+        valid_from: "2021-05-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제42조
+      - article_ref: 제43조
+        article_title: 개구부 등의 방호 조치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 작업발판·통로 끝, 개구부에 안전난간·울타리·수직형 추락방망·덮개 등 방호 조치
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제43조
+      - article_ref: 제44조
+        article_title: 안전대의 부착설비 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 높이 2미터 이상 추락 위험 장소에서 안전대 부착설비 설치 및 이상 유무 점검
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제44조
+references:
+  - title: KOSHA 추락재해 예방자료
+    url: https://www.kosha.or.kr/kosha/data/guidanceC.do
+last_verified: "2026-08-26"
+verified_by: hattuping
