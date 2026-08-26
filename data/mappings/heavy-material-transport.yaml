@@ -1,0 +1,34 @@
+mapping_id: heavy-material-transport
+work_type:
+  name_ko: 중량물 운반·보관 작업
+  category: transport
+  keywords: [중량물, 운반, 드럼통, 하역, 구름]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제385조
+        article_title: 중량물 취급
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 중량물 운반·취급 시 하역운반기계·운반용구 사용 (사용 곤란 시 예외)
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제385조
+      - article_ref: 제386조
+        article_title: 중량물의 구름 위험방지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 드럼통 등 구를 위험이 있는 중량물 보관·취급 시 구름멈춤대·쐐기 등 사용
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제386조
+references:
+  - title: KOSHA 운반하역 재해예방 자료
+    url: https://www.kosha.or.kr/kosha/data/guidance.do
+last_verified: "2026-08-26"
+verified_by: hattuping

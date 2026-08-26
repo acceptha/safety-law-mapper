@@ -1,0 +1,36 @@
+mapping_id: hazardous-chemicals-work
+work_type:
+  name_ko: 위험물질 제조·취급 작업
+  category: chemical-handling
+  keywords: [위험물, 위험물질, 폭발, 화재, 누출, 인화성]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제225조
+        article_title: 위험물질 등의 제조 등 작업 시의 조치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 위험물(별표 1) 제조·취급 시 폭발·화재·누출 방지 방호조치 없이 금지행위 수행 불가
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제225조
+  - law_id: osh-act
+    articles:
+      - article_ref: 제114조
+        article_title: 물질안전보건자료의 게시 및 교육
+        obligation_type: education
+        obligation_subject: employer
+        summary_ko: MSDS 대상물질에 해당하는 위험물질 취급 시 물질안전보건자료 게시·교육
+        valid_from: "2020-01-16"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건법/제114조
+references:
+  - title: 안전보건공단 화학안전 자료
+    url: https://www.kosha.or.kr/kosha/data/chemicalSafety.do
+last_verified: "2026-08-26"
+verified_by: hattuping

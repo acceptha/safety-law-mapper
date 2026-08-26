@@ -1,0 +1,26 @@
+mapping_id: grinder-work
+work_type:
+  name_ko: 연삭기 작업
+  category: machinery
+  keywords: [연삭기, 연삭숫돌, 그라인더, 파열, 비산]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: [grinder]
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제122조
+        article_title: 연삭숫돌의 덮개 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 지름 5센티미터 이상 회전 연삭숫돌에 덮개 설치, 작업 시작 전 시운전 점검
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제122조
+references:
+  - title: KOSHA 연삭기 안전작업 자료
+    url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
+last_verified: "2026-08-26"
+verified_by: hattuping

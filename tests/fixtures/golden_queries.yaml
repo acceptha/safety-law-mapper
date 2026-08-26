@@ -36,8 +36,7 @@
 - name: height-query
   query:
     keywords: [추락, 고소작업]
-  must_include_mappings: [work-at-height]
-  top_mapping: work-at-height
+  must_include_mappings: [work-at-height, aerial-work-platform, ladder-work]
   must_include_articles:
     - { mapping_id: work-at-height, law_id: osh-rule, article_ref: 제42조 }
 - name: crane-query
@@ -93,3 +92,53 @@
   query:
     category: work-at-height
   must_include_mappings: [work-at-height, scaffold-assembly, ladder-work]
+- name: msds-query
+  query:
+    keywords: [MSDS, 화학물질]
+  must_include_mappings: [chemical-msds]
+  top_mapping: chemical-msds
+  must_include_articles:
+    - { mapping_id: chemical-msds, law_id: osh-act, article_ref: 제114조 }
+- name: hazardous-query
+  query:
+    keywords: [위험물, 누출]
+  must_include_mappings: [hazardous-chemicals-work]
+  must_include_articles:
+    - { mapping_id: hazardous-chemicals-work, law_id: osh-rule, article_ref: 제225조 }
+- name: demolition-query
+  query:
+    keywords: [해체]
+  must_include_mappings: [demolition-work]
+  must_include_articles:
+    - { mapping_id: demolition-work, law_id: osh-rule, article_ref: 제384조 }
+- name: drum-transport-query
+  query:
+    keywords: [드럼통, 운반]
+  must_include_mappings: [heavy-material-transport]
+  must_include_articles:
+    - { mapping_id: heavy-material-transport, law_id: osh-rule, article_ref: 제386조 }
+- name: grinder-query
+  query:
+    keywords: [그라인더]
+  must_include_mappings: [grinder-work]
+  must_include_articles:
+    - { mapping_id: grinder-work, law_id: osh-rule, article_ref: 제122조 }
+- name: aerial-platform-query
+  query:
+    keywords: [고소작업대]
+  must_include_mappings: [aerial-work-platform]
+  top_mapping: aerial-work-platform
+  must_include_articles:
+    - { mapping_id: aerial-work-platform, law_id: osh-rule, article_ref: 제186조 }
+- name: lift-query
+  query:
+    keywords: [리프트]
+  must_include_mappings: [hoist-lift-operation]
+  must_include_articles:
+    - { mapping_id: hoist-lift-operation, law_id: osh-rule, article_ref: 제151조 }
+- name: gas-welding-query
+  query:
+    keywords: [가스용접]
+  must_include_mappings: [gas-welding, welding-cutting]
+  must_include_articles:
+    - { mapping_id: gas-welding, law_id: osh-rule, article_ref: 제234조 }
