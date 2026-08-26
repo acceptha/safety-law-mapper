@@ -1,0 +1,74 @@
+mapping_id: excavator-operation
+work_type:
+  name_ko: 굴착기(백호) 사용 작업
+  category: excavation
+  keywords: [굴착기, 백호, 포크레인, 퀵커플러, 차량계 건설기계]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: [excavator]
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제38조
+        article_title: 사전조사 및 작업계획서의 작성 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 차량계 건설기계 사용 작업 시 사전조사 및 작업계획서 작성, 계획에 따라 작업 수행
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제38조
+      - article_ref: 제199조
+        article_title: 전도 등의 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 넘어짐·굴러떨어짐 위험 시 유도자 배치, 지반 부동침하·갓길 붕괴 방지, 도로 폭 유지
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제199조
+      - article_ref: 제200조
+        article_title: 접촉 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 운전 중인 차량계 건설기계에 부딪칠 위험이 있는 장소에 근로자 출입 금지
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제200조
+      - article_ref: 제221조의2
+        article_title: 충돌위험 방지조치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 후사경·후방영상표시장치 등 좌우·후방 확인 장치 구비, 작업 전 작동 확인
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제221조의2
+      - article_ref: 제221조의3
+        article_title: 좌석안전띠의 착용
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 굴착기 운전자 좌석안전띠 착용 조치 (운전자 본인도 착용 의무)
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제221조의3
+      - article_ref: 제221조의4
+        article_title: 잠금장치의 체결
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 퀵커플러에 버킷·브레이커 등 작업장치 장착·교환 시 안전핀 등 잠금장치 체결·확인
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제221조의4
+      - article_ref: 제221조의5
+        article_title: 인양작업 시 조치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 달기구 부착 등 요건을 갖춘 굴착기에 한해 화물 인양작업 허용, 제한사항 준수
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제221조의5
+references:
+  - title: KOSHA 굴착기 재해예방 자료
+    url: https://www.kosha.or.kr/kosha/data/construction.do
+last_verified: "2026-08-26"
+verified_by: acceptha

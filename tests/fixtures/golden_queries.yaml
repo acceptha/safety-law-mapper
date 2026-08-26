@@ -142,3 +142,11 @@
   must_include_mappings: [gas-welding, welding-cutting]
   must_include_articles:
     - { mapping_id: gas-welding, law_id: osh-rule, article_ref: 제234조 }
+- name: excavator-query
+  query:
+    keywords: [굴착기]
+  must_include_mappings: [excavator-operation]
+  top_mapping: excavator-operation
+  must_include_articles:
+    - { mapping_id: excavator-operation, law_id: osh-rule, article_ref: 제221조의2 }
+    - { mapping_id: excavator-operation, law_id: osh-rule, article_ref: 제221조의4 }
