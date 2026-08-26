@@ -28,7 +28,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/hattuping/safety-law-mapper"
+Repository = "https://github.com/acceptha/safety-law-mapper"
 
 [project.scripts]
 slm = "safety_law_mapper.cli:app"

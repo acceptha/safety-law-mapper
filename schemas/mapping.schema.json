@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/hattuping/safety-law-mapper/schemas/mapping.schema.json",
+  "$id": "https://github.com/acceptha/safety-law-mapper/schemas/mapping.schema.json",
   "title": "Work-type to law mapping entry",
   "type": "object",
   "additionalProperties": false,

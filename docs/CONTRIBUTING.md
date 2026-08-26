@@ -5,7 +5,7 @@
 ## 1. 준비
 
 ```bash
-git clone https://github.com/hattuping/safety-law-mapper
+git clone https://github.com/acceptha/safety-law-mapper
 cd safety-law-mapper
 pip install -e ".[dev]"
 ```
