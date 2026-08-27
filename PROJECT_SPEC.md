@@ -86,7 +86,7 @@ verified_by: null                            # GitHub handle, optional
 
 ### 3.3 `work_type.category` controlled vocabulary (extensible via PR)
 
-`hot-work`, `confined-space`, `work-at-height`, `lifting`, `excavation`, `electrical`, `chemical-handling`, `machinery`, `demolition`, `transport`
+`hot-work`, `confined-space`, `work-at-height`, `lifting`, `excavation`, `electrical`, `chemical-handling`, `machinery`, `demolition`, `transport`, `physical-hazard` (added 2026-08-27, issue #7)
 
 ### 3.4 `obligation_type` controlled vocabulary
 
