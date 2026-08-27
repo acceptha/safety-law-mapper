@@ -149,5 +149,5 @@ Future intent, for schema-compat awareness only:
   - (3) Framework: `typer`. ✅
   - (4) `obligation_subject` added NOW as optional/nullable field. ✅
   - (5) `effective_date` replaced by `valid_from` (required) + `valid_until` (optional, default null). ✅
-  - (7) Ranking: category-exact-match > keyword-hit-count > condition-specificity; deterministic tie-break by mapping_id. ✅
+  - (7) Ranking: category-exact-match > keyword-score (exact keyword match weighted 2x over substring/name match, #11) > condition-specificity; deterministic tie-break by mapping_id. ✅
   - (6) STILL OPEN (decidable during implementation): law.go.kr/KOSHA API article-existence verification in CI — defer decision to Phase 2/3 unless data quality issues arise.

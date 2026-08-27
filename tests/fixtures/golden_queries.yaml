@@ -141,6 +141,7 @@
   query:
     keywords: [가스용접]
   must_include_mappings: [gas-welding, welding-cutting]
+  top_mapping: gas-welding
   must_include_articles:
     - { mapping_id: gas-welding, law_id: osh-rule, article_ref: 제234조 }
 - name: excavator-query
@@ -197,3 +198,8 @@
   top_mapping: pile-driver-work
   must_include_articles:
     - { mapping_id: pile-driver-work, law_id: osh-rule, article_ref: 제209조 }
+- name: crane-generic-keyword
+  query:
+    keywords: [크레인]
+  must_include_mappings: [crane-lifting, tower-crane-assembly]
+  top_mapping: crane-lifting

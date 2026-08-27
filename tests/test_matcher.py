@@ -55,3 +55,18 @@ def test_deterministic_order(dataset):
     r1 = [r.mapping.mapping_id for r in match(_mappings(dataset), q)]
     r2 = [r.mapping.mapping_id for r in match(_mappings(dataset), q)]
     assert r1 == r2
+
+
+def test_exact_keyword_beats_substring_crane(dataset):
+    # '크레인' is an exact keyword of crane-lifting; tower-crane-assembly
+    # matches only via containment ('크레인' in '타워크레인'). Before this
+    # change both scored 1 hit and specificity put tower-crane-assembly first.
+    results = match(_mappings(dataset), Query(keywords=["크레인"]))
+    assert results[0].mapping.mapping_id == "crane-lifting"
+
+
+def test_exact_keyword_beats_substring_gas_welding(dataset):
+    # '가스용접' is an exact keyword of gas-welding; other welding mappings
+    # match only via '용접' containment
+    results = match(_mappings(dataset), Query(keywords=["가스용접"]))
+    assert results[0].mapping.mapping_id == "gas-welding"

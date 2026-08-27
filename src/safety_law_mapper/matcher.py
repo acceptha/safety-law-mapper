@@ -1,8 +1,14 @@
 """Condition-matching engine. Pure functions only — no I/O.
 
-Ranking (confirmed 2026-08-26):
+Ranking (confirmed 2026-08-26; keyword axis refined 2026-08-27, #11):
   1. exact category match
-  2. keyword hit count
+  2. keyword score — an exact keyword match counts double a substring match,
+     so entries whose keyword equals the query term outrank entries matched
+     only via containment ('크레인' in '타워크레인'). A match against
+     work_type.name_ko counts as partial even when exact. Deliberate
+     tradeoff of the single-integer score: two partial matches tie with
+     one exact match (2*PARTIAL == EXACT); match-count and precision are
+     not separately ranked
   3. condition specificity (number of non-empty conditions on the entry)
 """
 
@@ -26,12 +32,12 @@ class Query:
 class MatchResult:
     mapping: Mapping
     category_match: bool
-    keyword_hits: int
+    keyword_score: int
     specificity: int
 
     @property
     def score(self) -> tuple[int, int, int]:
-        return (int(self.category_match), self.keyword_hits, self.specificity)
+        return (int(self.category_match), self.keyword_score, self.specificity)
 
 
 def _conditions_allow(cond: Conditions, query: Query) -> bool:
@@ -54,15 +60,21 @@ def _conditions_allow(cond: Conditions, query: Query) -> bool:
     return True
 
 
-def _keyword_hits(mapping: Mapping, query_keywords: list[str]) -> int:
-    hits = 0
+_EXACT_WEIGHT = 2
+_PARTIAL_WEIGHT = 1
+
+
+def _keyword_score(mapping: Mapping, query_keywords: list[str]) -> int:
+    score = 0
     entry_keywords = mapping.work_type.keywords
     for qk in query_keywords:
-        if any(qk in ek or ek in qk for ek in entry_keywords):
-            hits += 1
+        if qk in entry_keywords:
+            score += _EXACT_WEIGHT
+        elif any(qk in ek or ek in qk for ek in entry_keywords):
+            score += _PARTIAL_WEIGHT
         elif qk in mapping.work_type.name_ko:
-            hits += 1
-    return hits
+            score += _PARTIAL_WEIGHT
+    return score
 
 
 def _specificity(cond: Conditions) -> int:
@@ -85,14 +97,14 @@ def match(mappings: list[Mapping], query: Query) -> list[MatchResult]:
         if not _conditions_allow(m.conditions, query):
             continue
         category_match = query.category is not None and m.work_type.category == query.category
-        keyword_hits = _keyword_hits(m, query.keywords) if query.keywords else 0
-        if not category_match and keyword_hits == 0:
+        keyword_score = _keyword_score(m, query.keywords) if query.keywords else 0
+        if not category_match and keyword_score == 0:
             continue
         results.append(
             MatchResult(
                 mapping=m,
                 category_match=category_match,
-                keyword_hits=keyword_hits,
+                keyword_score=keyword_score,
                 specificity=_specificity(m.conditions),
             )
         )
