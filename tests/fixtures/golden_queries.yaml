@@ -225,3 +225,11 @@
   query:
     category: physical-hazard
   must_include_mappings: [noise-work, hot-environment-work]
+- name: carwash-query
+  query:
+    keywords: [세차장]
+  must_include_mappings: [carwash-operation]
+  top_mapping: carwash-operation
+  must_include_articles:
+    - { mapping_id: carwash-operation, law_id: osh-rule, article_ref: 제304조 }
+    - { mapping_id: carwash-operation, law_id: osh-act, article_ref: 제114조 }

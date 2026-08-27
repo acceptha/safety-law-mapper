@@ -1,0 +1,60 @@
+mapping_id: carwash-operation
+work_type:
+  name_ko: 세차장 작업
+  category: machinery
+  keywords: [세차장, 세차, 고압세척, 세차기, 습윤장소]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: [pressure-washer]
+applicable_laws:
+  - law_id: osh-act
+    articles:
+      - article_ref: 제114조
+        article_title: 물질안전보건자료의 게시 및 교육
+        obligation_type: education
+        obligation_subject: employer
+        summary_ko: MSDS 대상 세제·왁스 등 화학제품 취급 시 물질안전보건자료 게시·비치 및 근로자 교육
+        valid_from: "2020-01-16"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건법/제114조
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제3조
+        article_title: 전도의 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 물기 있는 세차장 바닥에서 넘어지거나 미끄러지지 않도록 작업장 바닥을 안전하고 청결한 상태로 유지
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제3조
+      - article_ref: 제32조
+        article_title: 보호구의 지급 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 작업조건에 맞는 보호구(물체 비래 위험 시 안전모, 감전 위험 시 절연용 보호구 등)를 근로자 수 이상 지급·착용 조치
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제32조
+      - article_ref: 제302조
+        article_title: 전기 기계·기구의 접지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 누전에 의한 감전 방지를 위해 세차설비 등 전기 기계·기구의 금속제 외함·외피 등에 접지
+        valid_from: "2021-11-19"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제302조
+      - article_ref: 제304조
+        article_title: 누전차단기에 의한 감전방지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 물 등 도전성이 높은 액체가 있는 습윤장소에서 사용하는 저압 전기기계·기구에 감전방지용 누전차단기 설치
+        valid_from: "2021-11-19"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제304조
+references:
+  - title: KOSHA 감전재해 예방 자료
+    url: https://www.kosha.or.kr/kosha/data/electricity.do
+last_verified: "2026-08-27"
+verified_by: acceptha
