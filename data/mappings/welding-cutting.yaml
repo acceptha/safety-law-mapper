@@ -11,6 +11,14 @@ conditions:
 applicable_laws:
   - law_id: osh-rule
     articles:
+      - article_ref: 제240조
+        article_title: 유류 등이 있는 배관이나 용기의 용접 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 위험물·인화성 유류·인화성 고체가 있을 우려가 있는 배관·탱크·드럼 등은 사전 제거 등 폭발·화재 예방조치 후에만 화재위험작업 허용
+        valid_from: "2019-12-26"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제240조
       - article_ref: 제241조
         article_title: 화재위험작업 시의 준수사항
         obligation_type: general
