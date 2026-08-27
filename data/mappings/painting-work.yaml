@@ -1,0 +1,60 @@
+mapping_id: painting-work
+work_type:
+  name_ko: 도장 작업 (유기용제·관리대상 유해물질 취급)
+  category: chemical-handling
+  keywords: [도장, 도료, 유기용제, 유기화합물, 스프레이, 국소배기]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제422조
+        article_title: 관리대상 유해물질과 관계되는 설비
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 실내작업장에서 관리대상 유해물질 취급 시 발산원 밀폐설비 또는 국소배기장치 설치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제422조
+      - article_ref: 제429조
+        article_title: 국소배기장치의 성능
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 국소배기장치는 제어풍속 기준(별표 13)을 낼 수 있는 성능으로 설치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제429조
+      - article_ref: 제442조
+        article_title: 명칭 등의 게시
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 관리대상 유해물질 취급 작업장에 물질 명칭·인체 영향·취급 주의사항 등 게시
+        valid_from: "2019-12-26"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제442조
+      - article_ref: 제450조
+        article_title: 호흡용 보호구의 지급 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 유기화합물 탱크 내부 작업 등에 송기마스크, 단시간 유기화합물 취급 작업에 방독마스크 지급·착용
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제450조
+  - law_id: osh-act
+    articles:
+      - article_ref: 제114조
+        article_title: 물질안전보건자료의 게시 및 교육
+        obligation_type: education
+        obligation_subject: employer
+        summary_ko: MSDS 대상 도료·용제 취급 시 물질안전보건자료 게시·비치 및 근로자 교육
+        valid_from: "2020-01-16"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건법/제114조
+references:
+  - title: 안전보건공단 화학안전 자료
+    url: https://www.kosha.or.kr/kosha/data/chemicalSafety.do
+last_verified: "2026-08-27"
+verified_by: acceptha
