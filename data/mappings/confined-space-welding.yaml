@@ -56,8 +56,8 @@ applicable_laws:
         article_title: 유류 등이 있는 배관이나 용기의 용접 등
         obligation_type: general
         obligation_subject: employer
-        summary_ko: 위험물·인화성 유류·인화성 고체가 있을 우려가 있는 배관·탱크·드럼 등은 사전 제거 등 폭발·화재 예방조치 후에만 화재위험작업 허용
-        valid_from: "2019-12-26"
+        summary_ko: 위험물·인화성 유류·인화성 고체가 있을 우려가 있는 배관·탱크·드럼 등 용기에 대해서는 해당 물질을 미리 제거하는 등 폭발·화재 예방조치를 하지 않으면 화재위험작업을 시켜서는 안 됨
+        valid_from: "2020-01-16"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제240조
       - article_ref: 제241조
@@ -73,7 +73,7 @@ applicable_laws:
         obligation_type: appointment
         obligation_subject: employer
         summary_ko: 밀폐공간 용접 작업 시 화재감시자 지정·배치
-        valid_from: "2021-05-28"
+        valid_from: "2022-10-18"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제241조의2
 references:
