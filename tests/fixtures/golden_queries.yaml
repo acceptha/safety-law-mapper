@@ -211,13 +211,16 @@
   must_include_articles:
     - { mapping_id: noise-work, law_id: osh-rule, article_ref: 제516조 }
     - { mapping_id: noise-work, law_id: osh-act, article_ref: 제125조 }
+    - { mapping_id: noise-work, law_id: osh-rule, article_ref: 제513조 }
 - name: heat-query
   query:
     keywords: [고열, 폭염]
   must_include_mappings: [hot-environment-work]
   top_mapping: hot-environment-work
   must_include_articles:
-    - { mapping_id: hot-environment-work, law_id: osh-rule, article_ref: 제566조 }
+    - { mapping_id: hot-environment-work, law_id: osh-rule, article_ref: 제560조 }
+    - { mapping_id: hot-environment-work, law_id: osh-rule, article_ref: 제559조 }
+    - { mapping_id: hot-environment-work, law_id: osh-rule, article_ref: 제567조 }
 - name: category-physical-hazard
   query:
     category: physical-hazard

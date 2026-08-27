@@ -21,11 +21,27 @@ applicable_laws:
         source_url: https://www.law.go.kr/법령/산업안전보건법/제125조
   - law_id: osh-rule
     articles:
+      - article_ref: 제512조
+        article_title: 정의
+        obligation_type: general
+        obligation_subject: null
+        summary_ko: 적용 기준 정의 — 소음작업(1일 8시간 기준 85dB 이상), 강렬한 소음작업(90dB 8시간~115dB 15분 이상), 충격소음작업(120dB 초과 1일 1만회 등)
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제512조
+      - article_ref: 제513조
+        article_title: 소음 감소 조치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 강렬한 소음작업·충격소음작업 장소에 기계·기구 대체, 시설 밀폐·흡음·격리 등 소음 감소 조치 (기술적·경제적 곤란 시 전문가 의견으로 예외)
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제513조
       - article_ref: 제516조
         article_title: 청력보호구의 지급 등
         obligation_type: provision
         obligation_subject: employer
-        summary_ko: 소음작업·강렬한 소음작업·충격소음작업 근로자에게 개인 전용 청력보호구 지급·착용 조치
+        summary_ko: 소음작업·강렬한 소음작업·충격소음작업 근로자에게 개인 전용 청력보호구 지급·착용 조치 (근로자도 착용 의무)
         valid_from: "2011-07-06"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제516조
@@ -33,12 +49,12 @@ applicable_laws:
         article_title: 청력보존 프로그램 시행 등
         obligation_type: general
         obligation_subject: employer
-        summary_ko: 소음성난청 발생 등 요건 해당 시 청력보존 프로그램 수립·시행
+        summary_ko: 소음작업·강렬한 소음작업·충격소음작업이 있는 사업장 또는 소음으로 근로자에게 건강장해가 발생한 사업장은 청력보존 프로그램 수립·시행 (난청 발생 여부와 무관하게 소음작업만 있어도 대상)
         valid_from: "2024-06-28"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제517조
 references:
-  - title: KOSHA 소음성난청 예방자료
-    url: https://www.kosha.or.kr/kosha/data/musculoskeletal.do
+  - title: KOSHA 소음성난청 예방 자료
+    url: https://www.kosha.or.kr/kosha/data/guidance.do
 last_verified: "2026-08-27"
 verified_by: acceptha
