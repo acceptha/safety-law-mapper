@@ -7,7 +7,7 @@ conditions:
   min_employees: null
   max_employees: null
   substances: []
-  equipment: [pressure-washer]
+  equipment: [pressure-washer, car-wash-machine]
 applicable_laws:
   - law_id: osh-act
     articles:
@@ -15,10 +15,18 @@ applicable_laws:
         article_title: 물질안전보건자료의 게시 및 교육
         obligation_type: education
         obligation_subject: employer
-        summary_ko: MSDS 대상 세제·왁스 등 화학제품 취급 시 물질안전보건자료 게시·비치 및 근로자 교육
+        summary_ko: MSDS 대상 세제·왁스 등 취급 시 물질안전보건자료 게시·비치, 작업공정별 관리요령 게시 및 근로자 교육
         valid_from: "2020-01-16"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건법/제114조
+      - article_ref: 제115조
+        article_title: 물질안전보건자료대상물질 용기 등의 경고표시
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 세제·왁스를 스프레이 보틀 등 소분 용기에 옮겨 사용하는 경우를 포함해 MSDS 대상물질을 담은 용기에 경고표시 부착
+        valid_from: "2020-01-16"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건법/제115조
   - law_id: osh-rule
     articles:
       - article_ref: 제3조
@@ -33,15 +41,31 @@ applicable_laws:
         article_title: 보호구의 지급 등
         obligation_type: provision
         obligation_subject: employer
-        summary_ko: 작업조건에 맞는 보호구(물체 비래 위험 시 안전모, 감전 위험 시 절연용 보호구 등)를 근로자 수 이상 지급·착용 조치
+        summary_ko: 작업조건에 맞는 보호구(고압 분사 시 보안경, 감전·정전기 대전 위험 장소에서 안전화 등)를 근로자 수 이상 지급·착용 조치
         valid_from: "2024-06-28"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제32조
+      - article_ref: 제87조
+        article_title: 원동기·회전축 등의 위험 방지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 자동세차기의 회전 브러시·구동 체인 등 원동기·회전축·기어·벨트의 위험 부위에 덮개·울 등 설치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제87조
+      - article_ref: 제92조
+        article_title: 정비 등의 작업 시의 운전정지 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 세차기 정비·청소·이물 제거 등 작업 시 운전 정지, 타인의 임의 기동 방지를 위해 기동장치 잠금·열쇠 별도 관리 또는 표지판 설치
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제92조
       - article_ref: 제302조
         article_title: 전기 기계·기구의 접지
         obligation_type: provision
         obligation_subject: employer
-        summary_ko: 누전에 의한 감전 방지를 위해 세차설비 등 전기 기계·기구의 금속제 외함·외피 등에 접지
+        summary_ko: 물·습기가 있는 장소에 설치되거나 도전성 높은 곳에서 사용하는 전기 기계·기구(고압세척기 등)에 접지, 접지설비의 적정상태 상시 점검 및 이상 시 즉시 보수·재설치
         valid_from: "2021-11-19"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제302조
@@ -49,12 +73,22 @@ applicable_laws:
         article_title: 누전차단기에 의한 감전방지
         obligation_type: provision
         obligation_subject: employer
-        summary_ko: 물 등 도전성이 높은 액체가 있는 습윤장소에서 사용하는 저압 전기기계·기구에 감전방지용 누전차단기 설치
+        summary_ko: 습윤장소에서 사용하는 저압 전기기계·기구에 감전방지용 누전차단기(정격감도전류 30밀리암페어 이하, 작동시간 0.03초 이내) 설치, 사용 전 작동상태 점검 및 이상 시 즉시 보수·교환
         valid_from: "2021-11-19"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제304조
+      - article_ref: 제316조
+        article_title: 꽂음접속기의 설치·사용 시 준수사항
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 습윤한 장소에는 방수형 꽂음접속기 사용, 땀 등으로 젖은 손으로 취급하지 않도록 조치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제316조
 references:
   - title: KOSHA 감전재해 예방 자료
     url: https://www.kosha.or.kr/kosha/data/electricity.do
+  - title: KOSHA 기계재해 예방 자료
+    url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
 last_verified: "2026-08-27"
 verified_by: acceptha

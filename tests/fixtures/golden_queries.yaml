@@ -232,4 +232,6 @@
   top_mapping: carwash-operation
   must_include_articles:
     - { mapping_id: carwash-operation, law_id: osh-rule, article_ref: 제304조 }
-    - { mapping_id: carwash-operation, law_id: osh-act, article_ref: 제114조 }
+    - { mapping_id: carwash-operation, law_id: osh-act, article_ref: 제115조 }
+    - { mapping_id: carwash-operation, law_id: osh-rule, article_ref: 제316조 }
+    - { mapping_id: carwash-operation, law_id: osh-rule, article_ref: 제92조 }
