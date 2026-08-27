@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>safety-law-mapper — 안전법규 매핑 엔진 데모</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --ink: #1c2330; --sub: #5a6472;
+    --accent: #1a5fb4; --accent-ink: #ffffff; --line: #e3e6ea;
+    --warn-bg: #fff6e5; --warn-ink: #7a5200; --chip: #eef2f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f; --card: #1d232d; --ink: #e8ebf0; --sub: #9aa4b1;
+      --accent: #62a0ea; --accent-ink: #10141a; --line: #2b323d;
+      --warn-bg: #3a3020; --warn-ink: #f2d59a; --chip: #262e3a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font-family: "Pretendard", "Noto Sans KR", -apple-system, "Malgun Gothic", sans-serif; line-height: 1.55; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+  header h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  header p.tag { color: var(--sub); margin: 0 0 6px; }
+  header a { color: var(--accent); text-decoration: none; }
+  .disclaimer { background: var(--warn-bg); color: var(--warn-ink); border-radius: 8px;
+                padding: 10px 14px; margin: 14px 0 20px; font-size: .92rem; }
+  .search { display: flex; gap: 8px; flex-wrap: wrap; }
+  .search input { flex: 1 1 260px; padding: 12px 14px; font-size: 1.05rem; border: 1px solid var(--line);
+                  border-radius: 8px; background: var(--card); color: var(--ink); }
+  .search select { padding: 12px 10px; border: 1px solid var(--line); border-radius: 8px;
+                   background: var(--card); color: var(--ink); font-size: .95rem; }
+  .search button { padding: 12px 22px; font-size: 1rem; border: 0; border-radius: 8px;
+                   background: var(--accent); color: var(--accent-ink); cursor: pointer; font-weight: 700; }
+  .examples { margin: 10px 0 0; color: var(--sub); font-size: .9rem; }
+  .examples button { border: 0; background: var(--chip); color: var(--ink); border-radius: 999px;
+                     padding: 4px 12px; margin: 2px 4px 2px 0; cursor: pointer; font-size: .88rem; }
+  #status { margin: 18px 0 8px; color: var(--sub); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+          padding: 16px 18px; margin: 12px 0; }
+  .card h2 { font-size: 1.12rem; margin: 0 0 2px; }
+  .card h2 .mid { color: var(--sub); font-weight: 400; font-size: .85rem; }
+  .meta { color: var(--sub); font-size: .87rem; margin-bottom: 8px; }
+  .meta .chip { background: var(--chip); border-radius: 999px; padding: 1px 9px; margin-right: 6px; }
+  .law { margin: 10px 0 2px; font-weight: 700; font-size: .95rem; }
+  .art { margin: 7px 0 7px 10px; padding-left: 10px; border-left: 3px solid var(--line); }
+  .art .ref { font-weight: 700; }
+  .art .sum { display: block; color: var(--sub); font-size: .92rem; }
+  .art a { color: var(--accent); font-size: .85rem; text-decoration: none; }
+  footer { margin-top: 36px; color: var(--sub); font-size: .85rem; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>안전법규 매핑 엔진 <span style="font-weight:400">데모</span></h1>
+    <p class="tag">작업 상황을 입력하면 적용되는 한국 안전 법령·조항을 찾아줍니다 —
+      <a href="https://github.com/acceptha/safety-law-mapper">GitHub</a> ·
+      <a href="https://pypi.org/project/safety-law-mapper/">PyPI</a></p>
+  </header>
+
+  <div class="disclaimer">⚠️ 본 결과는 참고용이며 법적 판단을 대체하지 않습니다. 모든 조항에는 국가법령정보센터 원문 링크가 함께 제공됩니다.</div>
+
+  <div class="search">
+    <input id="q" type="search" placeholder="키워드 입력 — 예: 밀폐공간 용접" autofocus>
+    <select id="cat"><option value="">전체 분류</option></select>
+    <button id="go">검색</button>
+  </div>
+  <div class="examples">예시:
+    <button data-q="밀폐공간 용접">밀폐공간 용접</button>
+    <button data-q="폭염">폭염</button>
+    <button data-q="지게차">지게차</button>
+    <button data-q="크레인">크레인</button>
+    <button data-q="석면">석면</button>
+    <button data-q="소음">소음</button>
+  </div>
+
+  <div id="status"></div>
+  <div id="results"></div>
+
+  <footer>
+    데이터: CC BY 4.0 · 코드: MIT · 데이터 버전 <span id="ver">-</span>, 매핑 <span id="cnt">-</span>건 ·
+    이 페이지의 검색·순위 로직은 <code>slm</code> CLI의 매칭 엔진과 동일한 규칙(카테고리 &gt; 키워드 정확일치 2점/부분일치 1점 &gt; 조건 특이도)입니다.
+    <div style="margin-top:6px">⚠️ 본 결과는 참고용이며 법적 판단을 대체하지 않습니다.</div>
+  </footer>
+</div>
+
+<script>
+"use strict";
+let DATA = null;
+
+const CATEGORY_KO = {
+  "hot-work": "화기작업", "confined-space": "밀폐공간", "work-at-height": "고소작업",
+  "lifting": "양중", "excavation": "굴착", "electrical": "전기",
+  "chemical-handling": "화학물질", "machinery": "기계", "demolition": "해체",
+  "transport": "운반", "physical-hazard": "물리적 유해인자"
+};
+
+// Mirrors src/safety_law_mapper/matcher.py — keep in sync.
+function keywordScore(mapping, queryKeywords) {
+  let score = 0;
+  const eks = mapping.work_type.keywords;
+  for (const qk of queryKeywords) {
+    if (eks.includes(qk)) score += 2;                                    // exact
+    else if (eks.some(ek => ek.includes(qk) || qk.includes(ek))) score += 1;  // substring
+    else if (mapping.work_type.name_ko.includes(qk)) score += 1;         // name match
+  }
+  return score;
+}
+
+function specificity(cond) {
+  if (!cond) return 0;
+  let n = 0;
+  if (cond.min_employees != null) n += 1;
+  if (cond.max_employees != null) n += 1;
+  n += (cond.substances || []).length + (cond.equipment || []).length;
+  return n;
+}
+
+function match(mappings, keywords, category) {
+  const results = [];
+  for (const m of mappings) {
+    const catMatch = !!category && m.work_type.category === category;
+    const ks = keywords.length ? keywordScore(m, keywords) : 0;
+    if (!catMatch && ks === 0) continue;
+    results.push({ m, catMatch, ks, spec: specificity(m.conditions) });
+  }
+  results.sort((a, b) =>
+    (b.catMatch - a.catMatch) || (b.ks - a.ks) || (b.spec - a.spec) ||
+    a.m.mapping_id.localeCompare(b.m.mapping_id));
+  return results;
+}
+
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+function render(results) {
+  const box = document.getElementById("results");
+  const status = document.getElementById("status");
+  if (!results.length) {
+    status.textContent = "검색 결과가 없습니다. 다른 키워드로 시도해 보세요.";
+    box.innerHTML = "";
+    return;
+  }
+  status.textContent = `검색 결과 ${results.length}건`;
+  box.innerHTML = results.map(({ m }) => {
+    const cat = CATEGORY_KO[m.work_type.category] || m.work_type.category;
+    const verified = m.last_verified ? `검증일 ${m.last_verified}` : "미검증 (사람 검토 필요)";
+    const laws = m.applicable_laws.map(al => {
+      const law = DATA.laws[al.law_id];
+      const arts = al.articles.map(a => `
+        <div class="art">
+          <span class="ref">${esc(a.article_ref)}</span>${a.article_title ? " (" + esc(a.article_title) + ")" : ""}
+          <span class="sum">${esc(a.summary_ko)}</span>
+          <a href="${esc(a.source_url)}" target="_blank" rel="noopener">법령 원문 보기 ↗</a>
+        </div>`).join("");
+      return `<div class="law">${esc(law ? law.name_ko : al.law_id)}</div>${arts}`;
+    }).join("");
+    return `
+      <div class="card">
+        <h2>${esc(m.work_type.name_ko)} <span class="mid">[${esc(m.mapping_id)}]</span></h2>
+        <div class="meta"><span class="chip">${esc(cat)}</span><span class="chip">${esc(verified)}</span></div>
+        ${laws}
+      </div>`;
+  }).join("");
+}
+
+function run() {
+  if (!DATA) return;
+  const q = document.getElementById("q").value.trim();
+  const cat = document.getElementById("cat").value;
+  const keywords = q ? q.split(/\s+/) : [];
+  if (!keywords.length && !cat) {
+    document.getElementById("status").textContent = "키워드를 입력하거나 분류를 선택하세요.";
+    document.getElementById("results").innerHTML = "";
+    return;
+  }
+  render(match(DATA.mappings, keywords, cat || null));
+}
+
+fetch("data.json").then(r => r.json()).then(d => {
+  DATA = d;
+  document.getElementById("ver").textContent = d.version;
+  document.getElementById("cnt").textContent = d.mappings.length;
+  const sel = document.getElementById("cat");
+  const cats = [...new Set(d.mappings.map(m => m.work_type.category))].sort();
+  for (const c of cats) {
+    const o = document.createElement("option");
+    o.value = c;
+    o.textContent = (CATEGORY_KO[c] || c) + " (" + c + ")";
+    sel.appendChild(o);
+  }
+}).catch(() => {
+  document.getElementById("status").textContent = "데이터 로드에 실패했습니다.";
+});
+
+document.getElementById("go").addEventListener("click", run);
+document.getElementById("q").addEventListener("keydown", e => { if (e.key === "Enter") run(); });
+document.getElementById("cat").addEventListener("change", run);
+document.querySelectorAll(".examples button").forEach(b =>
+  b.addEventListener("click", () => { document.getElementById("q").value = b.dataset.q; run(); }));
+</script>
+</body>
+</html>

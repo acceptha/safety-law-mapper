@@ -10,6 +10,8 @@
 
 ![slm search 데모](docs/assets/demo.svg)
 
+> 🔎 **설치 없이 바로 체험**: [웹 데모](https://acceptha.github.io/safety-law-mapper/) — CLI와 동일한 매칭 엔진을 브라우저에서 실행합니다.
+
 > ⚠️ **본 도구는 법률 자문이 아닙니다.** 모든 결과는 참고용이며 법적 판단을 대체하지 않습니다.
 
 ## 왜 만들었나
