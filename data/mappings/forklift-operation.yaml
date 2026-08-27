@@ -40,7 +40,7 @@ applicable_laws:
         obligation_type: provision
         obligation_subject: employer
         summary_ko: 전조등·후미등을 갖추지 않은 지게차 사용 금지 (조명 확보 장소 예외)
-        valid_from: "2019-12-26"
+        valid_from: "2021-01-16"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제179조
       - article_ref: 제180조
@@ -70,5 +70,5 @@ applicable_laws:
 references:
   - title: KOSHA 지게차 재해예방 자료
     url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 verified_by: acceptha

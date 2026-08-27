@@ -46,6 +46,16 @@ verified_by: null                    # 확인자 GitHub 핸들
 - `work_type.category`: `hot-work`, `confined-space`, `work-at-height`, `lifting`, `excavation`, `electrical`, `chemical-handling`, `machinery`, `demolition`, `transport`
 - `obligation_type`: `general`, `appointment`(선임), `measurement`(측정), `education`(교육), `report`(보고), `permit`(허가), `inspection`(점검), `provision`(지급/설치)
 
+## 주의 — `valid_from`은 공포일이 아니라 시행일입니다
+
+**정의: `valid_from`은 그 항목의 `summary_ko`가 서술하는 의무가 현행 내용으로 시행된 날입니다.** 조문의 다른 항·호가 나중에 개정되어도, 요약된 의무와 무관하면 `valid_from`을 올리지 않습니다 (예: 제241조의2 ③항 방연장비 신설은 ①항 화재감시자 지정·배치를 요약한 항목의 `valid_from`에 영향 없음). 이 필드의 주 용도는 재해 발생일 기준 적용 법규 판단입니다.
+
+조문 페이지의 `<개정 YYYY. M. D.>` 표기는 **공포일**입니다. 시행일은 다를 수 있습니다:
+
+1. 해당 개정 부령의 연혁판을 엽니다: `https://www.law.go.kr/법령/산업안전보건기준에관한규칙/(,,YYYYMMDD)` (공포일 입력)
+2. 헤더의 `[시행 YYYY. M. D.]`가 그 부령의 기본 시행일입니다
+3. **부칙 제1조(시행일)의 "다만" 단서를 반드시 확인하세요** — 특정 조항만 늦게 시행되는 경우가 있습니다 (예: 부령 제367호는 제221조의2~4를 2023-07-01로 유예)
+
 ## 3. 철칙 — 인용은 지어내지 않는다
 
 - 모든 조항에 **law.go.kr 원문 `source_url` 필수**입니다.

@@ -40,7 +40,7 @@ applicable_laws:
         obligation_type: provision
         obligation_subject: employer
         summary_ko: 후사경·후방영상표시장치 등 좌우·후방 확인 장치 구비, 작업 전 작동 확인
-        valid_from: "2022-10-18"
+        valid_from: "2023-07-01"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제221조의2
       - article_ref: 제221조의3
@@ -48,7 +48,7 @@ applicable_laws:
         obligation_type: provision
         obligation_subject: employer
         summary_ko: 굴착기 운전자 좌석안전띠 착용 조치 (운전자 본인도 착용 의무)
-        valid_from: "2022-10-18"
+        valid_from: "2023-07-01"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제221조의3
       - article_ref: 제221조의4
@@ -56,7 +56,7 @@ applicable_laws:
         obligation_type: general
         obligation_subject: employer
         summary_ko: 퀵커플러에 버킷·브레이커 등 작업장치 장착·교환 시 안전핀 등 잠금장치 체결·확인
-        valid_from: "2022-10-18"
+        valid_from: "2023-07-01"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제221조의4
       - article_ref: 제221조의5
@@ -70,5 +70,5 @@ applicable_laws:
 references:
   - title: KOSHA 굴착기 재해예방 자료
     url: https://www.kosha.or.kr/kosha/data/construction.do
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 verified_by: acceptha

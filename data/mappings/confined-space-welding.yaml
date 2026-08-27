@@ -73,11 +73,11 @@ applicable_laws:
         obligation_type: appointment
         obligation_subject: employer
         summary_ko: 밀폐공간 용접 작업 시 화재감시자 지정·배치
-        valid_from: "2022-10-18"
+        valid_from: "2021-05-28"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제241조의2
 references:
   - title: KOSHA GUIDE H-80 밀폐공간 작업 프로그램 시행에 관한 기술지침
     url: https://www.kosha.or.kr/kosha/data/guidanceH.do
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 verified_by: acceptha

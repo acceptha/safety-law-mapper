@@ -48,11 +48,11 @@ applicable_laws:
         obligation_type: appointment
         obligation_subject: employer
         summary_ko: 화재 위험 장소에서 가스 용접·용단 작업 시 화재감시자 지정·배치
-        valid_from: "2022-10-18"
+        valid_from: "2021-05-28"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제241조의2
 references:
   - title: KOSHA 용접·용단 작업 안전
     url: https://www.kosha.or.kr/kosha/data/guidance.do
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 verified_by: acceptha
