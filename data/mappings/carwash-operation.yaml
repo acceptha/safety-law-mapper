@@ -53,6 +53,22 @@ applicable_laws:
         valid_from: "2011-07-06"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제87조
+      - article_ref: 제88조
+        article_title: 기계의 동력차단장치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 동력으로 작동되는 세차기에 조작이 쉬운 스위치·클러치 등 동력차단장치 설치, 클러치·브레이크 등 제어 부위 기능을 항상 유효한 상태로 유지
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제88조
+      - article_ref: 제89조
+        article_title: 운전 시작 전 조치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 세차기 기동 전 근로자 배치·작업방법·방호장치 등 확인, 신호방법과 신호할 사람을 정해 신호 후 운전 시작
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제89조
       - article_ref: 제92조
         article_title: 정비 등의 작업 시의 운전정지 등
         obligation_type: general

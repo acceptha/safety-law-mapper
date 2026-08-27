@@ -235,3 +235,7 @@
     - { mapping_id: carwash-operation, law_id: osh-act, article_ref: 제115조 }
     - { mapping_id: carwash-operation, law_id: osh-rule, article_ref: 제316조 }
     - { mapping_id: carwash-operation, law_id: osh-rule, article_ref: 제92조 }
+- name: category-machinery
+  query:
+    category: machinery
+  must_include_mappings: [carwash-operation, press-operation, conveyor-operation]
