@@ -32,6 +32,7 @@ class WorkCategory(str, Enum):
     MACHINERY = "machinery"
     DEMOLITION = "demolition"
     TRANSPORT = "transport"
+    PHYSICAL_HAZARD = "physical-hazard"
 
 
 class ObligationType(str, Enum):

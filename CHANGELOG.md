@@ -9,6 +9,7 @@
 - **BREAKING**: 라이브러리 API의 `MatchResult.keyword_hits` 필드를 `keyword_score`로 개명
 
 ### Added
+- `work_type.category` 통제 어휘에 `physical-hazard` 추가 — 소음·고열·방사선 등 물리적 유해인자 작업 (#7)
 - README 데모, 아키텍처 다이어그램, 기존 도구 비교표
 - 커뮤니티 문서: 행동강령, 보안 정책, 이슈·PR 템플릿
 

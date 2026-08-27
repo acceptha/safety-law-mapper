@@ -43,7 +43,7 @@ verified_by: null                    # 확인자 GitHub 핸들
 
 ### 통제 어휘
 
-- `work_type.category`: `hot-work`, `confined-space`, `work-at-height`, `lifting`, `excavation`, `electrical`, `chemical-handling`, `machinery`, `demolition`, `transport`
+- `work_type.category`: `hot-work`, `confined-space`, `work-at-height`, `lifting`, `excavation`, `electrical`, `chemical-handling`, `machinery`, `demolition`, `transport`, `physical-hazard`(소음·고열·한랭·방사선·진동 등 물리적 유해인자)
 - `obligation_type`: `general`, `appointment`(선임), `measurement`(측정), `education`(교육), `report`(보고), `permit`(허가), `inspection`(점검), `provision`(지급/설치)
 
 ## 3. 철칙 — 인용은 지어내지 않는다
