@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "safety-law-mapper"
-version = "0.1.0"
+version = "0.2.0"
 description = "작업 상황을 입력하면 적용되는 한국 안전 법령·조항을 찾아주는 규칙 기반 매핑 엔진"
 readme = "README.md"
 requires-python = ">=3.11"
