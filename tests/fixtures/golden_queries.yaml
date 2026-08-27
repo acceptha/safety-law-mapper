@@ -165,3 +165,4 @@
   must_include_articles:
     - { mapping_id: tower-crane-assembly, law_id: osh-act, article_ref: 제82조 }
     - { mapping_id: tower-crane-assembly, law_id: osh-rule, article_ref: 제141조 }
+    - { mapping_id: tower-crane-assembly, law_id: osh-rule, article_ref: 제38조 }

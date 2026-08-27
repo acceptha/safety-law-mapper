@@ -7,7 +7,7 @@ conditions:
   min_employees: null
   max_employees: null
   substances: []
-  equipment: [tower-crane]
+  equipment: [tower-crane, crane]
 applicable_laws:
   - law_id: osh-act
     articles:
@@ -21,6 +21,14 @@ applicable_laws:
         source_url: https://www.law.go.kr/법령/산업안전보건법/제82조
   - law_id: osh-rule
     articles:
+      - article_ref: 제38조
+        article_title: 사전조사 및 작업계획서의 작성 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 타워크레인 설치·조립·해체 작업(별표 4) 시 사전조사 및 작업계획서 작성, 계획에 따라 작업 수행
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제38조
       - article_ref: 제141조
         article_title: 조립 등의 작업 시 조치사항
         obligation_type: general
