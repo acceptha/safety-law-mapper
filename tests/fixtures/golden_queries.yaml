@@ -21,6 +21,7 @@
   must_include_mappings: [welding-cutting]
   must_include_articles:
     - { mapping_id: welding-cutting, law_id: osh-rule, article_ref: 제241조의2 }
+    - { mapping_id: welding-cutting, law_id: osh-rule, article_ref: 제240조 }
 - name: category-query
   query:
     category: confined-space
