@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Changed
+- 매칭 엔진: 키워드 정확일치(2점)를 부분일치·작업명 매치(1점)보다 우선하는 가중 랭킹 (#11)
+- **BREAKING**: 라이브러리 API의 `MatchResult.keyword_hits` 필드를 `keyword_score`로 개명
+
 ### Added
 - README 데모, 아키텍처 다이어그램, 기존 도구 비교표
 - 커뮤니티 문서: 행동강령, 보안 정책, 이슈·PR 템플릿

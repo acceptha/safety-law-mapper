@@ -4,7 +4,11 @@ Ranking (confirmed 2026-08-26; keyword axis refined 2026-08-27, #11):
   1. exact category match
   2. keyword score — an exact keyword match counts double a substring match,
      so entries whose keyword equals the query term outrank entries matched
-     only via containment ('크레인' in '타워크레인')
+     only via containment ('크레인' in '타워크레인'). A match against
+     work_type.name_ko counts as partial even when exact. Deliberate
+     tradeoff of the single-integer score: two partial matches tie with
+     one exact match (2*PARTIAL == EXACT); match-count and precision are
+     not separately ranked
   3. condition specificity (number of non-empty conditions on the entry)
 """
 

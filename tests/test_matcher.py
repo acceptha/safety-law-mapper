@@ -57,12 +57,12 @@ def test_deterministic_order(dataset):
     assert r1 == r2
 
 
-def test_exact_keyword_beats_substring(dataset):
-    # '타워크레인' exactly matches tower-crane-assembly's keyword;
-    # crane-lifting matches only via '크레인' containment
-    results = match(_mappings(dataset), Query(keywords=["타워크레인"]))
-    ids = [r.mapping.mapping_id for r in results]
-    assert ids.index("tower-crane-assembly") < ids.index("crane-lifting")
+def test_exact_keyword_beats_substring_crane(dataset):
+    # '크레인' is an exact keyword of crane-lifting; tower-crane-assembly
+    # matches only via containment ('크레인' in '타워크레인'). Before this
+    # change both scored 1 hit and specificity put tower-crane-assembly first.
+    results = match(_mappings(dataset), Query(keywords=["크레인"]))
+    assert results[0].mapping.mapping_id == "crane-lifting"
 
 
 def test_exact_keyword_beats_substring_gas_welding(dataset):
