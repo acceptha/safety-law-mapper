@@ -1,0 +1,42 @@
+mapping_id: industrial-robot-work
+work_type:
+  name_ko: 산업용 로봇 교시·운전·수리 작업
+  category: machinery
+  keywords: [로봇, 산업용 로봇, 교시, 매니퓰레이터, 협착]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: [industrial-robot]
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제222조
+        article_title: 교시 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 로봇 작동범위 내 교시 작업 시 지침 작성·준수, 이상 시 즉시 정지 조치, 작업 중 표시 등 불시작동·오조작 방지 조치
+        valid_from: "2016-04-07"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제222조
+      - article_ref: 제223조
+        article_title: 운전 중 위험 방지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 로봇 운전 중 접촉 위험 방지를 위해 높이 1.8미터 이상 울타리 또는 안전매트·감응형 방호장치 등 설치
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제223조
+      - article_ref: 제224조
+        article_title: 수리 등 작업 시의 조치 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 로봇 작동범위 내 수리·검사·조정·청소·급유 작업 시 운전 정지, 기동스위치 잠금·표지판 부착 등 불시가동 방지
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제224조
+references:
+  - title: KOSHA 산업용 로봇 안전 자료
+    url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
+last_verified: "2026-08-27"
+verified_by: acceptha

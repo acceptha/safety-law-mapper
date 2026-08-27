@@ -166,3 +166,33 @@
     - { mapping_id: tower-crane-assembly, law_id: osh-act, article_ref: 제82조 }
     - { mapping_id: tower-crane-assembly, law_id: osh-rule, article_ref: 제141조 }
     - { mapping_id: tower-crane-assembly, law_id: osh-rule, article_ref: 제38조 }
+- name: painting-query
+  query:
+    keywords: [도장, 유기용제]
+  must_include_mappings: [painting-work]
+  top_mapping: painting-work
+  must_include_articles:
+    - { mapping_id: painting-work, law_id: osh-rule, article_ref: 제422조 }
+    - { mapping_id: painting-work, law_id: osh-act, article_ref: 제114조 }
+- name: asbestos-query
+  query:
+    keywords: [석면]
+  must_include_mappings: [asbestos-removal]
+  top_mapping: asbestos-removal
+  must_include_articles:
+    - { mapping_id: asbestos-removal, law_id: osh-act, article_ref: 제119조 }
+    - { mapping_id: asbestos-removal, law_id: osh-rule, article_ref: 제489조 }
+- name: robot-query
+  query:
+    keywords: [로봇]
+  must_include_mappings: [industrial-robot-work]
+  top_mapping: industrial-robot-work
+  must_include_articles:
+    - { mapping_id: industrial-robot-work, law_id: osh-rule, article_ref: 제223조 }
+- name: pile-driver-query
+  query:
+    keywords: [항타기]
+  must_include_mappings: [pile-driver-work]
+  top_mapping: pile-driver-work
+  must_include_articles:
+    - { mapping_id: pile-driver-work, law_id: osh-rule, article_ref: 제209조 }

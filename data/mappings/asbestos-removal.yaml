@@ -1,0 +1,60 @@
+mapping_id: asbestos-removal
+work_type:
+  name_ko: 석면 해체·제거 작업
+  category: demolition
+  keywords: [석면, 해체, 제거, 석면조사, 철거]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: [asbestos]
+  equipment: []
+applicable_laws:
+  - law_id: osh-act
+    articles:
+      - article_ref: 제119조
+        article_title: 석면조사
+        obligation_type: inspection
+        obligation_subject: owner
+        summary_ko: 건축물·설비 철거·해체 전 소유주등은 석면 함유 여부 조사(일반/기관 석면조사) 후 결과 기록·보존
+        valid_from: "2020-05-26"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건법/제119조
+      - article_ref: 제122조
+        article_title: 석면의 해체·제거
+        obligation_type: general
+        obligation_subject: owner
+        summary_ko: 기준 이상 석면 함유 건축물·설비는 등록된 석면해체·제거업자를 통해서만 해체·제거
+        valid_from: "2020-05-26"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건법/제122조
+      - article_ref: 제123조
+        article_title: 석면해체·제거 작업기준의 준수
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 석면 포함 건축물·설비를 철거·해체하는 자는 고용노동부령의 작업기준 준수 (근로자도 준수 의무)
+        valid_from: "2020-05-26"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건법/제123조
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제489조
+        article_title: 석면해체·제거작업 계획 수립
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 석면조사 결과 확인 후 작업 절차·방법, 비산 방지·폐기 방법 등이 포함된 작업 계획 수립·이행
+        valid_from: "2019-12-26"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제489조
+      - article_ref: 제491조
+        article_title: 개인보호구의 지급·착용
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 석면해체·제거작업 근로자에게 방진마스크·보호복 등 개인보호구 지급·착용 조치
+        valid_from: "2019-12-26"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제491조
+references:
+  - title: KOSHA 석면 관련 자료
+    url: https://www.kosha.or.kr/kosha/data/asbestos.do
+last_verified: "2026-08-27"
+verified_by: acceptha
