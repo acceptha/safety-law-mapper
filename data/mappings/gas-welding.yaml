@@ -11,6 +11,14 @@ conditions:
 applicable_laws:
   - law_id: osh-rule
     articles:
+      - article_ref: 제233조
+        article_title: 가스용접 등의 작업
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 인화성 가스·불활성 가스·산소를 사용한 용접·용단·가열 시 호스·취관 누출 방지, 조임기구 사용, 공급구 밸브 표시, 작업 종료 시 밸브 잠금, 분기관 불량체결 방지 등 준수
+        valid_from: "2021-05-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제233조
       - article_ref: 제234조
         article_title: 가스등의 용기
         obligation_type: general
@@ -19,6 +27,14 @@ applicable_laws:
         valid_from: "2011-07-06"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제234조
+      - article_ref: 제241조
+        article_title: 화재위험작업 시의 준수사항
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 가스 용접·용단은 화재위험작업이므로 작업 절차 수립, 위험물 현황 파악, 방호조치·소화기구 비치, 용접방화포 등 불티 비산방지, 환기, 비상조치 교육 이행 및 작업내용 서면 게시
+        valid_from: "2025-09-01"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제241조
       - article_ref: 제241조의2
         article_title: 화재감시자
         obligation_type: appointment

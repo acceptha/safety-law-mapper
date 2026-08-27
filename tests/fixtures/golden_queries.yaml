@@ -150,3 +150,10 @@
   must_include_articles:
     - { mapping_id: excavator-operation, law_id: osh-rule, article_ref: 제221조의2 }
     - { mapping_id: excavator-operation, law_id: osh-rule, article_ref: 제221조의4 }
+- name: confined-space-welding-ventilation
+  query:
+    keywords: [밀폐공간, 용접]
+  top_mapping: confined-space-welding
+  must_include_articles:
+    - { mapping_id: confined-space-welding, law_id: osh-rule, article_ref: 제629조 }
+    - { mapping_id: confined-space-welding, law_id: osh-rule, article_ref: 제623조 }
