@@ -1,0 +1,42 @@
+mapping_id: hot-environment-work
+work_type:
+  name_ko: 고열·한랭·다습 작업
+  category: physical-hazard
+  keywords: [고열, 폭염, 한랭, 다습, 온열질환, 열사병]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제560조
+        article_title: 온도·습도 조절 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 실내 고열·한랭·다습작업에 온도·습도 조절장치 설치 (곤란 시 별도 건강장해 방지 조치)
+        valid_from: "2025-07-17"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제560조
+      - article_ref: 제566조
+        article_title: 휴식 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 고열·한랭·다습 작업 시 적절한 휴식 부여 등 건강장해 예방 조치
+        valid_from: "2025-07-17"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제566조
+      - article_ref: 제571조
+        article_title: 소금과 음료수 등의 비치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 땀을 많이 흘리는 작업 장소에 소금·깨끗한 음료수 등을 충분히 비치
+        valid_from: "2025-07-17"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제571조
+references:
+  - title: KOSHA 온열질환 예방 자료
+    url: https://www.kosha.or.kr/kosha/data/guidanceH.do
+last_verified: "2026-08-27"
+verified_by: acceptha

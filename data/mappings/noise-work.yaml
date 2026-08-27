@@ -1,0 +1,44 @@
+mapping_id: noise-work
+work_type:
+  name_ko: 소음 작업
+  category: physical-hazard
+  keywords: [소음, 강렬한 소음, 충격소음, 난청, 청력]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-act
+    articles:
+      - article_ref: 제125조
+        article_title: 작업환경측정
+        obligation_type: measurement
+        obligation_subject: employer
+        summary_ko: 소음 등 유해인자에 노출되는 작업장에 대해 자격자에 의한 작업환경측정 실시
+        valid_from: "2020-01-16"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건법/제125조
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제516조
+        article_title: 청력보호구의 지급 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 소음작업·강렬한 소음작업·충격소음작업 근로자에게 개인 전용 청력보호구 지급·착용 조치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제516조
+      - article_ref: 제517조
+        article_title: 청력보존 프로그램 시행 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 소음성난청 발생 등 요건 해당 시 청력보존 프로그램 수립·시행
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제517조
+references:
+  - title: KOSHA 소음성난청 예방자료
+    url: https://www.kosha.or.kr/kosha/data/musculoskeletal.do
+last_verified: "2026-08-27"
+verified_by: acceptha
