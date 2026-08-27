@@ -1,0 +1,60 @@
+mapping_id: tower-crane-assembly
+work_type:
+  name_ko: 타워크레인 설치·해체 작업
+  category: lifting
+  keywords: [타워크레인, 설치, 해체, 조립, 텔레스코핑]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: [tower-crane, crane]
+applicable_laws:
+  - law_id: osh-act
+    articles:
+      - article_ref: 제82조
+        article_title: 타워크레인 설치·해체업의 등록 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 타워크레인 설치·해체는 고용노동부에 등록한 업자에게만 수행하도록 해야 함
+        valid_from: "2020-01-16"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건법/제82조
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제38조
+        article_title: 사전조사 및 작업계획서의 작성 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 타워크레인 설치·조립·해체 작업(별표 4) 시 사전조사 및 작업계획서 작성, 계획에 따라 작업 수행
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제38조
+      - article_ref: 제141조
+        article_title: 조립 등의 작업 시 조치사항
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 크레인 설치·조립·수리·점검·해체 시 작업순서 준수, 관계자 외 출입금지 표시, 악천후 시 작업중지 등 조치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제141조
+      - article_ref: 제142조
+        article_title: 타워크레인의 지지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 타워크레인을 자립고 이상 높이로 설치 시 벽체 지지 (부득이한 경우 와이어로프 지지)
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제142조
+      - article_ref: 제143조
+        article_title: 폭풍 등으로 인한 이상 유무 점검
+        obligation_type: inspection
+        obligation_subject: employer
+        summary_ko: 순간풍속 초당 30미터 초과 강풍 또는 중진 이상 지진 후 옥외 양중기 사용 전 각 부위 이상 점검
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제143조
+references:
+  - title: KOSHA 타워크레인 안전작업 자료
+    url: https://www.kosha.or.kr/kosha/data/construction.do
+last_verified: "2026-08-26"
+verified_by: acceptha
