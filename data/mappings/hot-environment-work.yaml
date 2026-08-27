@@ -1,0 +1,58 @@
+mapping_id: hot-environment-work
+work_type:
+  name_ko: 고열·한랭·다습 작업 (폭염 포함)
+  category: physical-hazard
+  keywords: [고열, 폭염, 한랭, 다습, 온열질환, 열사병, 체감온도]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제559조
+        article_title: 고열작업 등
+        obligation_type: general
+        obligation_subject: null
+        summary_ko: 적용 기준 정의 — 고열작업(용광로 제련·용해·가열·소성 등 장소), 한랭·다습작업, 폭염작업(체감온도 31도 이상 작업장소에서의 장시간 작업, 2025년 신설)
+        valid_from: "2025-07-17"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제559조
+      - article_ref: 제560조
+        article_title: 온도·습도 조절 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 실내 고열·한랭·다습작업에 온도·습도 조절장치 설치. 폭염작업 시 조절장치 가동·작업시간대 조정·휴식 부여 중 조치(조치에도 폭염작업이면 휴식 필수), 체감온도 33도 이상이면 매 2시간 이내 20분 이상 휴식(곤란 시 개인용 냉방·통풍장치 또는 보냉장구 지급)
+        valid_from: "2025-07-17"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제560조
+      - article_ref: 제566조
+        article_title: 휴식 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 고열·한랭·다습 작업 시 적절한 휴식 부여 등 건강장해 예방 조치
+        valid_from: "2025-07-17"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제566조
+      - article_ref: 제567조
+        article_title: 휴게시설의 설치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 고열·한랭·다습 작업 시 휴게시설을 해당 작업과 격리된 장소에 설치, 폭염에 직접 노출되는 옥외 작업은 휴식시간에 이용할 그늘진 장소 제공
+        valid_from: "2017-12-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제567조
+      - article_ref: 제571조
+        article_title: 소금과 음료수 등의 비치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 작업 중 땀을 많이 흘리게 되는 장소(고열·폭염작업 등)에 소금·깨끗한 음료수 등을 충분히 비치 — 한랭작업에는 적용되지 않음
+        valid_from: "2025-07-17"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제571조
+references:
+  - title: KOSHA 온열질환 예방 자료
+    url: https://www.kosha.or.kr/kosha/data/guidanceH.do
+last_verified: "2026-08-27"
+verified_by: acceptha
