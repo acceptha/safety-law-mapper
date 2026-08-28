@@ -266,6 +266,23 @@
   top_mapping: confined-space-work
   must_include_articles:
     - { mapping_id: confined-space-work, law_id: osh-rule, article_ref: 제619조 }
+- name: logging-query
+  query:
+    keywords: [벌목]
+  must_include_mappings: [logging-work]
+  top_mapping: logging-work
+  must_include_articles:
+    - { mapping_id: logging-work, law_id: osh-rule, article_ref: 제405조 }
+    - { mapping_id: logging-work, law_id: osh-rule, article_ref: 제406조 }
+- name: felled-tree-query
+  query:
+    keywords: [벌도목]
+  must_include_mappings: [logging-work]
+  top_mapping: logging-work
+- name: category-forestry
+  query:
+    category: forestry
+  must_include_mappings: [logging-work]
 - name: demolition-not-asbestos
   query:
     keywords: [철거]

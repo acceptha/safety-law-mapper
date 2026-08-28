@@ -278,6 +278,21 @@ def extract_keywords(text: str, lexicon: Lexicon, mapping_keywords: set[str]) ->
     return sorted(k for k in found if not _fully_absorbed(text, k, absorbers.get(k, [])))
 
 
+def scrub_region(text: str, region: str | None) -> str:
+    """Drop region names before keyword extraction.
+
+    Place names swallow work terms — '인천 연수구' contains '수구', '마포구'
+    contains '포구' — and a district name is never a work signal, so removing
+    it can only help.
+    """
+    if not region:
+        return text
+    for token in region.split():
+        if token:
+            text = text.replace(token, " ")
+    return text
+
+
 def _fully_absorbed(text: str, keyword: str, surfaces: list[str]) -> bool:
     """True when every occurrence of `keyword` sits inside a suppressing compound.
 
@@ -306,16 +321,19 @@ def build_incident(
     text = f"{title}\n{body}"
     fatal = _FATAL_RE.search(text)
     height = _HEIGHT_RE.search(text)
+    region = parse_region(title)
     return Incident(
         pst_no=pst_no,
         posted_at=posted_at,
         occurred_at=parse_occurred_at(body, posted_at),
-        region=parse_region(title),
+        region=region,
         site_type=parse_site_type(body),
         accident_type=parse_accident_types(text),
         fatalities=int(fatal.group(1)) if fatal else None,
         fall_height_m=float(height.group(1)) if height else None,
-        work_keywords=extract_keywords(text, lexicon, mapping_keywords),
+        work_keywords=extract_keywords(
+            scrub_region(text, region), lexicon, mapping_keywords
+        ),
         source_url=POST_URL.format(pst_no=pst_no),
         fetched_at=fetched_at,
         title=title if store_title else None,
