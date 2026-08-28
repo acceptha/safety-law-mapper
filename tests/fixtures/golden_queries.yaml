@@ -239,3 +239,35 @@
   query:
     category: machinery
   must_include_mappings: [carwash-operation, press-operation, conveyor-operation]
+- name: roof-query
+  query:
+    keywords: [지붕]
+  must_include_mappings: [roof-work]
+  top_mapping: roof-work
+  must_include_articles:
+    - { mapping_id: roof-work, law_id: osh-rule, article_ref: 제45조 }
+    - { mapping_id: roof-work, law_id: osh-rule, article_ref: 제13조 }
+- name: skylight-query
+  query:
+    keywords: [채광창]
+  must_include_mappings: [roof-work]
+  top_mapping: roof-work
+  must_include_articles:
+    - { mapping_id: roof-work, law_id: osh-rule, article_ref: 제45조 }
+- name: slate-roof-query
+  query:
+    keywords: [슬레이트]
+  must_include_mappings: [roof-work]
+- name: septic-tank-query
+  query:
+    keywords: [정화조]
+  must_include_mappings: [confined-space-work]
+  top_mapping: confined-space-work
+  must_include_articles:
+    - { mapping_id: confined-space-work, law_id: osh-rule, article_ref: 제619조 }
+- name: edge-fall-query
+  query:
+    keywords: [단부]
+  must_include_mappings: [work-at-height]
+  must_include_articles:
+    - { mapping_id: work-at-height, law_id: osh-rule, article_ref: 제43조 }
