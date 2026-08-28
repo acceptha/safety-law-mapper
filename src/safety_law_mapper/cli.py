@@ -88,6 +88,81 @@ def validate() -> None:
 
 
 @app.command()
+def incidents(
+    gaps: bool = typer.Option(False, "--gaps", help="미매핑 사고만 표시 (데이터 공백 큐)"),
+    since: str | None = typer.Option(None, "--since", help="게시일 하한 (YYYY-MM-DD)"),
+    accident_type: str | None = typer.Option(None, "--type", "-t", help="사고 유형 (예: 떨어짐)"),
+    limit: int = typer.Option(20, "--limit", "-n", help="표시 건수"),
+) -> None:
+    """KOSHA 사고속보를 적용 법령과 대조합니다 (수집: scripts/fetch_kosha_incidents.py)."""
+    import datetime
+
+    from .incidents import coverage, load_incidents, map_incidents
+
+    records = load_incidents()
+    if not records:
+        typer.echo("수집된 사고속보가 없습니다. 먼저 실행하세요:")
+        typer.echo("  python scripts/fetch_kosha_incidents.py")
+        _finish(1)
+
+    if since:
+        try:
+            floor = datetime.date.fromisoformat(since)
+        except ValueError:
+            typer.echo(f"--since 날짜 형식이 올바르지 않습니다: {since}")
+            _finish(2)
+        records = [r for r in records if r.posted_at >= floor]
+    if accident_type:
+        records = [r for r in records if any(t.value == accident_type for t in r.accident_type)]
+
+    ds = load_dataset()
+    matches = map_incidents(records, list(ds.mappings.values()))
+    mapped, total = coverage(matches)
+
+    shown = [m for m in matches if m.is_gap] if gaps else matches
+    if not shown:
+        typer.echo("조건에 맞는 사고가 없습니다.")
+        _finish(1)
+
+    typer.echo(f"사고 {total}건 중 매핑 {mapped}건 / 미매핑 {total - mapped}건")
+    typer.echo("※ 아래는 해당 작업에 적용되는 조항이며, 이 사고의 위반 사실을 뜻하지 않습니다.")
+    for m in shown[:limit]:
+        inc = m.incident
+        when = inc.occurred_at.strftime("%Y-%m-%d %H:%M") if inc.occurred_at else str(inc.posted_at)
+        head = " · ".join(
+            x
+            for x in (
+                when,
+                inc.region,
+                "/".join(t.value for t in inc.accident_type) or None,
+                f"사망 {inc.fatalities}명" if inc.fatalities else None,
+            )
+            if x
+        )
+        typer.echo(f"\n▸ {head}")
+        if inc.title:
+            typer.echo(f"  {inc.title}")
+        typer.echo(f"  근거: {inc.source_url}")
+        if m.is_gap:
+            typer.echo("  ⚠️ 미매핑 — 적용 매핑 데이터 없음 (기여 대상)")
+            continue
+        for r in m.results[:3]:
+            arts = [
+                f"{art.article_ref}"
+                for al in r.mapping.applicable_laws
+                for art in al.articles
+            ]
+            typer.echo(
+                f"  → {r.mapping.work_type.name_ko} [{r.mapping.mapping_id}]"
+                f" — {', '.join(arts[:6])}"
+            )
+
+    if len(shown) > limit:
+        typer.echo(f"\n… 외 {len(shown) - limit}건 (--limit 로 조정)")
+    _finish(0)
+
+
+@app.command()
 def version() -> None:
     """버전을 출력합니다."""
     typer.echo(f"safety-law-mapper {__version__}")
