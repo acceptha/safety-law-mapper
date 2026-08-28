@@ -19,6 +19,7 @@
   query:
     keywords: [용접]
   must_include_mappings: [welding-cutting]
+  top_mapping: welding-cutting
   must_include_articles:
     - { mapping_id: welding-cutting, law_id: osh-rule, article_ref: 제241조의2 }
     - { mapping_id: welding-cutting, law_id: osh-rule, article_ref: 제240조 }
@@ -265,6 +266,11 @@
   top_mapping: confined-space-work
   must_include_articles:
     - { mapping_id: confined-space-work, law_id: osh-rule, article_ref: 제619조 }
+- name: demolition-not-asbestos
+  query:
+    keywords: [철거]
+  must_include_mappings: [demolition-work]
+  top_mapping: demolition-work
 - name: edge-fall-query
   query:
     keywords: [단부]
