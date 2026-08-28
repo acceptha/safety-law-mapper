@@ -5,7 +5,9 @@
 
 ## 0. ⛔ SCOPE GUARD — READ FIRST
 
-**Implement Phase 1 ONLY.** Phase 2 (checklist generator) and Phase 3 (law-change tracker) are documented below for schema-design context but **MUST NOT be implemented yet**. Do not create modules, CLI commands, or dependencies for Phase 2/3. If a task seems to require them, stop and ask the user.
+**Implement Phase 1 and Phase 1.5 ONLY.** Phase 2 (checklist generator) and Phase 3 (law-change tracker) are documented below for schema-design context but **MUST NOT be implemented yet**. Do not create modules, CLI commands, or dependencies for Phase 2/3. If a task seems to require them, stop and ask the user.
+
+**Phase 1.5 — incident feed (approved 2026-08-28).** `incidents.py`, `slm incidents`, `scripts/fetch_kosha_incidents.py`, `data/incidents/`. Scope: collect KOSHA 사고속보, map each to existing mappings, surface unmapped ones as a contribution queue. Spec: `docs/사고속보-연계-기획서.md`. Hard limits — **never generate law articles automatically**, and **never assert an incident violated an article** (we report what applies to the work type, not fault). Daily automation (GitHub Actions) is NOT yet approved.
 
 ## 1. Project Identity
 

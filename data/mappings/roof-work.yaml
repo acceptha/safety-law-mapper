@@ -1,0 +1,60 @@
+mapping_id: roof-work
+work_type:
+  name_ko: 지붕 위 작업
+  category: work-at-height
+  keywords: [지붕, 지붕작업, 채광창, 슬레이트, 처마, 지붕재]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제45조
+        article_title: 지붕 위에서의 위험 방지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 지붕 위 작업 시 ①지붕 가장자리에 안전난간 설치, ②채광창에 견고한 구조의 덮개 설치, ③슬레이트 등 강도가 약한 재료로 덮은 지붕에는 폭 30센티미터 이상의 발판 설치. 안전난간 설치가 곤란하면 추락방호망을 설치하고, 그마저 곤란하면 안전대 착용 등 조치
+        valid_from: "2021-11-19"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제45조
+      - article_ref: 제13조
+        article_title: 안전난간의 구조 및 설치요건
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 제45조제1항제1호에 따라 지붕 가장자리에 설치하는 안전난간의 구조 기준 — 상부 난간대·중간 난간대·발끝막이판·난간기둥으로 구성, 상부 난간대는 바닥면등으로부터 90센티미터 이상, 발끝막이판은 10센티미터 이상 높이 유지
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제13조
+      - article_ref: 제42조
+        article_title: 추락의 방지
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 추락 위험이 있는 장소에 비계를 조립하는 등의 방법으로 작업발판 설치, 곤란한 경우 기준에 맞는 추락방호망 설치 또는 안전대 착용 등 조치
+        valid_from: "2021-05-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제42조
+      - article_ref: 제44조
+        article_title: 안전대의 부착설비 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 안전대를 착용시키는 경우 안전대를 안전하게 걸어 사용할 수 있는 설비 등을 설치하고, 작업 시작 전 부착설비의 이상 유무 점검
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제44조
+      - article_ref: 제32조
+        article_title: 보호구의 지급 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 추락 위험이 있는 작업에 안전모, 높이 2미터 이상 추락 위험 장소 작업에 안전대를 근로자 수 이상으로 지급하고 착용하도록 조치
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제32조
+references:
+  - title: KOSHA 추락재해 예방자료
+    url: https://www.kosha.or.kr/kosha/data/guidanceC.do
+  - title: KOSHA 사고속보 (지붕·채광창 추락 재해 다발)
+    url: https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2
+last_verified: "2026-08-28"
+verified_by: acceptha

@@ -2,7 +2,7 @@ mapping_id: confined-space-work
 work_type:
   name_ko: 밀폐공간 작업
   category: confined-space
-  keywords: [밀폐공간, 산소결핍, 질식, 탱크, 맨홀]
+  keywords: [밀폐공간, 산소결핍, 질식, 탱크, 맨홀, 정화조, 침전조, 집수조, 슬러지, 열교환기]
 conditions:
   min_employees: null
   max_employees: null
