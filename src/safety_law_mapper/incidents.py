@@ -57,6 +57,37 @@ _ACCIDENT_TERMS = sorted(
 )
 
 
+class SiteType(str, Enum):
+    """업종·현장 구분. 사고속보 300건에 실제로 나타난 표현에서 귀납한 어휘."""
+
+    CONSTRUCTION = "건설현장"
+    MANUFACTURING = "제조업"
+    AGRICULTURE = "농림축산"
+    LOGISTICS = "창고·물류"
+    WASTE = "환경·폐기물"
+    FACILITY = "건물·시설"
+    SERVICE = "서비스·판매"
+    OTHER = "기타"
+
+
+# 순서가 곧 우선순위. '제조업 사업장 내 야적장'은 제조업으로 본다.
+_SITE_RULES: tuple[tuple[SiteType, tuple[str, ...]], ...] = (
+    (SiteType.CONSTRUCTION, ("공사", "건설", "신축", "증축", "토목", "철도")),
+    (SiteType.MANUFACTURING, ("제조", "공장", "조선소", "플랜트", "발전소", "정제", "정미소")),
+    (SiteType.AGRICULTURE, (
+        "축사", "농장", "벌목", "야산", "임야", "과수", "양식", "산림", "조림",
+        "휴양림", "양돈", "양계", "농로",
+    )),
+    (SiteType.LOGISTICS, ("창고", "물류", "야적", "하치", "적치", "하역", "부두", "차고지")),
+    (SiteType.WASTE, ("폐기물", "재활용", "매립", "선별", "하수", "정수", "배수장")),
+    (SiteType.FACILITY, (
+        "아파트", "건물", "주택", "상가", "학교", "병원", "골프장", "옥상",
+        "빌딩", "호텔", "주차",
+    )),
+    (SiteType.SERVICE, ("마트", "도매", "소매", "서비스업", "세탁", "음식", "숙박")),
+)
+
+
 class _StrictModel(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
@@ -74,7 +105,7 @@ class Incident(_StrictModel):
     posted_at: datetime.date
     occurred_at: datetime.datetime | None = None
     region: str | None = None
-    site_type: str | None = None
+    site_type: SiteType | None = None
     accident_type: list[AccidentType] = Field(default_factory=list)
     fatalities: int | None = None
     fall_height_m: float | None = None
@@ -139,7 +170,10 @@ def write_incidents(incidents: list[Incident], path: Path) -> None:
 _TITLE_RE = re.compile(r"^\s*\[\s*(\d{1,2})\s*/\s*(\d{1,2})\s*,?\s*([^\]]*?)\s*\]")
 _DATE_RE = re.compile(r"(\d{4})\s*\.\s*(\d{1,2})\s*\.\s*(\d{1,2})")
 _TIME_RE = re.compile(r"(\d{1,2})\s*:\s*(\d{2})")
-_SITE_RE = re.compile(r"소재\s*(\S+?)\s*에서")
+_SITE_SOJAE_RE = re.compile(r"소재\s*(.+?)\s*(?:에서|$)", re.M)
+_SITE_FALLBACK_RE = re.compile(r"^(.+?)에서", re.M)
+# '경남 창원시', '울산 남구', '전라북도 군산시' 같은 지역 접두어를 떼어낸다.
+_REGION_PREFIX_RE = re.compile(r"^\S+\s+\S*[시군구]\s+|^\S*[시군구]\s+")
 _FATAL_RE = re.compile(r"사망\s*(\d+)\s*명")
 _HEIGHT_RE = re.compile(r"\(\s*(\d+(?:\.\d+)?)\s*m\s*\)", re.IGNORECASE)
 
@@ -184,6 +218,38 @@ def parse_occurred_at(body: str, posted_at: datetime.date) -> datetime.datetime 
 
 def parse_accident_types(text: str) -> list[AccidentType]:
     return [t for t in _ACCIDENT_TERMS if t.value in text]
+
+
+def site_phrase(body: str) -> str | None:
+    """The '…에서' phrase naming where the accident happened, region stripped.
+
+    Most posts read '<지역> 소재 <현장>에서'; a minority drop '소재' entirely,
+    so we fall back to the first '…에서' clause and remove the region prefix.
+    """
+    m = _SITE_SOJAE_RE.search(body)
+    if m:
+        phrase = m.group(1).strip()
+    else:
+        m = _SITE_FALLBACK_RE.search(body)
+        if not m:
+            return None
+        phrase = _REGION_PREFIX_RE.sub("", m.group(1).strip()).strip()
+    return phrase or None
+
+
+def parse_site_type(body: str) -> SiteType | None:
+    """Classify the site phrase into controlled vocabulary.
+
+    We store the category, never the source phrase — same rule as
+    `work_keywords` (기획서 §6.1).
+    """
+    phrase = site_phrase(body)
+    if phrase is None:
+        return None
+    for site_type, terms in _SITE_RULES:
+        if any(t in phrase for t in terms):
+            return site_type
+    return SiteType.OTHER
 
 
 def extract_keywords(text: str, lexicon: Lexicon, mapping_keywords: set[str]) -> list[str]:
@@ -240,13 +306,12 @@ def build_incident(
     text = f"{title}\n{body}"
     fatal = _FATAL_RE.search(text)
     height = _HEIGHT_RE.search(text)
-    site = _SITE_RE.search(body)
     return Incident(
         pst_no=pst_no,
         posted_at=posted_at,
         occurred_at=parse_occurred_at(body, posted_at),
         region=parse_region(title),
-        site_type=site.group(1) if site else None,
+        site_type=parse_site_type(body),
         accident_type=parse_accident_types(text),
         fatalities=int(fatal.group(1)) if fatal else None,
         fall_height_m=float(height.group(1)) if height else None,

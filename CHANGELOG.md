@@ -12,6 +12,7 @@
 - **사고속보 연계 파이프라인 (Phase 1.5)** — `slm incidents` / `slm incidents --gaps`, `scripts/fetch_kosha_incidents.py`, `src/safety_law_mapper/incidents.py`, `data/incidents/`. KOSHA 사고속보를 수집해 기존 매핑과 대조하고, 미매핑 사고를 기여 대상 큐로 노출. 300건 백필 기준 커버리지 74%. 새 의존성 없음(표준 라이브러리만)
   - 렉시콘(`data/incidents/lexicon.yaml`) — 원문 표현 → 매핑 키워드 사전, 범용어 stopword, 합성어 `suppress`
   - 원문 로컬 캐시(`.gitignore`) + `--reprocess` — 렉시콘 수정 시 재수집 없이 오프라인 재생성
+  - `site_type` 통제 어휘 8종(건설현장·제조업·농림축산·창고물류·환경폐기물·건물시설·서비스판매·기타) — 사고속보 실제 표현 146종에서 귀납. 파싱 성공률 100%
   - 법령 조문 자동 생성 없음, 위반 판정 없음 (출력에 명시)
 
 ### Changed

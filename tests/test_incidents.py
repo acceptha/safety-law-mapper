@@ -6,6 +6,7 @@ import pytest
 from safety_law_mapper.incidents import (
     AccidentType,
     Incident,
+    SiteType,
     build_incident,
     coverage,
     extract_keywords,
@@ -15,6 +16,7 @@ from safety_law_mapper.incidents import (
     map_incidents,
     parse_occurred_at,
     parse_region,
+    parse_site_type,
     strip_html,
     write_incidents,
 )
@@ -78,7 +80,7 @@ def test_parse_occurred_at_rejects_future_misread():
 def test_build_incident_extracts_structured_facts(posts, lexicon, mapping_keywords):
     inc = _build(posts[0], lexicon, mapping_keywords)
     assert inc.region == "부산 강서구"
-    assert inc.site_type == "공사현장"
+    assert inc.site_type is SiteType.CONSTRUCTION
     assert inc.fatalities == 1
     assert inc.fall_height_m == 1.8
     assert AccidentType.FALL in inc.accident_type
@@ -97,6 +99,29 @@ def test_extract_keywords_maps_surface_variants(lexicon, mapping_keywords):
     # 원문은 띄어 쓰지만 매핑 키워드는 '연삭숫돌' — 렉시콘이 이어줘야 한다.
     kws = extract_keywords("깨진 연삭 숫돌 파편에 맞음", lexicon, mapping_keywords)
     assert "연삭기" in kws
+
+
+def test_site_type_handles_multiword_phrase():
+    """'기계ˑ기구 제조 사업장'처럼 공백이 든 표현도 잡아야 한다 (종전 정규식 실패)."""
+    body = "2026. 8. 20. (목), 15:43경\n인천 미추홀구 소재 기계ˑ기구 제조 사업장에서\n떨어짐"
+    assert parse_site_type(body) is SiteType.MANUFACTURING
+
+
+def test_site_type_without_sojae_strips_region():
+    """'소재'가 없는 형식은 지역 접두어를 떼고 분류한다."""
+    body = "2026. 6. 1. (월), 09:00경\n경남 창원시 목재 야적장에서 재해자가\n떨어짐"
+    assert parse_site_type(body) is SiteType.LOGISTICS
+
+
+def test_site_type_phrase_ending_without_eseo():
+    """'…해체공사 현장'처럼 '에서'로 끝나지 않는 줄도 처리한다."""
+    body = "2026. 8. 12. (수), 10:00경\n경기 동두천시 소재 지붕 해체공사 현장\n떨어짐"
+    assert parse_site_type(body) is SiteType.CONSTRUCTION
+
+
+def test_site_type_unknown_phrase_falls_back_to_other():
+    body = "2026. 1. 1. (수), 09:00경\n서울 강남구 소재 채석장에서\n깔림"
+    assert parse_site_type(body) is SiteType.OTHER
 
 
 def test_compound_word_does_not_leak_a_keyword(lexicon, mapping_keywords):
