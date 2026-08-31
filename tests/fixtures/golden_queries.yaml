@@ -266,6 +266,19 @@
   top_mapping: confined-space-work
   must_include_articles:
     - { mapping_id: confined-space-work, law_id: osh-rule, article_ref: 제619조 }
+- name: compactor-query
+  query:
+    keywords: [압축기]
+  must_include_mappings: [compactor-crusher-work]
+  top_mapping: compactor-crusher-work
+  must_include_articles:
+    - { mapping_id: compactor-crusher-work, law_id: osh-rule, article_ref: 제92조 }
+    - { mapping_id: compactor-crusher-work, law_id: osh-rule, article_ref: 제111조 }
+- name: crusher-query
+  query:
+    keywords: [파쇄기]
+  must_include_mappings: [compactor-crusher-work]
+  top_mapping: compactor-crusher-work
 - name: logging-query
   query:
     keywords: [벌목]
