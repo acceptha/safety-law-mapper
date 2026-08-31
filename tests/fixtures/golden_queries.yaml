@@ -41,6 +41,13 @@
   must_include_mappings: [work-at-height, aerial-work-platform, ladder-work]
   must_include_articles:
     - { mapping_id: work-at-height, law_id: osh-rule, article_ref: 제42조 }
+- name: generic-fall-owns-work-at-height
+  query:
+    keywords: [추락]
+  must_include_mappings: [work-at-height]
+  top_mapping: work-at-height
+  must_include_articles:
+    - { mapping_id: work-at-height, law_id: osh-rule, article_ref: 제42조 }
 - name: crane-query
   query:
     keywords: [크레인]
@@ -266,6 +273,14 @@
   top_mapping: confined-space-work
   must_include_articles:
     - { mapping_id: confined-space-work, law_id: osh-rule, article_ref: 제619조 }
+- name: steel-frame-query
+  query:
+    keywords: [철골]
+  must_include_mappings: [steel-frame-work]
+  top_mapping: steel-frame-work
+  must_include_articles:
+    - { mapping_id: steel-frame-work, law_id: osh-rule, article_ref: 제380조 }
+    - { mapping_id: steel-frame-work, law_id: osh-rule, article_ref: 제383조 }
 - name: compactor-query
   query:
     keywords: [압축기]
