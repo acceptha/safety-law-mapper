@@ -2,7 +2,7 @@ mapping_id: scaffold-assembly
 work_type:
   name_ko: 비계 조립·해체 작업
   category: work-at-height
-  keywords: [비계, 조립, 해체, 작업발판, 강관비계, 달비계]
+  keywords: [비계, 조립, 작업발판, 강관비계, 달비계]
 conditions:
   min_employees: null
   max_employees: null

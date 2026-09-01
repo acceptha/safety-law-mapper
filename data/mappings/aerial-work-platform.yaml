@@ -2,9 +2,11 @@ mapping_id: aerial-work-platform
 work_type:
   name_ko: 고소작업대 작업
   category: work-at-height
-  # 일반 위험어 '추락'은 work-at-height 소유 — 특정 장비 매핑이 가져가면
-  # 일반 추락 질의에서 제186조(고소작업대)가 제42조를 밀어낸다.
-  keywords: [고소작업대, 테이블리프트, 시저리프트, 고소작업]
+  # 일반어 '추락'·'고소작업'은 work-at-height 소유 — 특정 장비 매핑이 가져가면
+  # 일반 질의에서 제186조(고소작업대)가 제42조를 밀어낸다.
+  # '고소작업대' 질의는 여전히 이 매핑이 1위이고, '고소작업' 질의에도
+  # 부분일치로 포함된다.
+  keywords: [고소작업대, 테이블리프트, 시저리프트]
 conditions:
   min_employees: null
   max_employees: null

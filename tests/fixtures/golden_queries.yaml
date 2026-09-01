@@ -35,12 +35,26 @@
   must_include_articles:
     - { mapping_id: forklift-operation, law_id: osh-rule, article_ref: 제180조 }
     - { mapping_id: forklift-operation, law_id: osh-rule, article_ref: 제38조 }
+# 사다리·고소작업대는 '고소작업'을 키워드로 갖지 않는다 (일반어 소유권, §7.8).
+# 장비를 특정하지 않은 질의에서는 일반 매핑이 1위여야 하고, 장비별 매핑은
+# category 질의(category-work-at-height)로 모두 회수된다.
 - name: height-query
   query:
     keywords: [추락, 고소작업]
-  must_include_mappings: [work-at-height, aerial-work-platform, ladder-work]
+  must_include_mappings: [work-at-height, aerial-work-platform]
+  top_mapping: work-at-height
   must_include_articles:
     - { mapping_id: work-at-height, law_id: osh-rule, article_ref: 제42조 }
+- name: generic-demolition-owns-demolition-work
+  query:
+    keywords: [해체]
+  must_include_mappings: [demolition-work, tower-crane-assembly, scaffold-assembly]
+  top_mapping: demolition-work
+- name: generic-height-work-owns-work-at-height
+  query:
+    keywords: [고소작업]
+  must_include_mappings: [work-at-height, aerial-work-platform]
+  top_mapping: work-at-height
 - name: generic-fall-owns-work-at-height
   query:
     keywords: [추락]
