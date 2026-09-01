@@ -1,5 +1,6 @@
 import datetime
 import json
+import sys
 
 import pytest
 
@@ -21,7 +22,7 @@ from safety_law_mapper.incidents import (
     write_incidents,
 )
 
-from .conftest import DATA_DIR, FIXTURES
+from .conftest import DATA_DIR, FIXTURES, REPO_ROOT
 
 FETCHED = datetime.date(2026, 8, 28)
 
@@ -200,6 +201,38 @@ def test_jsonl_roundtrip_is_lossless(tmp_path, posts, lexicon, mapping_keywords)
 
 def test_load_incidents_missing_file_is_empty(tmp_path):
     assert load_incidents(tmp_path / "nope.jsonl") == []
+
+
+def test_reprocess_preserves_original_fetch_date(tmp_path):
+    """--reprocess는 재수집이 아니다. 수집일을 오늘로 덮어쓰면 출처 이력이 사라진다."""
+    import subprocess
+
+    cache = tmp_path / "cache"
+    cache.mkdir()
+    (cache / "TESTPROVENANCE000001.json").write_text(
+        json.dumps(
+            {
+                "pstNo": "TESTPROVENANCE000001",
+                "pstNm": "[8/19, 부산 강서구] 이동식 비계가 넘어져 떨어짐",
+                "regYmd": "20260827",
+                "body": "2026. 8. 19 (수), 14:08경\n부산 강서구 소재 공사현장에서\n"
+                "이동식 비계가 넘어지며 떨어짐 (사망1명)",
+                "fetchedAt": "2026-08-28",
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    out = tmp_path / "alerts.jsonl"
+    script = REPO_ROOT / "scripts" / "fetch_kosha_incidents.py"
+    result = subprocess.run(
+        [sys.executable, str(script), "--reprocess", "--cache-dir", str(cache), "--out", str(out)],
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode == 0, result.stderr
+    (incident,) = load_incidents(out)
+    assert incident.fetched_at == datetime.date(2026, 8, 28)
 
 
 def test_coverage_counts_mapped_and_total(posts, lexicon, mapping_keywords, dataset):
