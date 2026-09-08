@@ -11,6 +11,37 @@ def test_seed_data_validates():
     assert report.checked_files >= 5
 
 
+def test_seed_data_has_no_unreviewed_shared_keywords():
+    """일반어 소유권 결함(§7.8)이 다시 들어오면 여기서 걸린다."""
+    report = validate_data(DATA_DIR, SCHEMA_DIR)
+    assert report.warnings == [], report.warnings
+
+
+def test_over_shared_keyword_warns(tmp_path):
+    data = _copy_data(tmp_path)
+    for name in ("ladder-work.yaml", "aerial-work-platform.yaml"):
+        f = data / "mappings" / name
+        f.write_text(
+            f.read_text(encoding="utf-8").replace(
+                "  keywords: [", "  keywords: [추락, ", 1
+            ),
+            encoding="utf-8",
+        )
+    report = validate_data(data, SCHEMA_DIR)
+    assert report.ok, report.errors  # 경고이지 오류가 아니다
+    assert any("'추락'" in w for w in report.warnings), report.warnings
+
+
+def test_allowlisted_keyword_is_not_warned(tmp_path):
+    """정책 파일에 근거와 함께 등록된 공유는 경고하지 않는다."""
+    data = _copy_data(tmp_path)
+    report = validate_data(data, SCHEMA_DIR)
+    assert not any("'협착'" in w for w in report.warnings)
+    (data / "keyword_policy.yaml").write_text("shared_keywords: []\n", encoding="utf-8")
+    report = validate_data(data, SCHEMA_DIR)
+    assert any("'협착'" in w for w in report.warnings), report.warnings
+
+
 def _copy_data(tmp_path):
     dst = tmp_path / "data"
     shutil.copytree(DATA_DIR, dst)

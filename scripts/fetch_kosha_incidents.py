@@ -167,13 +167,13 @@ def main() -> int:
     }
     store_title = not args.no_store_titles
 
-    def _record(raw: dict) -> object:
+    def _record(raw: dict, fetched_at: datetime.date = today) -> object:
         return build_incident(
             pst_no=raw["pstNo"],
             title=raw.get("pstNm") or "",
             body=raw.get("body") or "",
             posted_at=_parse_ymd(raw["regYmd"]),
-            fetched_at=today,
+            fetched_at=fetched_at,
             lexicon=lexicon,
             mapping_keywords=mapping_keywords,
             store_title=store_title,
@@ -184,7 +184,20 @@ def main() -> int:
         if not cached:
             print(f"❌ 캐시가 비어 있습니다: {cache_dir}", file=sys.stderr)
             return 1
-        rebuilt = [_record(json.loads(p.read_text(encoding="utf-8"))) for p in cached]
+        # Reprocessing re-derives fields from cache; it does not re-retrieve
+        # anything, so the original fetch date must survive. Prefer the date
+        # recorded in the cache, fall back to the existing store.
+        seen = {i.pst_no: i.fetched_at for i in load_incidents(out)}
+        rebuilt = []
+        for p in cached:
+            raw = json.loads(p.read_text(encoding="utf-8"))
+            cached_at = raw.get("fetchedAt")
+            fetched_at = (
+                datetime.date.fromisoformat(cached_at)
+                if cached_at
+                else seen.get(raw["pstNo"], today)
+            )
+            rebuilt.append(_record(raw, fetched_at))
         print(f"캐시 {len(rebuilt)}건 재처리 (네트워크 호출 없음)")
         if args.dry_run:
             print("dry-run: 저장하지 않음")
@@ -214,6 +227,7 @@ def main() -> int:
             "pstNm": post.get("pstNm") or "",
             "regYmd": post["regYmd"],
             "body": fetch_detail(pst_no),
+            "fetchedAt": today.isoformat(),
         }
         time.sleep(args.delay)
         if not args.dry_run:

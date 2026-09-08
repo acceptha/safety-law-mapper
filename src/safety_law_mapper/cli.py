@@ -78,8 +78,11 @@ def validate() -> None:
     from .validate import validate_data
 
     report = validate_data()
+    for warn in report.warnings:
+        typer.echo(f"⚠️  {warn}")
     if report.ok:
-        typer.echo(f"✅ 검증 통과: {report.checked_files}개 파일")
+        suffix = f" (경고 {len(report.warnings)}건)" if report.warnings else ""
+        typer.echo(f"✅ 검증 통과: {report.checked_files}개 파일{suffix}")
         _finish(0)
     typer.echo(f"❌ 검증 실패: 오류 {len(report.errors)}건")
     for err in report.errors:

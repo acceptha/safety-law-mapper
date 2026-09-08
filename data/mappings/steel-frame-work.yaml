@@ -1,0 +1,59 @@
+mapping_id: steel-frame-work
+work_type:
+  name_ko: 철골 조립 작업
+  category: work-at-height
+  # '승강로'는 제외 — 엘리베이터 승강로에도 쓰여 철골과 무관한 사고를 끌어온다.
+  keywords: [철골, 철골조립, 철골부재, 가설통로]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제380조
+        article_title: 철골조립 시의 위험 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 철골 조립 시 접합부가 충분히 지지되도록 볼트를 체결하거나 그와 같은 수준 이상의 견고한 구조가 되기 전에는 들어 올린 철골을 걸이로프 등에서 분리하지 말 것
+        valid_from: "2019-01-31"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제380조
+      - article_ref: 제381조
+        article_title: 승강로의 설치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 근로자가 수직방향으로 이동하는 철골부재에 답단 간격 30센티미터 이내의 고정된 승강로 설치, 수평·수직 철골이 연결되는 부분에는 연결작업용 작업발판 등 설치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제381조
+      - article_ref: 제382조
+        article_title: 가설통로의 설치
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 철골작업 시 근로자의 주요 이동통로에 고정된 가설통로 설치(제44조에 따른 안전대 부착설비 등을 갖춘 경우는 제외)
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제382조
+      - article_ref: 제383조
+        article_title: 작업의 제한
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 풍속 초당 10미터 이상, 강우량 시간당 1밀리미터 이상, 강설량 시간당 1센티미터 이상인 경우 철골작업 중지
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제383조
+      - article_ref: 제44조
+        article_title: 안전대의 부착설비 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 제382조 단서에 따라 가설통로 대신 안전대를 사용하는 경우를 포함해, 안전대를 안전하게 걸어 사용할 수 있는 설비를 설치하고 작업 시작 전 이상 유무 점검
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제44조
+references:
+  - title: KOSHA 건설업 안전보건 자료
+    url: https://www.kosha.or.kr/kosha/data/construction.do
+last_verified: "2026-08-31"
+verified_by: acceptha

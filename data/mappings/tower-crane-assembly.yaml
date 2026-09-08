@@ -2,7 +2,9 @@ mapping_id: tower-crane-assembly
 work_type:
   name_ko: 타워크레인 설치·해체 작업
   category: lifting
-  keywords: [타워크레인, 설치, 해체, 조립, 텔레스코핑]
+  # 일반어 '해체'는 demolition-work 소유 — 작업명 '타워크레인 설치·해체 작업'의
+  # 부분일치로 '해체' 검색에도 계속 포함된다.
+  keywords: [타워크레인, 설치, 조립, 텔레스코핑]
 conditions:
   min_employees: null
   max_employees: null
