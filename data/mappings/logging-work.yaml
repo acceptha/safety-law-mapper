@@ -1,0 +1,45 @@
+mapping_id: logging-work
+work_type:
+  name_ko: 벌목 작업
+  category: forestry
+  # 임목·수구·조재는 제외 — 고임목/배수구/구조재에 삼켜져 오탐을 낸다.
+  keywords: [벌목, 벌도목, 벌목기, 벌채, 간벌]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제405조
+        article_title: 벌목작업 시 등의 위험 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 벌목 전 대피로·대피장소를 미리 정하고, 가슴높이지름 20센티미터 이상인 나무는 수구의 상면·하면 각도 30도 이상·깊이는 뿌리부분 지름의 1/4 이상 1/3 이하로 만들 것. 벌목 중에는 해당 나무 높이의 2배에 해당하는 직선거리 안에서 다른 작업 금지. 나무가 다른 나무에 걸려 있으면 걸린 나무 밑에서 작업하거나 받치고 있는 나무를 벌목하지 말 것. 유압식 벌목기에는 견고한 헤드 가드 부착
+        valid_from: "2021-11-19"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제405조
+      - article_ref: 제406조
+        article_title: 벌목의 신호 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 벌목작업 시 일정한 신호방법을 정해 근로자에게 주지시키고, 작업에 종사하지 않는 사람에게 위험이 미칠 우려가 있으면 미리 신호해 대피를 확인한 후 벌목
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제406조
+      - article_ref: 제32조
+        article_title: 보호구의 지급 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 물체가 떨어지거나 날아올 위험이 있는 벌목작업에 안전모를 근로자 수 이상으로 지급하고 착용하도록 조치
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제32조
+references:
+  - title: KOSHA 임업 안전보건 자료
+    url: https://www.kosha.or.kr/kosha/data/agriculture.do
+  - title: KOSHA 사고속보 (벌도목에 맞음 재해 다발)
+    url: https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2
+last_verified: "2026-08-28"
+verified_by: acceptha

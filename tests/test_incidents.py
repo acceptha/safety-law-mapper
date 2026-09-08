@@ -124,6 +124,19 @@ def test_site_type_unknown_phrase_falls_back_to_other():
     assert parse_site_type(body) is SiteType.OTHER
 
 
+def test_region_name_does_not_leak_a_keyword(posts, lexicon, mapping_keywords):
+    """'인천 연수구'의 연수구가 '수구'로 읽혀 벌목 매핑을 끌어오면 안 된다."""
+    post = {
+        "pstNo": "TESTREGIONLEAK000001",
+        "regYmd": "20260325",
+        "pstNm": "[3/22, 인천 연수구] 배관 보온 작업 중 떨어짐",
+        "pstCn": "2026. 3. 22. (일), 11:00경\n인천광역시 연수구 소재 제조업 사업장 내 캐노피에서\n"
+        "재해자가 배관 보온 작업 중 바닥 마감재가 탈락되며 떨어짐",
+    }
+    inc = _build(post, lexicon, mapping_keywords)
+    assert "수구" not in inc.work_keywords
+
+
 def test_compound_word_does_not_leak_a_keyword(lexicon, mapping_keywords):
     """'가용접된 러그' 때문에 인양 사고가 용접으로 매칭되면 안 된다."""
     text = "호이스트로 철판을 인양하던 중 철판에 가용접된 인양용 러그가 파단되면서"

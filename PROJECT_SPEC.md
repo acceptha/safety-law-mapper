@@ -88,7 +88,7 @@ verified_by: null                            # GitHub handle, optional
 
 ### 3.3 `work_type.category` controlled vocabulary (extensible via PR)
 
-`hot-work`, `confined-space`, `work-at-height`, `lifting`, `excavation`, `electrical`, `chemical-handling`, `machinery`, `demolition`, `transport`, `physical-hazard` (added 2026-08-27, issue #7)
+`hot-work`, `confined-space`, `work-at-height`, `lifting`, `excavation`, `electrical`, `chemical-handling`, `machinery`, `demolition`, `transport`, `physical-hazard` (added 2026-08-27, issue #7), `forestry` (added 2026-08-28 — 사고속보 업종별 커버리지에서 농림축산 52%로 최저, 미매핑 10건 중 6건이 벌목)
 
 ### 3.4 `obligation_type` controlled vocabulary
 
