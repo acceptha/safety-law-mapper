@@ -2,7 +2,7 @@ mapping_id: work-at-height
 work_type:
   name_ko: 고소작업 (추락 위험 작업)
   category: work-at-height
-  keywords: [고소작업, 추락, 개구부, 안전대, 작업발판, 안전난간]
+  keywords: [고소작업, 추락, 개구부, 단부, 안전대, 작업발판, 안전난간]
 conditions:
   min_employees: null
   max_employees: null

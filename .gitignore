@@ -7,3 +7,6 @@ build/
 *.egg-info/
 .pytest_cache/
 .coverage
+
+# 사고속보 원문 캐시 — 재처리용 로컬 사본, 재배포하지 않음
+data/incidents/.cache/

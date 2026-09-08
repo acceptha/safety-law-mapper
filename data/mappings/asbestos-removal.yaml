@@ -2,7 +2,7 @@ mapping_id: asbestos-removal
 work_type:
   name_ko: 석면 해체·제거 작업
   category: demolition
-  keywords: [석면, 해체, 제거, 석면조사, 철거]
+  keywords: [석면, 석면조사, 석면해체, 석면제거, 슬레이트]
 conditions:
   min_employees: null
   max_employees: null
