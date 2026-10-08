@@ -19,6 +19,7 @@ Serving choices worth stating:
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Annotated, Any
 
 from fastapi import FastAPI, HTTPException, Query
@@ -142,6 +143,16 @@ def get_mapping_endpoint(mapping_id: str) -> dict[str, Any]:
     payload["grounding"] = GROUNDING_RULE
     payload["disclaimer"] = DISCLAIMER
     return payload
+
+
+# The demo UI, served from the same origin as the API so it can call it with
+# no configuration. It is mounted last: every route above wins, and a missing
+# web/ directory (an sdist install, say) simply means no UI, not a crash.
+_WEB_DIR = Path(__file__).resolve().parents[2] / "web"
+if _WEB_DIR.is_dir():
+    from fastapi.staticfiles import StaticFiles
+
+    app.mount("/", StaticFiles(directory=_WEB_DIR, html=True), name="web")
 
 
 def main() -> None:

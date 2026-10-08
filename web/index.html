@@ -87,121 +87,164 @@
   </footer>
 </div>
 
-<script>
+<script type="module">
 "use strict";
+import { match } from "./matcher.js";
+
 let DATA = null;
+let API = null;   // set when an API answers /health
 
 const CATEGORY_KO = {
   "hot-work": "화기작업", "confined-space": "밀폐공간", "work-at-height": "고소작업",
   "lifting": "양중", "excavation": "굴착", "electrical": "전기",
   "chemical-handling": "화학물질", "machinery": "기계", "demolition": "해체",
-  "transport": "운반", "physical-hazard": "물리적 유해인자"
+  "transport": "운반", "physical-hazard": "물리적 유해인자",
+  "forestry": "임업"
 };
-
-// Mirrors src/safety_law_mapper/matcher.py — keep in sync.
-function keywordScore(mapping, queryKeywords) {
-  let score = 0;
-  const eks = mapping.work_type.keywords;
-  for (const qk of queryKeywords) {
-    if (eks.includes(qk)) score += 2;                                    // exact
-    else if (eks.some(ek => ek.includes(qk) || qk.includes(ek))) score += 1;  // substring
-    else if (mapping.work_type.name_ko.includes(qk)) score += 1;         // name match
-  }
-  return score;
-}
-
-function specificity(cond) {
-  if (!cond) return 0;
-  let n = 0;
-  if (cond.min_employees != null) n += 1;
-  if (cond.max_employees != null) n += 1;
-  n += (cond.substances || []).length + (cond.equipment || []).length;
-  return n;
-}
-
-function match(mappings, keywords, category) {
-  const results = [];
-  for (const m of mappings) {
-    const catMatch = !!category && m.work_type.category === category;
-    const ks = keywords.length ? keywordScore(m, keywords) : 0;
-    if (!catMatch && ks === 0) continue;
-    results.push({ m, catMatch, ks, spec: specificity(m.conditions) });
-  }
-  results.sort((a, b) =>
-    (b.catMatch - a.catMatch) || (b.ks - a.ks) || (b.spec - a.spec) ||
-    a.m.mapping_id.localeCompare(b.m.mapping_id));
-  return results;
-}
 
 function esc(s) {
   return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 }
 
-function render(results) {
+// Both sources are normalised to one shape so render() never has to care
+// whether the answer came from the API or the bundled snapshot.
+function fromBundle(m) {
+  return {
+    id: m.mapping_id,
+    title: m.work_type.name_ko,
+    category: m.work_type.category,
+    verification: m.last_verified ? `검증일 ${m.last_verified}` : "미검증 (사람 검토 필요)",
+    laws: m.applicable_laws.map(al => ({
+      name: (DATA.laws[al.law_id] || {}).name_ko || al.law_id,
+      articles: al.articles,
+    })),
+  };
+}
+
+function fromApi(e) {
+  const byLaw = new Map();
+  for (const a of e.articles) {
+    if (!byLaw.has(a.law)) byLaw.set(a.law, []);
+    byLaw.get(a.law).push(a);
+  }
+  return {
+    id: e.mapping_id,
+    title: e.work_type,
+    category: e.category,
+    verification: e.verification.startsWith("미검증") ? e.verification : `검증일 ${e.verification}`,
+    laws: [...byLaw].map(([name, articles]) => ({ name, articles })),
+  };
+}
+
+function render(items, truncatedOf) {
   const box = document.getElementById("results");
   const status = document.getElementById("status");
-  if (!results.length) {
+  if (!items.length) {
     status.textContent = "검색 결과가 없습니다. 다른 키워드로 시도해 보세요.";
     box.innerHTML = "";
     return;
   }
-  status.textContent = `검색 결과 ${results.length}건`;
-  box.innerHTML = results.map(({ m }) => {
-    const cat = CATEGORY_KO[m.work_type.category] || m.work_type.category;
-    const verified = m.last_verified ? `검증일 ${m.last_verified}` : "미검증 (사람 검토 필요)";
-    const laws = m.applicable_laws.map(al => {
-      const law = DATA.laws[al.law_id];
-      const arts = al.articles.map(a => `
+  status.textContent = truncatedOf
+    ? `검색 결과 ${items.length}건 (전체 ${truncatedOf}건 중)`
+    : `검색 결과 ${items.length}건`;
+  box.innerHTML = items.map(v => {
+    const cat = CATEGORY_KO[v.category] || v.category;
+    const laws = v.laws.map(l => {
+      const arts = l.articles.map(a => `
         <div class="art">
           <span class="ref">${esc(a.article_ref)}</span>${a.article_title ? " (" + esc(a.article_title) + ")" : ""}
           <span class="sum">${esc(a.summary_ko)}</span>
           <a href="${esc(a.source_url)}" target="_blank" rel="noopener">법령 원문 보기 ↗</a>
         </div>`).join("");
-      return `<div class="law">${esc(law ? law.name_ko : al.law_id)}</div>${arts}`;
+      return `<div class="law">${esc(l.name)}</div>${arts}`;
     }).join("");
     return `
       <div class="card">
-        <h2>${esc(m.work_type.name_ko)} <span class="mid">[${esc(m.mapping_id)}]</span></h2>
-        <div class="meta"><span class="chip">${esc(cat)}</span><span class="chip">${esc(verified)}</span></div>
+        <h2>${esc(v.title)} <span class="mid">[${esc(v.id)}]</span></h2>
+        <div class="meta"><span class="chip">${esc(cat)}</span><span class="chip">${esc(v.verification)}</span></div>
         ${laws}
       </div>`;
   }).join("");
 }
 
-function run() {
-  if (!DATA) return;
+function currentQuery() {
   const q = document.getElementById("q").value.trim();
-  const cat = document.getElementById("cat").value;
-  const keywords = q ? q.split(/\s+/) : [];
-  if (!keywords.length && !cat) {
+  return {
+    keywords: q ? q.split(/\s+/) : [],
+    category: document.getElementById("cat").value || null,
+  };
+}
+
+async function run() {
+  const { keywords, category } = currentQuery();
+  if (!keywords.length && !category) {
     document.getElementById("status").textContent = "키워드를 입력하거나 분류를 선택하세요.";
     document.getElementById("results").innerHTML = "";
     return;
   }
-  render(match(DATA.mappings, keywords, cat || null));
+  // Served by slm-serve: ask the real engine. On GitHub Pages there is no
+  // API, so the bundled snapshot and the ported matcher answer instead.
+  if (API) {
+    try {
+      const u = new URL(API + "/search", location.href);
+      for (const k of keywords) u.searchParams.append("q", k);
+      if (category) u.searchParams.set("category", category);
+      u.searchParams.set("limit", "20");
+      const r = await fetch(u);
+      if (!r.ok) throw new Error(r.status);
+      const d = await r.json();
+      render(d.results.map(fromApi), d.truncated ? d.total_matched : 0);
+      return;
+    } catch {
+      document.getElementById("status").textContent = "API 응답 실패 — 내장 데이터로 검색합니다.";
+    }
+  }
+  if (!DATA) return;
+  render(match(DATA.mappings, { keywords, category }).map(r => fromBundle(r.mapping)), 0);
 }
 
-fetch("data.json").then(r => r.json()).then(d => {
-  DATA = d;
-  document.getElementById("ver").textContent = d.version;
-  document.getElementById("cnt").textContent = d.mappings.length;
+function fillCategories(cats) {
   const sel = document.getElementById("cat");
-  const cats = [...new Set(d.mappings.map(m => m.work_type.category))].sort();
-  for (const c of cats) {
+  for (const c of [...new Set(cats)].sort()) {
     const o = document.createElement("option");
     o.value = c;
     o.textContent = (CATEGORY_KO[c] || c) + " (" + c + ")";
     sel.appendChild(o);
   }
-}).catch(() => {
-  document.getElementById("status").textContent = "데이터 로드에 실패했습니다.";
-});
+}
+
+async function boot() {
+  // Prefer a live API; fall back to the bundled snapshot.
+  try {
+    const h = await fetch("health", { cache: "no-store" });
+    if (h.ok) {
+      const info = await h.json();
+      API = ".";
+      document.getElementById("ver").textContent = info.version + " (API)";
+      document.getElementById("cnt").textContent = info.mappings;
+      const c = await (await fetch("categories")).json();
+      fillCategories(c.categories.map(x => x.category));
+      return;
+    }
+  } catch { /* no API here — static mode */ }
+
+  try {
+    DATA = await (await fetch("data.json")).json();
+    document.getElementById("ver").textContent = DATA.version;
+    document.getElementById("cnt").textContent = DATA.mappings.length;
+    fillCategories(DATA.mappings.map(m => m.work_type.category));
+  } catch {
+    document.getElementById("status").textContent = "데이터 로드에 실패했습니다.";
+  }
+}
 
 document.getElementById("go").addEventListener("click", run);
 document.getElementById("q").addEventListener("keydown", e => { if (e.key === "Enter") run(); });
 document.getElementById("cat").addEventListener("change", run);
 document.querySelectorAll(".examples button").forEach(b =>
   b.addEventListener("click", () => { document.getElementById("q").value = b.dataset.q; run(); }));
+
+boot();
 </script>
 </body>
 </html>

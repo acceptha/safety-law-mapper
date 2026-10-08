@@ -10,6 +10,8 @@
   - 에러는 호출자가 행동할 수 있어야 한다 — `400`은 가능한 분류 전체를, `404`는 실재하는 매핑 ID를 함께 반환
   - CORS 전면 개방 + `allow_credentials=False` — 데이터가 이미 공개(CC BY 4.0)이고 정적 데모가 다른 오리진(GitHub Pages)에서 돈다
   - `Dockerfile` — 빌드 중 `slm validate` 실행(데이터가 깨지면 운영이 아니라 빌드가 실패), 비루트 실행(uid 10001), `/health` HEALTHCHECK. CI가 이미지를 빌드하고 띄워서 응답까지 확인한다
+- **웹 데모 ↔ API 연동** — `slm-serve`가 `web/`을 같은 오리진에 서빙한다. 페이지는 부팅 시 `/health`를 찔러 보고, 응답하면 `GET /search`(실제 Python 엔진)를, 응답하지 않으면(GitHub Pages) 번들된 `data.json`을 쓴다. 서버 없이도 데모가 살아 있고, 서버가 있으면 엔진이 하나로 수렴한다
+
 - **표현 계층 분리(`view`)** — MCP와 REST가 같은 모듈에서 응답을 만든다. 두 번째 포맷터는 두 번째로 어긋날 물건이므로, 두 인터페이스의 응답이 바이트 단위로 같다는 것을 테스트로 고정했다(`test_rest_and_mcp_return_identical_payloads`)
 - **MCP 서버(`slm-mcp`)** — 매칭 엔진을 LLM 툴로 노출. `search_laws`·`get_mapping`·`list_categories` 3종, stdio 전송. 선택 의존성 `pip install "safety-law-mapper[mcp]"`. 반환되는 모든 조항에 `source_url`과 검증일이 실리고, 미검증 항목은 명시되며, 응답마다 인용 규칙(`grounding`)이 동봉된다. 빈 질의는 빈 결과 — 추측하지 않는다. [연동 가이드](docs/MCP.md)
   - `matcher.match()`를 그대로 호출 — 랭킹 로직을 복제하지 않았으므로 골든 쿼리 회귀 스위트가 MCP 경로까지 보증
@@ -40,6 +42,11 @@
 - **일반 위험어 `추락`의 소유권 정리** — `aerial-work-platform`·`ladder-work`에서 제거하고 `work-at-height`에만 남김. `slm search 추락`이 제42조(추락의 방지) 대신 제186조(고소작업대)를 1위로 내놓던 문제. `철거`·`용접`에 이어 같은 유형의 세 번째 사례
 - 키워드 추출 전 **지역명 제거**(`scrub_region`) — `인천 연수구`의 `연수구`가 벌목 용어 `수구`로 읽혀 무관한 사고가 벌목으로 매칭되던 문제. `마포구`→`포구` 등 재발 가능한 구조적 위험
 
+- **웹 데모의 JS 매처가 Python과 어긋날 수 있었다** — 정적 데모가 랭킹 로직을 JavaScript로 재구현해 두고 주석에 `keep in sync`라고만 적어 뒀을 뿐, 동기화를 강제하는 장치가 없었다. 실제로 동점 처리에서 JS는 `localeCompare`(로케일 정렬), Python은 코드포인트 정렬을 써서 순서가 달라질 수 있었다
+  - 코드포인트 비교로 수정하고, JS 포트를 `web/matcher.js` 모듈로 분리
+  - `tests/test_web_parity.py` — 골든 쿼리 전건을 Node와 Python 양쪽에 돌려 순서 일치를 검증. 동점이 반드시 발생하는 분류 단독 질의도 별도 케이스로 포함. 오프라인 데모 요구상 중복 구현을 없앨 수 없다면, 어긋남을 검출 가능하게 만든다
+  - JS 포트에 누락돼 있던 `conditions` 필터를 Python과 동일하게 구현
+  - 분류 한국어 라벨에 `forestry`(임업) 누락 보완
 ### Changed
 - `confined-space-work` 키워드에 `정화조`·`침전조`·`집수조`·`슬러지`·`열교환기` 추가 — 기준규칙 별표18 제5·11호에 명시된 밀폐공간 장소이나 검색되지 않던 문제
 - **`asbestos-removal` 키워드에서 범용어 `해체`·`제거`·`철거` 제거**, 석면 특정 어휘(`석면조사`·`석면해체`·`석면제거`·`슬레이트`)로 교체 — `slm search 철거`가 구축물 해체 대신 석면을 1위로 내놓던 오답 수정
