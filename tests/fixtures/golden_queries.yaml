@@ -308,6 +308,21 @@
     keywords: [스쿠버]
   must_include_mappings: [diving-work]
   top_mapping: diving-work
+- name: formwork-query
+  query:
+    keywords: [거푸집, 동바리]
+  must_include_mappings: [formwork-shoring-work]
+  top_mapping: formwork-shoring-work
+  must_include_articles:
+    - { mapping_id: formwork-shoring-work, law_id: osh-rule, article_ref: 제333조 }
+    - { mapping_id: formwork-shoring-work, law_id: osh-rule, article_ref: 제332조 }
+- name: gangform-query
+  query:
+    keywords: [갱폼]
+  must_include_mappings: [formwork-shoring-work]
+  top_mapping: formwork-shoring-work
+  must_include_articles:
+    - { mapping_id: formwork-shoring-work, law_id: osh-rule, article_ref: 제331조의3 }
 - name: stacked-cargo-query
   query:
     keywords: [하적단]
