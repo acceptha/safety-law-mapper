@@ -5,6 +5,11 @@
 ## [Unreleased]
 
 ### Added
+- **MCP 서버(`slm-mcp`)** — 매칭 엔진을 LLM 툴로 노출. `search_laws`·`get_mapping`·`list_categories` 3종, stdio 전송. 선택 의존성 `pip install "safety-law-mapper[mcp]"`. 반환되는 모든 조항에 `source_url`과 검증일이 실리고, 미검증 항목은 명시되며, 응답마다 인용 규칙(`grounding`)이 동봉된다. 빈 질의는 빈 결과 — 추측하지 않는다. [연동 가이드](docs/MCP.md)
+  - `matcher.match()`를 그대로 호출 — 랭킹 로직을 복제하지 않았으므로 골든 쿼리 회귀 스위트가 MCP 경로까지 보증
+  - 포맷 로직은 `MCPServer`를 모르는 순수 함수 — `mcp` 미설치 환경에서도 테스트됨
+  - `limit`(기본 5, 최대 20)으로 토큰 예산 관리, 잘렸을 때 `truncated: true`로 그 사실을 알림
+  - 에러는 `ToolError`로 번역 — SDK가 그 외 예외를 `Error executing tool <name>`으로 덮어써 모델이 교정에 필요한 정보(가능한 분류 목록 등)를 잃는 것을 막는다
 - **벌목 작업 매핑(`logging-work`)** — 기준규칙 제405조(대피로·수구 규격·나무 높이 2배 이내 작업 금지·걸린 나무 조치·헤드가드), 제406조(벌목 신호), 제32조. 업종별 커버리지에서 최저였던 농림축산(52%)의 미매핑 10건 중 6건이 벌목
 - `work_type.category` 통제 어휘에 `forestry` 추가 — 기존 11종에 임업에 해당하는 항목이 없었음
 - 골든 쿼리 3건 추가 — `벌목`, `벌도목`, `category: forestry`

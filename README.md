@@ -84,6 +84,19 @@ for r in results:
     print(r.mapping.work_type.name_ko, r.score)
 ```
 
+### AI 에이전트에 연결 (MCP)
+
+LLM이 안전 법규 질문에 조항을 **지어내지 않게** 하려면, 생성 대신 검증된 데이터를 조회하게 만들어야 합니다. `slm-mcp`는 매칭 엔진을 [MCP](https://modelcontextprotocol.io) 툴로 노출합니다.
+
+```bash
+pip install "safety-law-mapper[mcp]"
+claude mcp add safety-law-mapper -- slm-mcp
+```
+
+반환되는 모든 조항에 `source_url`(law.go.kr)과 사람이 검증한 날짜가 실리고, 미검증 항목은 그렇게 표시됩니다. 매핑에 없는 작업은 빈 결과를 반환합니다 — **추측하지 않습니다.**
+
+👉 [MCP 연동 가이드](docs/MCP.md)
+
 ## 데이터 현황
 
 고위험 작업 유형 **34종** 매핑 (12개 카테고리 전부 커버): 밀폐공간, 용접·용단, 밀폐공간×용접(조합), 고소작업, 지붕 위 작업, 철골 조립, 벌목, 지게차, 크레인, 타워크레인 설치·해체, 굴착, 굴착기, 전기, 비계, 사다리, 중량물, 컨베이어, 프레스, 압축·파쇄 설비, 연삭기, 산업용 로봇, 항타기, 세차장, MSDS 화학물질, 위험물질·도장(교차 인용), 석면 해체, 소음, 고열·폭염(2025년 신설 규정 반영) 등 — 전 조항 [국가법령정보센터](https://www.law.go.kr) 원문 대조 검증 완료.

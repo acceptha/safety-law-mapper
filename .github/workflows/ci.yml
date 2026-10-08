@@ -18,6 +18,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install
         run: pip install -e ".[dev]"
+      - name: Install MCP extra (optional)
+        # The MCP server is optional; its tests skip when absent. A transitive
+        # wheel that lags a new Python release must not fail the core matrix.
+        continue-on-error: true
+        run: pip install -e ".[mcp]"
       - name: Validate data
         run: slm validate
       - name: Run tests
