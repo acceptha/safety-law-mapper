@@ -64,8 +64,10 @@ jobs:
           git commit -m "data: 사고속보 수집 (총 ${total}건)" -m "scripts/fetch_kosha_incidents.py + build_coverage_report.py 자동 실행." -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
           # 사이에 다른 커밋이 들어왔을 수 있다. 수집 결과는 append-only 라
           # 리베이스로 안전하게 얹힌다.
+          # push 대상을 명시한다. 맨 `git push` 는 upstream 설정에 의존해서
+          # detached HEAD 나 브랜치명이 다른 체크아웃에서 조용히 실패한다.
           for attempt in 1 2 3; do
-            if git push; then
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               exit 0
             fi
             echo "push 실패 ($attempt/3) - 리베이스 후 재시도"
