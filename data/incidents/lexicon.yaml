@@ -54,6 +54,13 @@ terms:
     keywords: [슬레이트]
     category: work-at-height
 
+  # --- 기계 롤러 (machine-servicing) --------------------------------------
+  # 맨 '롤러'는 타이어롤러(차량계 건설기계)와 기계 롤러를 구분하지 못한다.
+  # 기계 쪽 표현만 골라 잇는다.
+  - surface: [롤러기, 기계 롤러, 구동롤러, 압연롤러]
+    keywords: [롤러기]
+    category: machinery
+
   # --- 임업 (logging-work) ------------------------------------------------
   - surface: [벌목, 벌도목, 벌목현장, 벌채, 간벌]
     keywords: [벌목]

@@ -2,7 +2,9 @@ mapping_id: excavator-operation
 work_type:
   name_ko: 굴착기(백호) 사용 작업
   category: excavation
-  keywords: [굴착기, 백호, 포크레인, 퀵커플러, 차량계 건설기계]
+  # '차량계 건설기계'는 construction-vehicle-work 소유 — 굴착기 전용
+  # 어휘만 남긴다. 작업명 부분일치로 일반 질의에도 계속 포함된다.
+  keywords: [굴착기, 백호, 포크레인, 퀵커플러]
 conditions:
   min_employees: null
   max_employees: null
