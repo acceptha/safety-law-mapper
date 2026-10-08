@@ -295,6 +295,19 @@
   must_include_articles:
     - { mapping_id: steel-frame-work, law_id: osh-rule, article_ref: 제380조 }
     - { mapping_id: steel-frame-work, law_id: osh-rule, article_ref: 제383조 }
+- name: diving-query
+  query:
+    keywords: [잠수]
+  must_include_mappings: [diving-work]
+  top_mapping: diving-work
+  must_include_articles:
+    - { mapping_id: diving-work, law_id: osh-rule, article_ref: 제545조 }
+    - { mapping_id: diving-work, law_id: osh-rule, article_ref: 제547조 }
+- name: scuba-query
+  query:
+    keywords: [스쿠버]
+  must_include_mappings: [diving-work]
+  top_mapping: diving-work
 - name: compactor-query
   query:
     keywords: [압축기]

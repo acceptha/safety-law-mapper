@@ -93,3 +93,32 @@ def test_bad_date_range_is_caught(tmp_path):
     report = validate_data(data, SCHEMA_DIR)
     assert not report.ok
     assert any("valid_from" in e for e in report.errors)
+
+
+def test_generic_term_monopolised_by_narrow_mapping_warns(tmp_path):
+    """공유 개수로는 영원히 안 걸리는 모양 — 좁은 매핑이 일반어를 독점한 경우."""
+    data = _copy_data(tmp_path)
+    f = data / "mappings" / "gas-welding.yaml"
+    f.write_text(
+        f.read_text(encoding="utf-8").replace("산소용기,", "산소, 산소용기,"), encoding="utf-8"
+    )
+    report = validate_data(data, SCHEMA_DIR)
+    assert report.ok, report.errors  # 경고이지 오류가 아니다
+    assert any("'산소'" in w for w in report.warnings), report.warnings
+
+
+def test_generic_term_taken_from_its_owner_warns(tmp_path):
+    data = _copy_data(tmp_path)
+    f = data / "mappings" / "tower-crane-assembly.yaml"
+    f.write_text(
+        f.read_text(encoding="utf-8").replace("[타워크레인, 설치,", "[타워크레인, 해체, 설치,"),
+        encoding="utf-8",
+    )
+    report = validate_data(data, SCHEMA_DIR)
+    assert any("'해체'" in w and "demolition-work" in w for w in report.warnings), report.warnings
+
+
+def test_owner_itself_is_not_warned():
+    """소유자가 자기 일반어를 갖는 것은 정상이다."""
+    report = validate_data(DATA_DIR, SCHEMA_DIR)
+    assert not any("'추락'" in w for w in report.warnings), report.warnings

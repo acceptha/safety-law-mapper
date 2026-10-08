@@ -1,8 +1,8 @@
 """Fetch KOSHA 사고속보 posts into data/incidents/kosha-alerts.jsonl.
 
 Usage:
-  python scripts/fetch_kosha_incidents.py                 # newest 2 pages, incremental
-  python scripts/fetch_kosha_incidents.py --pages 25      # backfill
+  python scripts/fetch_kosha_incidents.py                 # incremental; stops at the first page with nothing new
+  python scripts/fetch_kosha_incidents.py --pages 250     # full backfill
   python scripts/fetch_kosha_incidents.py --no-store-titles
   python scripts/fetch_kosha_incidents.py --dry-run
 
@@ -139,7 +139,13 @@ def _parse_ymd(value: str) -> datetime.date:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--pages", type=int, default=2, help="list pages to scan (12 posts each)")
+    ap.add_argument(
+        "--pages",
+        type=int,
+        default=25,
+        help="max list pages to scan (12 posts each); scanning stops early at the "
+        "first page holding nothing new",
+    )
     ap.add_argument("--out", type=Path, default=None)
     ap.add_argument("--cache-dir", type=Path, default=None, help="raw post cache (gitignored)")
     ap.add_argument("--delay", type=float, default=0.5, help="seconds between requests")
@@ -207,15 +213,34 @@ def main() -> int:
         return 0
 
     existing = {i.pst_no: i for i in load_incidents(out)}
-    print(f"기존 {len(existing)}건, {args.pages}페이지 조회")
+    print(f"기존 {len(existing)}건, 최대 {args.pages}페이지 조회")
 
+    # Pages run newest-block first (rows inside a page are oldest-first), so the
+    # first page holding nothing new means we have caught up. Scanning a fixed
+    # two pages instead would silently drop posts whenever a run is late: a
+    # 41-day gap produced 28 new posts spread over three pages.
     posts: list[dict] = []
+    truncated = False
     for page in range(1, args.pages + 1):
         rows = fetch_list(page)
         if not rows:
             break
-        posts.extend(rows)
+        fresh = [r for r in rows if r.get("pstNo") and r["pstNo"] not in existing]
+        posts.extend(fresh)
+        print(f"  p{page}: {len(rows)}건 중 신규 {len(fresh)}건")
+        if not fresh:
+            break
         time.sleep(args.delay)
+        if page == args.pages:
+            truncated = True
+
+    if truncated:
+        print(
+            f"❌ {args.pages}페이지까지 신규가 계속 나왔습니다 — 더 남아 있을 수 있습니다."
+            f" --pages 를 늘려 다시 실행하세요.",
+            file=sys.stderr,
+        )
+        return 1
 
     added = 0
     for post in posts:
