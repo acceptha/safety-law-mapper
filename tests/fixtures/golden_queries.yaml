@@ -308,6 +308,19 @@
     keywords: [스쿠버]
   must_include_mappings: [diving-work]
   top_mapping: diving-work
+- name: structure-stability-query
+  query:
+    keywords: [구축물]
+  must_include_mappings: [structure-stability-work, demolition-work]
+  top_mapping: structure-stability-work
+  must_include_articles:
+    - { mapping_id: structure-stability-work, law_id: osh-rule, article_ref: 제51조 }
+    - { mapping_id: structure-stability-work, law_id: osh-rule, article_ref: 제52조 }
+- name: reservoir-confined-space-query
+  query:
+    keywords: [저수조]
+  must_include_mappings: [confined-space-work]
+  top_mapping: confined-space-work
 - name: formwork-query
   query:
     keywords: [거푸집, 동바리]

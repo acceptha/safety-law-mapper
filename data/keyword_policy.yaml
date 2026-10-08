@@ -93,3 +93,10 @@ generic_terms:
   - term: 차량계 하역운반기계
     owner: cargo-vehicle-work
     reason: 별표의 상위 분류어. 지게차 등 하위 기종 매핑이 가져가면 안 된다.
+
+  - term: 구축물
+    owner: structure-stability-work
+    reason: >-
+      제51·52조(구축물등의 안전 유지·안전성 평가)가 일반 의무다. 해체작업
+      매핑이 함께 보유하면 "벽체 보수 중 무너지는 벽체에 깔림" 같은
+      비(非)해체 붕괴가 해체작업으로 간다 (§7.16).
