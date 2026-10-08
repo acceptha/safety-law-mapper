@@ -1,0 +1,69 @@
+mapping_id: diving-work
+work_type:
+  name_ko: 잠수작업
+  # 이상기압은 소음·고열과 같은 물리적 유해인자이며, 해당 조문도 보건기준
+  # (제3편 제5장 고기압에 의한 건강장해의 예방)에 있다.
+  category: physical-hazard
+  # '감압'은 제외 — 감압밸브 등 설비 용어에 삼켜진다.
+  keywords: [잠수, 잠수작업, 스쿠버, 표면공급식, 잠수기, 비상기체통]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제545조
+        article_title: 스쿠버 잠수작업 시 조치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 스쿠버 잠수작업은 잠수작업자 2명을 1조로 하고 작업 장소에 감시인을 두어 이상 유무를 감시. 실내 작업을 제외하고 비상기체통을 제공하며, 호흡용 기체통·비상기체통의 이상 유무와 저장 기체량을 확인해 작업자에게 알리고 이상이 있는 기체통은 제공 금지. 수중시계·수중압력계·예리한 칼 제공 및 부력조절기 착용
+        valid_from: "2017-12-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제545조
+      - article_ref: 제547조
+        article_title: 표면공급식 잠수작업 시 조치
+        obligation_type: appointment
+        obligation_subject: employer
+        summary_ko: 표면공급식 잠수작업은 잠수작업자 1명이면 감시인 1명, 2명 이상이면 감시인 1명당 작업자 2명을 넘지 않게 배치. 감시인은 송기조절 담당자와 연락해 필요한 호흡용 기체를 보내게 하고, 송기설비 고장 시 즉시 연락하며, 작업 전 잠수장비 이상 유무를 점검. 수심 18미터 이상 등에서는 비상기체통·역지밸브가 달린 잠수마스크(헬멧)·통화장치 제공
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제547조
+      - article_ref: 제544조
+        article_title: 송기량
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 표면공급식 잠수작업자에게 공기를 보내는 경우 작업자마다 해당 수심의 압력 아래에서 분당 송기량을 60리터 이상으로 유지
+        valid_from: "2017-12-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제544조
+      - article_ref: 제552조
+        article_title: 잠수작업 설비의 점검 등
+        obligation_type: inspection
+        obligation_subject: employer
+        summary_ko: 잠수작업 전 잠수기·압력조절기(표면공급식은 송기관 포함)와 사용할 잠수기구를 점검. 표면공급식은 공기압축기·수압펌프 매주 1회, 수중압력계 매월 1회, 수중시계 3개월 1회, 산소발생기 6개월 1회 이상 점검하고, 이상 발견 시 즉시 보수·교체
+        valid_from: "2017-12-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제552조
+      - article_ref: 제548조
+        article_title: 잠수신호기의 게양
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 실내 작업을 제외한 잠수작업 장소에 「해사안전법」 제85조제5항제2호에 따른 표시(잠수신호기) 게양
+        valid_from: "2017-12-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제548조
+      - article_ref: 제557조
+        article_title: 잠수시간
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 잠수작업 시 고용노동부장관이 정하여 고시하는 잠수시간을 준수
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제557조
+references:
+  - title: KOSHA 고기압·잠수작업 안전보건 자료
+    url: https://www.kosha.or.kr/kosha/data/industrialHealth.do
+last_verified: "2026-10-08"
+verified_by: acceptha
