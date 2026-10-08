@@ -1,0 +1,68 @@
+mapping_id: cargo-vehicle-work
+work_type:
+  name_ko: 차량계 하역운반기계 작업
+  category: transport
+  # 지게차·구내운반차는 전용/별도 매핑이 있거나 하위 기종이므로 상위 분류어와
+  # 화물자동차 계열 어휘만 둔다. 맨 '화물'·'하역'·'운반'은 일반어라 제외.
+  keywords: [차량계 하역운반기계, 화물자동차, 화물차량, 화물트럭, 적재함]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제172조
+        article_title: 접촉의 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 하역·운반 중인 화물이나 차량계 하역운반기계등에 접촉되어 근로자가 위험해질 우려가 있는 장소에 근로자를 출입시키지 말 것. 다만 작업지휘자 또는 유도자를 배치해 유도하는 경우는 예외이며, 운전자는 그 유도에 따라야 함
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제172조
+      - article_ref: 제171조
+        article_title: 전도 등의 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 차량계 하역운반기계등이 넘어지거나 굴러떨어져 근로자에게 위험을 미칠 우려가 있으면 유도자를 배치하고 지반의 부동침하 및 갓길 붕괴를 방지하기 위한 조치
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제171조
+      - article_ref: 제173조
+        article_title: 화물적재 시의 조치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 하중이 한쪽으로 치우치지 않게 적재하고, 구내운반차·화물자동차는 화물의 붕괴·낙하를 막기 위해 로프를 거는 등 조치하며, 운전자의 시야를 가리지 않도록 적재. 최대적재량 초과 금지
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제173조
+      - article_ref: 제176조
+        article_title: 수리 등의 작업 시 조치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 차량계 하역운반기계등의 수리 또는 부속장치의 장착·해체 작업 시 작업지휘자를 지정해 작업순서를 결정·지휘하게 하고, 안전지지대 또는 안전블록 등의 사용 상황을 점검하도록 조치
+        valid_from: "2019-10-15"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제176조
+      - article_ref: 제187조
+        article_title: 승강설비
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 바닥으로부터 짐 윗면까지의 높이가 2미터 이상인 화물자동차에 짐을 싣거나 내리는 작업을 하는 경우, 바닥과 적재함의 짐 윗면 사이를 안전하게 오르내릴 수 있는 설비 설치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제187조
+      - article_ref: 제38조
+        article_title: 사전조사 및 작업계획서의 작성 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 차량계 하역운반기계등을 사용하는 작업 시 작업계획서를 작성하고 계획에 따라 작업 수행
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제38조
+references:
+  - title: KOSHA 하역운반기계 안전작업 자료
+    url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
+last_verified: "2026-10-08"
+verified_by: acceptha

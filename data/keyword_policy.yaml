@@ -73,3 +73,23 @@ generic_terms:
     reason: >-
       별표6의 상위 분류어다. 굴착기·항타기 등 전용 매핑이 함께 보유하면
       일반 질의에서 특정 기계가 1위를 가져간다 (§7.12).
+
+  - term: 하역
+    owner: heavy-material-transport
+    reason: >-
+      forklift-operation 이 함께 보유해 "폐비닐 하역운반 중 … 깔림"이 중량물
+      취급 대신 지게차로 1위를 잡았다 (§7.13).
+
+  - term: 운반
+    owner: heavy-material-transport
+    reason: 하역과 같은 이유. 중량물 운반·보관 매핑이 일반 운반을 대표한다.
+
+  - term: 화물
+    owner: null
+    reason: >-
+      화물자동차·화물취급·화물적재가 모두 '화물'이다. 어느 한 작업을 가리키지
+      않으므로 화물자동차 계열은 cargo-vehicle-work 가 구체어로 잡는다.
+
+  - term: 차량계 하역운반기계
+    owner: cargo-vehicle-work
+    reason: 별표의 상위 분류어. 지게차 등 하위 기종 매핑이 가져가면 안 된다.

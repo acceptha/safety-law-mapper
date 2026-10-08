@@ -2,7 +2,9 @@ mapping_id: forklift-operation
 work_type:
   name_ko: 지게차 작업
   category: transport
-  keywords: [지게차, 하역, 운반, 화물, 헤드가드]
+  # 일반어 '하역'·'운반'은 heavy-material-transport, '화물'은 어느 매핑도
+  # 소유하지 않는다 — 지게차를 구별해 주는 어휘만 남긴다.
+  keywords: [지게차, 헤드가드, 포크]
 conditions:
   min_employees: null
   max_employees: null

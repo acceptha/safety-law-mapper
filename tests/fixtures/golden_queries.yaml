@@ -308,6 +308,19 @@
     keywords: [스쿠버]
   must_include_mappings: [diving-work]
   top_mapping: diving-work
+- name: cargo-vehicle-query
+  query:
+    keywords: [화물자동차]
+  must_include_mappings: [cargo-vehicle-work]
+  top_mapping: cargo-vehicle-work
+  must_include_articles:
+    - { mapping_id: cargo-vehicle-work, law_id: osh-rule, article_ref: 제172조 }
+    - { mapping_id: cargo-vehicle-work, law_id: osh-rule, article_ref: 제187조 }
+- name: generic-unloading-owns-heavy-material
+  query:
+    keywords: [하역]
+  must_include_mappings: [heavy-material-transport]
+  top_mapping: heavy-material-transport
 - name: construction-vehicle-query
   query:
     keywords: [차량계 건설기계]
