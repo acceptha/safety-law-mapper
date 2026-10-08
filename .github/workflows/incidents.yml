@@ -1,0 +1,87 @@
+name: 사고속보 수집
+
+on:
+  schedule:
+    # 22:00 UTC = 07:00 KST. 게시가 부정기(사고일 기준 3~8일 지연)라
+    # 하루 1회 이상 돌릴 실익이 없다 — 기획서 §3.4.
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: "조회할 최대 목록 페이지 수 (백필 시 상향)"
+        required: false
+        default: "25"
+
+concurrency:
+  group: incidents
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install
+        run: pip install -e ".[dev]"
+
+      # 수집이 실패하면 여기서 워크플로가 멈춘다. 비공식 API라 언제든
+      # 바뀔 수 있고, 조용히 0건을 저장하는 것이 실패보다 나쁘다.
+      - name: Collect incidents
+        run: python scripts/fetch_kosha_incidents.py --pages "${{ inputs.pages || '25' }}"
+
+      # 수집한 데이터가 아니라 매핑 데이터의 무결성을 지키는 게이트.
+      # 사고 수집이 법령 데이터를 깨뜨릴 일은 없지만, 깨진 상태로 커밋이
+      # 쌓이는 것을 막는다.
+      - name: Validate data
+        run: slm validate
+
+      - name: Run tests
+        run: pytest -q
+
+      - name: Build coverage report
+        run: python scripts/build_coverage_report.py
+
+      - name: Commit if changed
+        run: |
+          set -euo pipefail
+          git config user.name "acceptha"
+          git config user.email "acceptha@gmail.com"
+          # 먼저 스테이징한다. 리포트가 처음 생성되면 untracked 라서
+          # `git diff` 로는 변경이 보이지 않는다.
+          git add -A -- data/incidents docs/incidents
+          if git diff --cached --quiet; then
+            echo "변경 없음 - 커밋하지 않습니다."
+            exit 0
+          fi
+          total=$(wc -l < data/incidents/kosha-alerts.jsonl)
+          git commit -m "data: 사고속보 수집 (총 ${total}건)" -m "scripts/fetch_kosha_incidents.py + build_coverage_report.py 자동 실행." -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
+          # 사이에 다른 커밋이 들어왔을 수 있다. 수집 결과는 append-only 라
+          # 리베이스로 안전하게 얹힌다.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push 실패 ($attempt/3) - 리베이스 후 재시도"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          done
+          echo "::error::3회 재시도 후에도 push 하지 못했습니다"
+          exit 1
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### 사고속보 수집 결과"
+            echo
+            if [ -f data/incidents/kosha-alerts.jsonl ]; then
+              echo "- 총 $(wc -l < data/incidents/kosha-alerts.jsonl)건"
+            fi
+            echo "- 리포트: \`docs/incidents/coverage.md\`"
+          } >> "$GITHUB_STEP_SUMMARY"
