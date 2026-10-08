@@ -308,6 +308,14 @@
     keywords: [스쿠버]
   must_include_mappings: [diving-work]
   top_mapping: diving-work
+- name: stacked-cargo-query
+  query:
+    keywords: [하적단]
+  must_include_mappings: [stacked-cargo-work]
+  top_mapping: stacked-cargo-work
+  must_include_articles:
+    - { mapping_id: stacked-cargo-work, law_id: osh-rule, article_ref: 제392조 }
+    - { mapping_id: stacked-cargo-work, law_id: osh-rule, article_ref: 제393조 }
 - name: cargo-vehicle-query
   query:
     keywords: [화물자동차]
