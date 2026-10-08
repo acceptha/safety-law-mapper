@@ -2,7 +2,8 @@ mapping_id: gas-welding
 work_type:
   name_ko: 가스 용접·용단 작업
   category: hot-work
-  keywords: [가스용접, 용단, 가스용기, LPG, 산소, 아세틸렌]
+  # 맨 '산소'는 제외 — 잠수·밀폐공간·질식 사고에도 나타나 가스용접으로 오탐된다.
+  keywords: [가스용접, 용단, 가스용기, 산소용기, 산소절단, LPG, 아세틸렌]
 conditions:
   min_employees: null
   max_employees: null
