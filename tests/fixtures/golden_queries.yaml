@@ -308,6 +308,83 @@
     keywords: [스쿠버]
   must_include_mappings: [diving-work]
   top_mapping: diving-work
+- name: structure-stability-query
+  query:
+    keywords: [구축물]
+  must_include_mappings: [structure-stability-work, demolition-work]
+  top_mapping: structure-stability-work
+  must_include_articles:
+    - { mapping_id: structure-stability-work, law_id: osh-rule, article_ref: 제51조 }
+    - { mapping_id: structure-stability-work, law_id: osh-rule, article_ref: 제52조 }
+- name: reservoir-confined-space-query
+  query:
+    keywords: [저수조]
+  must_include_mappings: [confined-space-work]
+  top_mapping: confined-space-work
+- name: formwork-query
+  query:
+    keywords: [거푸집, 동바리]
+  must_include_mappings: [formwork-shoring-work]
+  top_mapping: formwork-shoring-work
+  must_include_articles:
+    - { mapping_id: formwork-shoring-work, law_id: osh-rule, article_ref: 제333조 }
+    - { mapping_id: formwork-shoring-work, law_id: osh-rule, article_ref: 제332조 }
+- name: gangform-query
+  query:
+    keywords: [갱폼]
+  must_include_mappings: [formwork-shoring-work]
+  top_mapping: formwork-shoring-work
+  must_include_articles:
+    - { mapping_id: formwork-shoring-work, law_id: osh-rule, article_ref: 제331조의3 }
+- name: stacked-cargo-query
+  query:
+    keywords: [하적단]
+  must_include_mappings: [stacked-cargo-work]
+  top_mapping: stacked-cargo-work
+  must_include_articles:
+    - { mapping_id: stacked-cargo-work, law_id: osh-rule, article_ref: 제392조 }
+    - { mapping_id: stacked-cargo-work, law_id: osh-rule, article_ref: 제393조 }
+- name: cargo-vehicle-query
+  query:
+    keywords: [화물자동차]
+  must_include_mappings: [cargo-vehicle-work]
+  top_mapping: cargo-vehicle-work
+  must_include_articles:
+    - { mapping_id: cargo-vehicle-work, law_id: osh-rule, article_ref: 제172조 }
+    - { mapping_id: cargo-vehicle-work, law_id: osh-rule, article_ref: 제187조 }
+- name: generic-unloading-owns-heavy-material
+  query:
+    keywords: [하역]
+  must_include_mappings: [heavy-material-transport]
+  top_mapping: heavy-material-transport
+- name: construction-vehicle-query
+  query:
+    keywords: [차량계 건설기계]
+  must_include_mappings: [construction-vehicle-work]
+  top_mapping: construction-vehicle-work
+  must_include_articles:
+    - { mapping_id: construction-vehicle-work, law_id: osh-rule, article_ref: 제200조 }
+    - { mapping_id: construction-vehicle-work, law_id: osh-rule, article_ref: 제38조 }
+- name: roller-vehicle-query
+  query:
+    keywords: [타이어롤러]
+  must_include_mappings: [construction-vehicle-work]
+  top_mapping: construction-vehicle-work
+- name: machine-servicing-query
+  query:
+    keywords: [성형기]
+  must_include_mappings: [machine-servicing]
+  top_mapping: machine-servicing
+  must_include_articles:
+    - { mapping_id: machine-servicing, law_id: osh-rule, article_ref: 제92조 }
+    - { mapping_id: machine-servicing, law_id: osh-rule, article_ref: 제94조 }
+- name: lathe-entanglement-query
+  query:
+    keywords: [선반]
+  must_include_mappings: [machine-servicing]
+  top_mapping: machine-servicing
+  must_include_articles:
+    - { mapping_id: machine-servicing, law_id: osh-rule, article_ref: 제95조 }
 - name: compactor-query
   query:
     keywords: [압축기]
