@@ -95,7 +95,26 @@ claude mcp add safety-law-mapper -- slm-mcp
 
 반환되는 모든 조항에 `source_url`(law.go.kr)과 사람이 검증한 날짜가 실리고, 미검증 항목은 그렇게 표시됩니다. 매핑에 없는 작업은 빈 결과를 반환합니다 — **추측하지 않습니다.**
 
-👉 [MCP 연동 가이드](docs/MCP.md)
+👉 [MCP 연동 가이드](docs/MCP.md) · [grounding 실측 기록](docs/MCP-grounding-실측.md)
+
+### REST API로 사용
+
+```bash
+pip install "safety-law-mapper[api]"
+slm-serve                                   # http://127.0.0.1:8000/docs
+
+curl "http://127.0.0.1:8000/search?q=밀폐공간&q=용접&limit=2"
+```
+
+```bash
+docker build -t safety-law-mapper . && docker run --rm -p 8000:8000 safety-law-mapper
+```
+
+전 경로 읽기 전용(GET)입니다 — 데이터는 HTTP가 아니라 PR로 바뀝니다.
+
+👉 [REST API 가이드](docs/API.md)
+
+> **네 인터페이스, 하나의 엔진** — CLI · 라이브러리 · MCP · REST가 모두 같은 `matcher.match()`를 호출하고, 두 서버는 같은 표현 계층(`view`)에서 응답을 만듭니다. 어떻게 물었는지에 따라 인용이 달라질 수 없고, 그 불변식은 테스트로 고정돼 있습니다.
 
 ## 데이터 현황
 

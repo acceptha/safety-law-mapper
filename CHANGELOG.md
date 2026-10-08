@@ -5,6 +5,12 @@
 ## [Unreleased]
 
 ### Added
+- **REST API(`slm-serve`)** — FastAPI 기반. `GET /health` · `/search` · `/categories` · `/mappings` · `/mappings/{id}`, OpenAPI 문서 `/docs`. 선택 의존성 `pip install "safety-law-mapper[api]"`. [가이드](docs/API.md)
+  - **전 경로 읽기 전용** — 데이터셋은 PR로 리뷰되고 CI가 검증해야 머지되는 빌드 산출물이다. HTTP 쓰기 경로를 두면 그 게이트를 우회하게 되므로 아예 만들지 않았고, 불변식을 테스트로 고정했다(`test_every_route_is_read_only`)
+  - 에러는 호출자가 행동할 수 있어야 한다 — `400`은 가능한 분류 전체를, `404`는 실재하는 매핑 ID를 함께 반환
+  - CORS 전면 개방 + `allow_credentials=False` — 데이터가 이미 공개(CC BY 4.0)이고 정적 데모가 다른 오리진(GitHub Pages)에서 돈다
+  - `Dockerfile` — 빌드 중 `slm validate` 실행(데이터가 깨지면 운영이 아니라 빌드가 실패), 비루트 실행(uid 10001), `/health` HEALTHCHECK. CI가 이미지를 빌드하고 띄워서 응답까지 확인한다
+- **표현 계층 분리(`view`)** — MCP와 REST가 같은 모듈에서 응답을 만든다. 두 번째 포맷터는 두 번째로 어긋날 물건이므로, 두 인터페이스의 응답이 바이트 단위로 같다는 것을 테스트로 고정했다(`test_rest_and_mcp_return_identical_payloads`)
 - **MCP 서버(`slm-mcp`)** — 매칭 엔진을 LLM 툴로 노출. `search_laws`·`get_mapping`·`list_categories` 3종, stdio 전송. 선택 의존성 `pip install "safety-law-mapper[mcp]"`. 반환되는 모든 조항에 `source_url`과 검증일이 실리고, 미검증 항목은 명시되며, 응답마다 인용 규칙(`grounding`)이 동봉된다. 빈 질의는 빈 결과 — 추측하지 않는다. [연동 가이드](docs/MCP.md)
   - `matcher.match()`를 그대로 호출 — 랭킹 로직을 복제하지 않았으므로 골든 쿼리 회귀 스위트가 MCP 경로까지 보증
   - 포맷 로직은 `MCPServer`를 모르는 순수 함수 — `mcp` 미설치 환경에서도 테스트됨
