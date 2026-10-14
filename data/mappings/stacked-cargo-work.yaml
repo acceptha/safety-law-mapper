@@ -1,0 +1,52 @@
+mapping_id: stacked-cargo-work
+work_type:
+  name_ko: 적재물 보관·하역 작업
+  category: transport
+  # 중량물 취급(제385·386조)과는 다른 위험이다 — 들어올리거나 구르는 것이
+  # 아니라 쌓아둔 것이 무너진다. 맨 '적재'는 제외: '적재함'(화물자동차)까지 끌어온다.
+  keywords: [하적단, 야적, 톤백, 고철, 코일, 주물, 적재물]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제392조
+        article_title: 하적단의 붕괴 등에 의한 위험방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 하적단의 붕괴 또는 화물의 낙하로 근로자가 위험해질 우려가 있으면 하적단을 로프로 묶거나 망을 치는 등 조치. 쌓을 때는 기본형을 조성하고, 헐어낼 때는 위에서부터 순차적으로 층계를 만들며 헐어낼 것(중간에서 헐어내기 금지)
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제392조
+      - article_ref: 제393조
+        article_title: 화물의 적재
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 침하 우려가 없는 튼튼한 기반 위에 적재하고, 건물의 칸막이·벽이 화물의 압력을 견딜 강도가 아니면 거기에 기대어 적재하지 말 것. 불안정할 정도로 높이 쌓지 말고 하중이 한쪽으로 치우치지 않게 쌓을 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제393조
+      - article_ref: 제389조
+        article_title: 화물 중간에서 화물 빼내기 금지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 차량 등에서 화물을 내리는 작업을 하는 경우 쌓여 있는 화물 중간에서 화물을 빼내도록 하지 말 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제389조
+      - article_ref: 제391조
+        article_title: 하적단의 간격
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 바닥으로부터 높이 2미터 이상인 하적단(포대·가마니 등으로 포장된 화물이 쌓여 있는 것)과 인접 하적단 사이의 간격을 밑부분 기준 10센티미터 이상으로 유지
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제391조
+references:
+  - title: KOSHA 하역작업 안전보건 자료
+    url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
+last_verified: "2026-10-08"
+verified_by: acceptha

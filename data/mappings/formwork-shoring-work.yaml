@@ -1,0 +1,50 @@
+mapping_id: formwork-shoring-work
+work_type:
+  name_ko: 거푸집·동바리 작업
+  category: work-at-height
+  keywords: [거푸집, 동바리, 갱폼, 슬립폼, 클라이밍폼, 받침목, 멍에, 조립도]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제333조
+        article_title: 조립·해체 등 작업 시의 준수사항
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 기둥·보·벽체·슬래브 등의 거푸집 및 동바리를 조립·해체하는 작업 시 관계 근로자 외 출입금지, 기상상태 불안정 시 작업중지, 재료·기구·공구를 올리고 내릴 때 달줄·달포대 사용, 낙하·충격에 의한 돌발 재해를 막기 위해 버팀목을 설치하고 거푸집·동바리를 인양장비에 매단 후 작업. 철근조립 시 양중기 운반은 두 군데 이상 묶어 수평으로, 작업위치 높이 2미터 이상이면 작업발판 설치 또는 안전대 착용
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제333조
+      - article_ref: 제331조의3
+        article_title: 작업발판 일체형 거푸집의 안전조치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 갱폼·슬립폼·클라이밍폼 등 작업발판 일체형 거푸집의 조립·이동·양중·해체 시 작업절차를 근로자에게 주지, 구조물 내부에서 작업발판으로 출입할 이동통로 설치, 지지·고정철물 이상 유무 수시점검 및 교체. 조립·해체 시 인양장비에 매단 후 작업하고 매달기 전에 지지·고정철물을 미리 해체하지 말 것, 작업발판용 케이지에 근로자가 탑승한 상태로 인양하지 말 것
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제331조의3
+      - article_ref: 제332조
+        article_title: 동바리 조립 시의 안전조치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 동바리 조립 시 하중 지지상태를 유지하도록 받침목·깔판 사용 등 침하 방지, 상하 고정 및 미끄러짐 방지, 상부·하부 동바리를 동일 수직선상에 두어 깔판·받침목에 고정. 개구부 상부에는 상부하중을 견딜 견고한 받침대 설치, U헤드 단판 설치 및 멍에 전도·이탈 방지, 강재 접속부·교차부는 전용철물로 연결, 깔판·받침목 2단 이상 금지
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제332조
+      - article_ref: 제331조
+        article_title: 조립도
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 거푸집 및 동바리를 조립하는 경우 구조를 검토한 후 조립도를 작성하고 그 조립도에 따라 조립. 조립도에는 부재의 재질·단면규격·설치간격 및 이음방법 등을 명시
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제331조
+references:
+  - title: KOSHA 건설업 안전보건 자료
+    url: https://www.kosha.or.kr/kosha/data/construction.do
+last_verified: "2026-10-08"
+verified_by: acceptha

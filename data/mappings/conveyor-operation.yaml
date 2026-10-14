@@ -2,7 +2,8 @@ mapping_id: conveyor-operation
 work_type:
   name_ko: 컨베이어 작업
   category: machinery
-  keywords: [컨베이어, 이송, 롤러, 말림, 협착]
+  # '롤러'는 제외 — 타이어롤러(도로 다짐기)까지 컨베이어로 끌어왔다.
+  keywords: [컨베이어, 이송, 말림, 협착]
 conditions:
   min_employees: null
   max_employees: null

@@ -59,17 +59,55 @@ def _to_jsonable(doc: dict) -> dict:
     return json.loads(json.dumps(doc, default=str, ensure_ascii=False))
 
 
-def load_shared_keyword_allowlist(data_dir: Path) -> dict[str, str]:
-    """Keywords explicitly approved for sharing, mapped to their stated reason."""
+def _load_keyword_policy(data_dir: Path) -> dict:
     path = data_dir / "keyword_policy.yaml"
     if not path.is_file():
         return {}
-    doc = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+
+
+def load_shared_keyword_allowlist(data_dir: Path) -> dict[str, str]:
+    """Keywords explicitly approved for sharing, mapped to their stated reason."""
     allowed: dict[str, str] = {}
-    for entry in doc.get("shared_keywords") or []:
+    for entry in _load_keyword_policy(data_dir).get("shared_keywords") or []:
         if isinstance(entry, dict) and entry.get("keyword"):
             allowed[entry["keyword"]] = (entry.get("reason") or "").strip()
     return allowed
+
+
+def load_generic_terms(data_dir: Path) -> dict[str, str | None]:
+    """Generic words mapped to the single mapping_id allowed to own them.
+
+    `owner: null` means no mapping may carry the bare word at all.
+    """
+    owners: dict[str, str | None] = {}
+    for entry in _load_keyword_policy(data_dir).get("generic_terms") or []:
+        if isinstance(entry, dict) and entry.get("term"):
+            owners[entry["term"]] = entry.get("owner")
+    return owners
+
+
+def _generic_term_warnings(
+    owners: dict[str, list[str]], generic: dict[str, str | None]
+) -> list[str]:
+    """Catch a generic word held by a mapping that has no claim to it.
+
+    The share-count check only sees a word spread across many mappings. It is
+    blind to the opposite shape — a general word monopolised by one narrow
+    mapping — which is how `산소` sent diving deaths to 가스용접.
+    """
+    warnings = []
+    for term, owner in sorted(generic.items()):
+        holders = [m for m in owners.get(term, []) if m != owner]
+        if not holders:
+            continue
+        where = "어떤 매핑도 이 단어를 가질 수 없습니다" if owner is None else f"'{owner}'만 가질 수 있습니다"
+        warnings.append(
+            f"일반어 '{term}' — {', '.join(sorted(holders))}이(가) 키워드로 보유합니다."
+            f" {where}. 특정 매핑이 일반어를 독점하면 그 매핑과 무관한 사고까지 끌려옵니다."
+            f" data/keyword_policy.yaml의 generic_terms를 확인하세요."
+        )
+    return warnings
 
 
 def _keyword_share_warnings(
@@ -147,4 +185,5 @@ def validate_data(data_dir: Path | None = None, schema_dir: Path | None = None) 
     warnings = _keyword_share_warnings(
         keyword_owners, load_shared_keyword_allowlist(data_dir)
     )
+    warnings += _generic_term_warnings(keyword_owners, load_generic_terms(data_dir))
     return ValidationReport(errors=errors, checked_files=checked, warnings=warnings)

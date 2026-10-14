@@ -2,7 +2,9 @@ mapping_id: demolition-work
 work_type:
   name_ko: 구축물 해체작업
   category: demolition
-  keywords: [해체, 철거, 구축물, 붕괴, 파쇄]
+  # '구축물'은 structure-stability-work 소유 — 작업명 '구축물 해체작업'의
+  # 부분일치로 구축물 질의에도 계속 포함된다.
+  keywords: [해체, 철거, 붕괴, 파쇄]
 conditions:
   min_employees: null
   max_employees: null

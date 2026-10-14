@@ -47,6 +47,7 @@ class AccidentType(str, Enum):
     FIRE = "화재"
     EXPLOSION = "폭발"
     DROWNING = "빠짐"
+    DROWNED = "익사"
     OTHER = "기타"
 
 

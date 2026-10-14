@@ -42,10 +42,18 @@ python scripts/fetch_kosha_incidents.py --no-store-titles
 
 ## 갱신
 
+**자동 수집**: `.github/workflows/incidents.yml`이 매일 07:00 KST에 실행합니다. 수집할 게 없는 날은 커밋하지 않고 조용히 끝납니다.
+
+수동 실행:
+
 ```bash
-python scripts/fetch_kosha_incidents.py            # 최신 2페이지 증분 수집
-python scripts/fetch_kosha_incidents.py --pages 25 # 백필
-slm incidents --gaps                                # 미매핑 = 매핑 기여 대상
+python scripts/fetch_kosha_incidents.py            # 증분 수집 (신규 없는 첫 페이지에서 정지)
+python scripts/fetch_kosha_incidents.py --pages 250 # 전체 백필
+python scripts/fetch_kosha_incidents.py --reprocess  # 렉시콘 수정 후 오프라인 재생성
+python scripts/build_coverage_report.py              # docs/incidents/coverage.md 갱신
+slm incidents --gaps                                 # 미매핑 = 매핑 기여 대상
 ```
 
 게시가 부정기(사고일 기준 3~8일 지연)이므로 하루 1회 이상 수집할 실익이 없습니다.
+
+커버리지 현황과 공백 큐는 [coverage.md](../../docs/incidents/coverage.md)에서 볼 수 있습니다.
