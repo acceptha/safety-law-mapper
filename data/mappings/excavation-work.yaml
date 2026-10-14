@@ -51,6 +51,38 @@ applicable_laws:
         valid_from: "2023-11-14"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제342조
+      - article_ref: 제341조
+        article_title: 매설물 등 파손에 의한 위험방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 매설물·조적벽·콘크리트벽·옹벽 등 건설물에 근접한 장소에서 굴착작업을 할 때 그 가설물의 파손으로 근로자가 위험해질 우려가 있으면 해당 건설물을 보강하거나 이설할 것. 굴착으로 노출된 매설물이 파손돼 위험해질 우려가 있으면 방호조치를 하거나 이설하고, 그 방호작업은 관리감독자가 지휘하도록 할 것
+        valid_from: "2020-01-16"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제341조
+      - article_ref: 제345조
+        article_title: 흙막이지보공의 재료
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 흙막이 지보공의 재료로 변형·부식되거나 심하게 손상된 것을 사용하지 말 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제345조
+      - article_ref: 제346조
+        article_title: 조립도
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 흙막이 지보공을 조립할 때 미리 구조를 검토한 후 조립도를 작성해 그에 따라 조립할 것. 조립도에는 흙막이판·말뚝·버팀대·띠장 등 부재의 배치·치수·재질과 설치방법·순서를 명시할 것
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제346조
+      - article_ref: 제347조
+        article_title: 붕괴 등의 위험 방지
+        obligation_type: inspection
+        obligation_subject: employer
+        summary_ko: 흙막이 지보공을 설치했을 때 정기적으로 부재의 손상·변형·부식·변위·탈락 유무와 상태, 버팀대 긴압의 정도, 부재 접속부·부착부·교차부의 상태, 침하의 정도를 점검하고 이상을 발견하면 즉시 보수할 것. 그 밖에 설계도서에 따른 계측을 하고 토압 증가 등 이상한 점이 발견되면 즉시 보강조치할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제347조
 references:
   - title: KOSHA 굴착공사 재해예방 자료
     url: https://www.kosha.or.kr/kosha/data/construction.do
