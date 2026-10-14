@@ -1,0 +1,51 @@
+mapping_id: suspended-scaffold-work
+work_type:
+  name_ko: 달비계 작업
+  category: work-at-height
+  # 비계 조립·해체(제56~58조)와는 적용 조문이 다르므로 별도 매핑이다.
+  keywords: [달비계, 달대비계, 작업의자형 달비계, 구명줄, 작업용 섬유로프, 달기 와이어로프]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제63조
+        article_title: 달비계의 구조
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 곤돌라형 달비계는 이음매가 있거나 소선이 10% 이상 끊어졌거나 지름 감소 7% 초과·꼬임·변형·부식·열손상된 와이어로프를 쓰지 말고, 달기 와이어로프·체인·강선·강대의 양 끝을 비계 보와 내민 보·앵커볼트·건축물 보에 풀리지 않도록 설치하며, 작업발판 폭 40cm 이상에 틈새 없이 고정하고, 구명줄 설치·안전대 착용 및 안전줄 체결. 작업의자형 달비계는 작업대 4개 모서리에 로프를 매달고, 작업용 섬유로프를 2개 이상의 견고한 고정점에 결속하되 구명줄은 다른 고정점에 결속하며, 근로자 조종 없이는 하강하지 않도록 하고, 끝부분·날카로운 물체에 절단·마모될 우려가 있으면 보호 덮개를 씌우며, 꼬임이 끊어지거나 심하게 손상·부식된 것, 2개를 연결한 것, 작업높이보다 짧은 것은 사용 금지
+        valid_from: "2021-11-19"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제63조
+      - article_ref: 제64조
+        article_title: 달비계의 점검 및 보수
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 달비계에서 작업을 시키는 경우 작업 시작 전에 제58조 각 호(비계의 재료)의 사항을 점검하고 이상을 발견하면 즉시 보수
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제64조
+      - article_ref: 제66조
+        article_title: 높은 디딤판 등의 사용금지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 달비계 또는 달대비계 위에서 높은 디딤판·사다리 등을 사용해 근로자에게 작업을 시키지 말 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제66조
+      - article_ref: 제65조
+        article_title: 달대비계
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 달대비계를 조립해 사용하는 경우 하중에 충분히 견딜 수 있도록 조치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제65조
+references:
+  - title: KOSHA 달비계 안전작업 자료
+    url: https://www.kosha.or.kr/kosha/data/construction.do
+last_verified: "2026-10-14"
+verified_by: acceptha

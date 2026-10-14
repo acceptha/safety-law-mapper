@@ -1,0 +1,35 @@
+mapping_id: mobile-scaffold-work
+work_type:
+  name_ko: 이동식비계 작업
+  category: work-at-height
+  # 비계 조립·해체(제56~58조)와는 적용 조문이 다르므로 별도 매핑이다.
+  keywords: [이동식비계, 아웃트리거, 승강용사다리]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제68조
+        article_title: 이동식비계
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 바퀴에 브레이크·쐐기 등으로 갑작스러운 이동과 전도를 막고 비계 일부를 견고한 시설물에 고정하거나 아웃트리거를 설치할 것. 승강용사다리는 견고하게 설치하고, 최상부에서 작업할 때는 안전난간을 설치하며, 작업발판은 항상 수평을 유지하고 그 위에서 안전난간을 딛거나 받침대·사다리를 사용해 작업하지 않도록 하며, 작업발판 최대적재하중은 250kg을 초과하지 않을 것
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제68조
+      - article_ref: 제13조
+        article_title: 안전난간의 구조 및 설치요건
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 제68조제3호의 안전난간은 상부 난간대·중간 난간대·발끝막이판·난간기둥으로 구성하고, 상부 난간대는 바닥면등으로부터 90cm 이상에 설치하며, 100kg 이상의 하중에 견디는 구조일 것
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제13조
+references:
+  - title: KOSHA 이동식비계 안전작업 자료
+    url: https://www.kosha.or.kr/kosha/data/construction.do
+last_verified: "2026-10-14"
+verified_by: acceptha
