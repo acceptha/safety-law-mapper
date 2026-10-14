@@ -6,6 +6,7 @@ import sys
 import pytest
 
 from safety_law_mapper.incidents import (
+    POST_URL,
     AccidentType,
     Incident,
     SiteType,
@@ -239,6 +240,58 @@ def test_reprocess_preserves_original_fetch_date(tmp_path):
     assert result.returncode == 0, result.stderr
     (incident,) = load_incidents(out)
     assert incident.fetched_at == datetime.date(2026, 8, 28)
+
+
+def test_reprocess_keeps_records_it_has_no_cache_for(tmp_path):
+    """캐시는 .gitignore 대상이라 저장소보다 짧을 수 있다. 짧다는 이유로
+    기존 기록을 지우면, 자동 수집이 러너에서 모아 둔 사고가 다른 PC에서
+    재처리 한 번에 사라진다."""
+    import subprocess
+
+    cache = tmp_path / "cache"
+    cache.mkdir()
+    (cache / "CACHED00000000000001.json").write_text(
+        json.dumps(
+            {
+                "pstNo": "CACHED00000000000001",
+                "pstNm": "[8/19, 부산 강서구] 이동식 비계가 넘어져 떨어짐",
+                "regYmd": "20260827",
+                "body": "2026. 8. 19 (수), 14:08경\n부산 강서구 소재 공사현장에서\n"
+                "이동식 비계가 넘어지며 떨어짐 (사망1명)",
+                "fetchedAt": "2026-08-28",
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    out = tmp_path / "alerts.jsonl"
+    orphan = {
+        "pst_no": "UNCACHED000000000001",
+        "posted_at": "2026-10-09",
+        "occurred_at": "2026-10-06T15:20:00",
+        "region": "전남광주 광산구",
+        "site_type": "서비스·판매",
+        "accident_type": ["깔림"],
+        "fatalities": 1,
+        "work_keywords": [],
+        "source_url": POST_URL.format(pst_no="UNCACHED000000000001"),
+        "fetched_at": "2026-10-09",
+        "title": "[10/6, 전남광주 광산구] 넘어지는 펜스에 깔림",
+    }
+    out.write_text(json.dumps(orphan, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    script = REPO_ROOT / "scripts" / "fetch_kosha_incidents.py"
+    result = subprocess.run(
+        [sys.executable, str(script), "--reprocess", "--cache-dir", str(cache), "--out", str(out)],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        env={**os.environ, "PYTHONIOENCODING": "utf-8"},
+    )
+    assert result.returncode == 0, result.stderr
+    kept = {i.pst_no for i in load_incidents(out)}
+    assert kept == {"CACHED00000000000001", "UNCACHED000000000001"}, result.stdout
+    assert "재처리하지 못한 기존 기록 1건" in result.stdout
 
 
 def test_coverage_counts_mapped_and_total(posts, lexicon, mapping_keywords, dataset):
