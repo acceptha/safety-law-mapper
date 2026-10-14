@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-14
+
 ### Added
 - **REST API(`slm-serve`)** — FastAPI 기반. `GET /health` · `/search` · `/categories` · `/mappings` · `/mappings/{id}`, OpenAPI 문서 `/docs`. 선택 의존성 `pip install "safety-law-mapper[api]"`. [가이드](docs/API.md)
   - **전 경로 읽기 전용** — 데이터셋은 PR로 리뷰되고 CI가 검증해야 머지되는 빌드 산출물이다. HTTP 쓰기 경로를 두면 그 게이트를 우회하게 되므로 아예 만들지 않았고, 불변식을 테스트로 고정했다(`test_every_route_is_read_only`)
@@ -104,6 +106,7 @@
 - GitHub Actions CI (Python 3.11–3.14) 및 태그 릴리스 자동화 (PyPI trusted publishing)
 - 문서: README(한국어, 면책 포함), CONTRIBUTING(10분 기여 가이드)
 
-[Unreleased]: https://github.com/acceptha/safety-law-mapper/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/acceptha/safety-law-mapper/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/acceptha/safety-law-mapper/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/acceptha/safety-law-mapper/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/acceptha/safety-law-mapper/releases/tag/v0.1.0
