@@ -15,7 +15,7 @@ applicable_laws:
         article_title: 밀폐공간 작업 프로그램의 수립·시행
         obligation_type: general
         obligation_subject: employer
-        summary_ko: 밀폐공간 작업 전 작업 프로그램(유해공기 확인, 출입금지 표지 등) 수립·시행
+        summary_ko: 밀폐공간의 위치 파악·관리 방안, 질식·중독 유해위험요인 파악·관리 방안, 사전 확인 절차, 안전보건교육·훈련이 포함된 밀폐공간 작업 프로그램을 수립·시행할 것. 작업 시작 전에 작업 정보, 관리감독자·근로자·감시인 등 작업자 정보, 산소·유해가스 농도 측정결과와 후속조치, 불활성가스·유해가스 누출·유입·발생 가능성 검토와 후속조치, 착용할 보호구 종류, 비상연락체계를 확인하고, 작업이 끝날 때까지 그 내용을 작업장 출입구에 게시할 것
         valid_from: "2017-03-03"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제619조
@@ -23,7 +23,7 @@ applicable_laws:
         article_title: 산소 및 유해가스 농도의 측정 및 기록 등
         obligation_type: measurement
         obligation_subject: employer
-        summary_ko: 작업 시작 전 및 작업 중 산소·유해가스 농도 측정, 적정공기 유지 확인
+        summary_ko: 작업 시작 전(일시 중단 후 재개 포함)에 측정·평가 지식과 실무경험이 있는 사람을 지정해 측정장비를 지급하고 산소·유해가스 농도를 측정해 적정공기 유지 여부를 평가하게 할 것. 측정·평가자에게는 사전에 밀폐공간의 위험성, 측정장비 이상 유무 확인과 조작 방법, 측정방법, 적정공기 기준과 평가 방법의 숙지 여부를 확인하고 교육할 것. 적정공기가 유지되지 않는다고 평가되면 환기하거나 공기호흡기·송기마스크를 지급해 착용하도록 할 것. **측정·평가 결과는 측정자 성명과 일시·장소·결과 등을 기록해 3년간 보존할 것**
         valid_from: "2025-12-01"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제619조의2
@@ -39,12 +39,60 @@ applicable_laws:
         article_title: 감시인의 배치 등
         obligation_type: appointment
         obligation_subject: employer
-        summary_ko: 밀폐공간 외부에 감시인 배치, 작업자와 상시 연락체계 유지
+        summary_ko: 작업상황을 감시할 감시인을 지정해 밀폐공간 외부에 배치하고, 작업장과 외부 감시인 간에 항상 연락할 수 있는 설비를 설치할 것. 감시인은 밀폐공간 종사 근로자에게 이상이 있으면 지체 없이 관할 소방관서에 신고하고 그 장의 협조를 받아 적절한 조치를 한 후 즉시 사업주와 관리감독자에게 알릴 것
         valid_from: "2025-12-01"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제623조
+      - article_ref: 제639조
+        article_title: 사고 시의 대피 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 밀폐공간 작업 중 산소결핍이나 유해가스로 인한 질식·화재·폭발 우려가 있으면 즉시 작업을 중단시키고 대피시킬 것. 대피시킨 경우 적정공기 상태임이 확인될 때까지 관계자가 아닌 사람의 출입을 금지하고 그 내용을 보기 쉬운 곳에 게시할 것
+        valid_from: "2017-03-03"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제639조
+      - article_ref: 제643조
+        article_title: 구출 시 공기호흡기 또는 송기마스크의 사용
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 밀폐공간에서 위급한 근로자를 구출하는 작업을 하는 경우 그 구출작업에 종사하는 근로자에게 공기호흡기 또는 송기마스크를 지급해 착용하도록 할 것
+        valid_from: "2017-03-03"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제643조
+      - article_ref: 제640조
+        article_title: 긴급 구조훈련
+        obligation_type: education
+        obligation_subject: employer
+        summary_ko: 밀폐공간에서 작업하는 근로자에게 비상연락체계 운영, 구조용 장비의 사용, 공기호흡기 또는 송기마스크의 착용, 응급처치 등에 관한 훈련을 6개월에 1회 이상 주기적으로 실시하고 결과를 기록·보존할 것
+        valid_from: "2017-03-03"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제640조
+      - article_ref: 제641조
+        article_title: 안전한 작업방법 등의 주지
+        obligation_type: education
+        obligation_subject: employer
+        summary_ko: 작업 시작 전에 밀폐공간의 위험성, 산소·유해가스 농도 측정, 환기설비 가동 등 안전한 작업방법, 보호구 착용과 사용방법, 사고 시 구조요청을 할 수 있는 관할 소방관서 등 비상연락처와 응급조치, 대피용 기구의 위치와 사용방법을 감시인을 포함한 작업근로자에게 알리고 숙지 여부를 확인해 필요한 교육을 실시할 것
+        valid_from: "2025-12-01"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제641조
+      - article_ref: 제642조
+        article_title: 의사의 진찰
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 근로자가 산소결핍증이 있거나 유해가스에 중독된 경우 즉시 의사의 진찰이나 처치를 받도록 할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제642조
+      - article_ref: 제644조
+        article_title: 보호구의 지급 등
+        obligation_type: provision
+        obligation_subject: employer
+        summary_ko: 공기호흡기 또는 송기마스크를 지급할 때 근로자에게 질병 감염의 우려가 있으면 개인전용의 것을 지급할 것
+        valid_from: "2017-03-03"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제644조
 references:
   - title: KOSHA GUIDE H-80 밀폐공간 작업 프로그램 시행에 관한 기술지침
     url: https://www.kosha.or.kr/kosha/data/guidanceH.do
-last_verified: "2026-08-26"
+last_verified: "2026-10-14"
 verified_by: acceptha
