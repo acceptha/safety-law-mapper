@@ -62,6 +62,14 @@ applicable_laws:
         valid_from: "2011-07-06"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제557조
+      - article_ref: 제47조
+        article_title: 구명구 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 수상 또는 선박건조 작업에 종사하는 근로자가 물에 빠질 위험이 있는 경우 그 장소에 구명을 위한 배 또는 구명장구를 비치하는 등 필요한 조치를 할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제47조
 references:
   - title: KOSHA 고기압·잠수작업 안전보건 자료
     url: https://www.kosha.or.kr/kosha/data/industrialHealth.do

@@ -37,6 +37,22 @@ applicable_laws:
         valid_from: "2011-07-06"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제58조
+      - article_ref: 제54조
+        article_title: 비계의 재료
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 비계의 재료로 변형·부식 또는 심하게 손상된 것을 사용하지 말 것. 강관비계의 재료는 한국산업표준에서 정하는 기준 이상의 것을 사용할 것
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제54조
+      - article_ref: 제55조
+        article_title: 작업발판의 최대적재하중
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 비계의 구조와 재료에 따라 작업발판의 최대적재하중을 정하고 이를 초과해 싣지 말 것
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제55조
 references:
   - title: KOSHA 비계 안전작업 자료
     url: https://www.kosha.or.kr/kosha/data/construction.do
