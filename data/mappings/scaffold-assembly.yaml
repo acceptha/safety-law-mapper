@@ -2,7 +2,9 @@ mapping_id: scaffold-assembly
 work_type:
   name_ko: 비계 조립·해체 작업
   category: work-at-height
-  keywords: [비계, 조립, 작업발판, 강관비계, 달비계]
+  # '달비계'는 suspended-scaffold-work 소유다. 여기 두면 2-2 동점에서
+  # 알파벳순이 갈라 달비계 사고가 제63조 대신 제56~58조로 간다.
+  keywords: [비계, 조립, 작업발판, 강관비계]
 conditions:
   min_employees: null
   max_employees: null

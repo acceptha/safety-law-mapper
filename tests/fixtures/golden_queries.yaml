@@ -432,6 +432,19 @@
   query:
     category: falling-object
   must_include_mappings: [falling-object-protection]
+- name: suspended-scaffold-query
+  query:
+    keywords: [달비계]
+  must_include_mappings: [suspended-scaffold-work]
+  top_mapping: suspended-scaffold-work
+  must_include_articles:
+    - { mapping_id: suspended-scaffold-work, law_id: osh-rule, article_ref: 제63조 }
+    - { mapping_id: suspended-scaffold-work, law_id: osh-rule, article_ref: 제64조 }
+- name: scaffold-stays-with-plain-bigye
+  query:
+    keywords: [비계]
+  must_include_mappings: [scaffold-assembly]
+  top_mapping: scaffold-assembly
 - name: demolition-not-asbestos
   query:
     keywords: [철거]
