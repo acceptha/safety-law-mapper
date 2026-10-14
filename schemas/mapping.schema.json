@@ -17,7 +17,7 @@
           "enum": [
             "hot-work", "confined-space", "work-at-height", "lifting",
             "excavation", "electrical", "chemical-handling", "machinery",
-            "demolition", "transport", "physical-hazard", "forestry"
+            "demolition", "transport", "physical-hazard", "forestry", "falling-object"
           ]
         },
         "keywords": {

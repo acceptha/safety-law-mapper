@@ -1,0 +1,52 @@
+mapping_id: falling-object-protection
+work_type:
+  name_ko: 낙하물 위험 장소 작업
+  category: falling-object
+  # 위험의 이름만 둔다. '자재'·'상부'·'떨어지는' 같은 말은 일반어라
+  # 들어오는 순간 모든 사고를 빨아들인다.
+  keywords: [낙하물, 낙하물 방지망, 방호선반, 수직보호망, 투하설비, 발끝막이판, 안전모]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제14조
+        article_title: 낙하물에 의한 위험의 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 작업장의 바닥·도로·통로 등에서 낙하물이 근로자에게 위험을 미칠 우려가 있으면 보호망 설치 등 조치. 작업으로 물체가 떨어지거나 날아올 위험이 있으면 낙하물 방지망·수직보호망·방호선반 설치, 출입금지구역 설정, 보호구 착용 등 조치하며 낙하물 방지망과 수직보호망은 한국산업표준 성능기준에 적합할 것. 낙하물 방지망·방호선반은 높이 10m 이내마다 설치하고 내민 길이 2m 이상, 수평면과 20~30도 유지
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제14조
+      - article_ref: 제15조
+        article_title: 투하설비 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 높이 3m 이상인 장소에서 물체를 투하하는 경우 적당한 투하설비를 설치하거나 감시인을 배치하는 등 위험 방지에 필요한 조치
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제15조
+      - article_ref: 제13조
+        article_title: 안전난간의 구조 및 설치요건
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 안전난간을 설치하는 경우 발끝막이판을 바닥면등으로부터 10cm 이상 높이로 유지할 것. 다만 물체가 떨어지거나 날아올 위험이 없거나 그 위험을 막을 망을 설치하는 등 예방 조치를 한 장소는 제외
+        valid_from: "2023-11-14"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제13조
+      - article_ref: 제32조
+        article_title: 보호구의 지급 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 물체가 떨어지거나 날아올 위험 또는 추락할 위험이 있는 작업에는 안전모를, 물체의 낙하·충격·끼임·감전·정전기 위험이 있는 작업에는 안전화를 작업 근로자 수 이상으로 지급하고 착용하도록 할 것
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제32조
+references:
+  - title: KOSHA 추락·낙하 재해예방 자료
+    url: https://www.kosha.or.kr/kosha/data/construction.do
+last_verified: "2026-10-14"
+verified_by: acceptha
