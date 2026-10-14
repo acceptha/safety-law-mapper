@@ -2,7 +2,9 @@ mapping_id: crane-lifting
 work_type:
   name_ko: 크레인 양중 작업
   category: lifting
-  keywords: [크레인, 타워크레인, 양중, 인양, 줄걸이, 하물]
+  # '줄걸이'는 rigging-gear 소유다. 달기구 조문(제7관)은 크레인뿐 아니라
+  # 호이스트·곤돌라에도 적용되므로 크레인 매핑이 그 말을 가지면 안 된다.
+  keywords: [크레인, 타워크레인, 양중, 인양, 하물]
 conditions:
   min_employees: null
   max_employees: null
@@ -51,6 +53,22 @@ applicable_laws:
         valid_from: "2018-03-30"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제146조
+      - article_ref: 제137조
+        article_title: 해지장치의 사용
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 훅걸이용 와이어로프 등이 훅으로부터 벗겨지는 것을 막는 해지장치를 구비한 크레인을 사용하고, 그 크레인으로 짐을 운반할 때는 해지장치를 사용할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제137조
+      - article_ref: 제149조
+        article_title: 해지장치의 사용
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 이동식 크레인으로 하물을 운반하는 경우 해지장치를 사용할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제149조
 references:
   - title: KOSHA 크레인 재해예방 자료
     url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
