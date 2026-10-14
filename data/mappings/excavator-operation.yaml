@@ -69,6 +69,14 @@ applicable_laws:
         valid_from: "2022-10-18"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제221조의5
+      - article_ref: 제344조
+        article_title: 굴착기계등의 유도
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 굴착작업을 할 때 굴착기계등이 근로자의 작업장소로 후진해 접근하거나 굴러 떨어질 우려가 있으면 유도자를 배치해 유도하도록 할 것. 운전자는 유도자의 유도에 따를 것
+        valid_from: "2025-09-01"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제344조
 references:
   - title: KOSHA 굴착기 재해예방 자료
     url: https://www.kosha.or.kr/kosha/data/construction.do
