@@ -77,6 +77,38 @@ applicable_laws:
         valid_from: "2023-11-14"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제38조
+      - article_ref: 제175조
+        article_title: 주용도 외의 사용 제한
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 차량계 하역운반기계등은 화물의 적재·하역 등 주된 용도에만 사용할 것. 다만 근로자가 위험해질 우려가 없는 경우는 예외
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제175조
+      - article_ref: 제174조
+        article_title: 차량계 하역운반기계등의 이송
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 자주 또는 견인으로 화물자동차에 싣거나 내리는 작업에 발판·성토 등을 쓰는 경우 전도·굴러떨어짐을 막기 위해 평탄하고 견고한 장소에서 작업하고, 발판은 충분한 길이·폭·강도를 갖춰 적당한 경사로 견고하게 설치하며, 가설대는 충분한 폭·강도와 적당한 경사를 확보하고, 지정운전자의 성명·연락처를 보기 쉬운 곳에 표시해 지정운전자 외에는 운전하지 않도록 할 것
+        valid_from: "2019-10-15"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제174조
+      - article_ref: 제177조
+        article_title: 싣거나 내리는 작업
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 단위화물 무게 100kg 이상인 화물을 싣거나 내리는 작업(로프 걸기·풀기, 덮개 덮기·벗기기 포함)을 할 때 작업지휘자에게 작업순서와 순서별 작업방법을 정해 지휘하게 하고, 기구·공구를 점검해 불량품을 제거하며, 관계 근로자가 아닌 사람의 출입을 금지하고, 로프 풀기·덮개 벗기기는 적재함의 화물이 떨어질 위험이 없음을 확인한 후에 하도록 할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제177조
+      - article_ref: 제178조
+        article_title: 허용하중 초과 등의 제한
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 지게차의 허용하중(구조·재료와 포크·램 등에 적재하는 화물의 중심위치에 따라 실을 수 있는 최대하중)을 초과해 사용하지 말고, 안전한 운행을 위한 유지·관리 등은 제조자가 제공하는 제품설명서의 기준을 준수할 것. 구내운반차·화물자동차는 최대적재량을 초과하지 말 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제178조
 references:
   - title: KOSHA 하역운반기계 안전작업 자료
     url: https://www.kosha.or.kr/kosha/data/machineryEquipment.do
