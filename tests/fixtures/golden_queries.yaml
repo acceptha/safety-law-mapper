@@ -452,6 +452,14 @@
   top_mapping: mobile-scaffold-work
   must_include_articles:
     - { mapping_id: mobile-scaffold-work, law_id: osh-rule, article_ref: 제68조 }
+- name: circular-saw-query
+  query:
+    keywords: [둥근톱]
+  must_include_mappings: [woodworking-machine-work]
+  top_mapping: woodworking-machine-work
+  must_include_articles:
+    - { mapping_id: woodworking-machine-work, law_id: osh-rule, article_ref: 제105조 }
+    - { mapping_id: woodworking-machine-work, law_id: osh-rule, article_ref: 제106조 }
 - name: demolition-not-asbestos
   query:
     keywords: [철거]

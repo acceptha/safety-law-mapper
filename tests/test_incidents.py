@@ -171,7 +171,9 @@ def test_septic_tank_incident_maps_to_confined_space(
 
 
 def test_unknown_work_type_is_reported_as_gap(posts, lexicon, mapping_keywords, dataset):
-    """둥근톱 매핑은 아직 없다 — 조용히 오답을 내지 말고 공백으로 남겨야 한다."""
+    """관광버스 차고지의 버스는 차량계 하역운반기계도 건설기계도 아니라
+    기준규칙에 대응 조문이 없다. 구내 교통안전은 도로교통법과 안전보건관리
+    규정의 영역이다. 조용히 그럴듯한 오답을 내지 말고 공백으로 남겨야 한다."""
     inc = _build(posts[4], lexicon, mapping_keywords)
     m = map_incident(inc, list(dataset.mappings.values()))
     assert m.is_gap
@@ -301,4 +303,4 @@ def test_coverage_counts_mapped_and_total(posts, lexicon, mapping_keywords, data
     matches = map_incidents(built, list(dataset.mappings.values()))
     mapped, total = coverage(matches)
     assert total == len(posts)
-    assert 0 < mapped < total  # 둥근톱 1건은 공백으로 남아야 한다
+    assert 0 < mapped < total  # 버스 1건은 공백으로 남아야 한다

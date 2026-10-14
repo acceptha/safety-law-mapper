@@ -1,0 +1,66 @@
+mapping_id: woodworking-machine-work
+work_type:
+  name_ko: 목재가공용 기계 작업
+  category: machinery
+  keywords: [목재가공, 둥근톱, 휴대용 둥근톱, 띠톱, 대패기계, 모떼기기계, 반발예방장치, 톱날접촉예방장치, 분할날]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제105조
+        article_title: 둥근톱기계의 반발예방장치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 목재가공용 둥근톱기계에 분할날 등 반발예방장치를 설치할 것. 가로 절단용 둥근톱기계와 반발로 근로자에게 위험을 미칠 우려가 없는 것은 제외
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제105조
+      - article_ref: 제106조
+        article_title: 둥근톱기계의 톱날접촉예방장치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 목재가공용 둥근톱기계(휴대용 둥근톱 포함)에 톱날접촉예방장치를 설치할 것. 원목제재용 둥근톱기계와 자동이송장치를 부착한 둥근톱기계는 제외
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제106조
+      - article_ref: 제107조
+        article_title: 띠톱기계의 덮개
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 목재가공용 띠톱기계의 절단에 필요한 톱날 부위 외의 위험한 톱날 부위에 덮개 또는 울 등을 설치할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제107조
+      - article_ref: 제108조
+        article_title: 띠톱기계의 날접촉예방장치 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 목재가공용 띠톱기계에서 스파이크가 붙어 있는 이송롤러 또는 요철형 이송롤러에 날접촉예방장치 또는 덮개를 설치할 것. 다만 해당 이송롤러에 급정지장치가 설치돼 있으면 제외
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제108조
+      - article_ref: 제109조
+        article_title: 대패기계의 날접촉예방장치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 작업대상물이 수동으로 공급되는 동력식 수동대패기계에 날접촉예방장치를 설치할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제109조
+      - article_ref: 제110조
+        article_title: 모떼기기계의 날접촉예방장치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 모떼기기계(자동이송장치를 부착한 것은 제외)에 날접촉예방장치를 설치할 것. 작업 성질상 설치가 곤란해 적절한 작업공구 등을 사용하도록 한 경우는 제외
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제110조
+references:
+  - title: KOSHA 목재가공용 기계 안전 자료
+    url: https://www.kosha.or.kr/kosha/data/industrialSafety.do
+last_verified: "2026-10-14"
+verified_by: acceptha
