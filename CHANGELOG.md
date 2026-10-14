@@ -5,6 +5,7 @@
 ## [Unreleased]
 
 ### Added
+- **조문 제목 대조 테스트(`tests/test_article_titles.py`)** — 데이터셋의 `article_title` 전건을 law.go.kr 원문과 대조한다. 현재 불일치 0건. 제목표 스냅샷은 `tests/fixtures/osh-rule-titles-2026-10-14.json`(669건). 틀린 제목은 조문 번호가 맞아도 읽는 사람을 다른 의무로 보낸다
 - **`scaffold-assembly`에 제54조(비계의 재료)·제55조(작업발판의 최대적재하중) 추가** — 비계 매핑이 제56~58조만 싣고, 정작 재료 기준과 최대적재하중이 빠져 있었다
 - **`work-at-height`에 제46조(승강설비의 설치) 추가** — 높이·깊이 2m 초과 장소의 승강설비
 - **`diving-work`에 제47조(구명구 등) 추가** — 수상·선박건조 작업의 구명장구 비치. 잠수 익사 3건이 있다
