@@ -31,8 +31,8 @@ applicable_laws:
         article_title: 원동기·회전축 등의 위험 방지
         obligation_type: provision
         obligation_subject: employer
-        summary_ko: 압축·파쇄 설비의 원동기·회전축·기어·풀리·벨트 등 위험을 미칠 우려가 있는 부위에 덮개·울·슬리브·건널다리 등 설치
-        valid_from: "2011-07-06"
+        summary_ko: 압축·파쇄 설비의 원동기·회전축·기어·풀리·벨트 등 위험을 미칠 우려가 있는 부위에 덮개·울·슬리브·건널다리 등 설치. 분쇄기·파쇄기·마쇄기·미분기·혼합기 등은 가동 중 덮개나 울을 열어야 하는 경우 가동 정지, 덮개 연동장치, 감응형 방호장치 중 하나 이상을 갖출 것(제8항·제9항)
+        valid_from: "2025-06-28"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제87조
       - article_ref: 제88조

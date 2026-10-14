@@ -415,6 +415,23 @@
   query:
     category: forestry
   must_include_mappings: [logging-work]
+- name: falling-object-query
+  query:
+    keywords: [낙하물]
+  must_include_mappings: [falling-object-protection]
+  top_mapping: falling-object-protection
+  must_include_articles:
+    - { mapping_id: falling-object-protection, law_id: osh-rule, article_ref: 제14조 }
+    - { mapping_id: falling-object-protection, law_id: osh-rule, article_ref: 제15조 }
+- name: falling-object-net-query
+  query:
+    keywords: [낙하물 방지망]
+  must_include_mappings: [falling-object-protection]
+  top_mapping: falling-object-protection
+- name: category-falling-object
+  query:
+    category: falling-object
+  must_include_mappings: [falling-object-protection]
 - name: demolition-not-asbestos
   query:
     keywords: [철거]

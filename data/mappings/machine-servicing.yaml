@@ -26,7 +26,7 @@ applicable_laws:
         obligation_type: provision
         obligation_subject: employer
         summary_ko: 기계의 원동기·회전축·기어·풀리·플라이휠·벨트 등 위험을 미칠 우려가 있는 부위에 덮개·울·슬리브·건널다리 등 설치
-        valid_from: "2011-07-06"
+        valid_from: "2025-06-28"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제87조
       - article_ref: 제93조

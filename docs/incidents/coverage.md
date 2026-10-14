@@ -9,8 +9,8 @@
 ## 요약
 
 - 수집 사고: **334건** (게시일 2025-08-29 ~ 2026-10-09)
-- 매핑 데이터: **41종**
-- 커버리지: **301/334 = 90%**
+- 매핑 데이터: **42종**
+- 커버리지: **306/334 = 92%**
 
 ## 업종별 커버리지
 
@@ -18,20 +18,20 @@
 |---|---:|---:|---|
 | 환경·폐기물 | 12 | 12 | 100% ████████████████ |
 | 건물·시설 | 23 | 24 | 96% ███████████████ |
-| 제조업 | 101 | 109 | 93% ███████████████ |
+| 제조업 | 102 | 109 | 94% ███████████████ |
 | 창고·물류 | 12 | 13 | 92% ███████████████ |
-| 건설현장 | 122 | 139 | 88% ██████████████ |
+| 기타 | 10 | 11 | 91% ███████████████ |
+| 건설현장 | 125 | 139 | 90% ██████████████ |
 | 농림축산 | 18 | 21 | 86% ██████████████ |
-| 기타 | 9 | 11 | 82% █████████████ |
 | 서비스·판매 | 4 | 5 | 80% █████████████ |
 
 ## 사고 유형별 분포
 
 | 사고 유형 | 건수 | 미매핑 |
 |---|---:|---:|
-| 떨어짐 | 140 | 13 |
-| 깔림 | 56 | 6 |
-| 끼임 | 43 | 2 |
+| 떨어짐 | 140 | 10 |
+| 깔림 | 56 | 5 |
+| 끼임 | 43 | 1 |
 | 맞음 | 36 | 7 |
 | 부딪힘 | 27 | 4 |
 | 폭발 | 8 | 0 |
@@ -48,7 +48,7 @@
 
 ## 데이터 공백 큐
 
-미매핑 **33건** 중 최근 25건입니다. 각 항목이 곧 매핑 기여 대상입니다.
+미매핑 **28건** 중 최근 25건입니다. 각 항목이 곧 매핑 기여 대상입니다.
 
 | 발생 | 지역 | 업종 | 사고 |
 |---|---|---|---|
@@ -62,14 +62,11 @@
 | 2026-06-17 | 경기 안산시 | 건설현장 | [자재 운반 작업 중 밟고 있던 판넬이 파손되며 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260705185224LN4509) |
 | 2026-07-01 | 경북 구미시 | 건설현장 | [석고보드 보수 작업 중 건물 사이로 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=202607031825131611P0) |
 | 2026-06-27 | 충남 아산시 | 건설현장 | [천막이 찢어져 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260702132306MPR0Q9) |
-| 2026-05-14 | 인천 중구 | 건설현장 | [배관 통로 점검 중 천장마감재를 밟고 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260604110344TLYI60) |
 | 2026-05-19 | 서울 동작구 | 건물·시설 | [환기구 덮개를 들어내던 중 환기구 아래로 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=202605271005247DRKH1) |
 | 2026-05-20 | 부산 사하구 | 창고·물류 | [차고지로 복귀하는 버스에 부딪힘](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=2026052710042251RFLW) |
 | 2026-05-18 | 전남 여수시 | 제조업 | [이동 중 유휴설비로부터 분리되어 떨어지는 덕트 배관에 맞음](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260520161933D9VWWW) |
 | 2026-04-29 | 울산 울주군 | 건설현장 | [콘크리트 믹서 트럭 위에서 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260502084831CMY99Q) |
 | 2026-04-27 | 경남 창원시 | 건설현장 | [넘어지는 판넬에 깔림](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260502084635A6DZSZ) |
-| 2026-03-22 | 인천 연수구 | 제조업 | [배관 보온 작업 중 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260325094927T6EGDB) |
-| 2026-03-17 | 충북 단양군 | 건설현장 | [천장에 올라가 작업 중 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260321105857CWI1SL) |
 | 2026-01-13 | 전북 군산시 | 기타 | [선박에 기대어 놓은 부함이 내려앉으면서 깔림](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260114165303XN5LQV) |
 | 2025-12-30 | 경남 함안군 | 제조업 | [철제 발판 운반 중 섬유로프가 끊어져 떨어지는 철제 발판에 맞음](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20260102171452ZQX1UG) |
 | 2025-12-18 | 서울 영등포구 | 건설현장 | [터널 상부에 조립된 철근이 무너지며 매몰](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20251224153918WR7YFW) |
@@ -77,6 +74,9 @@
 | 2025-10-15 | 전북 완주시 | 제조업 | [설비 점검 중 끼임](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20251019184442K33GFN) |
 | 2025-09-29 | 경북 포항시 | 건설현장 | [천공작업 중 회전하는 드릴에 맞음](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20251005075203PLL5NU) |
 | 2025-09-21 | 경북 경주시 | 농림축산 | [뒤로 밀리는 차량에 깔림](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20250926180021JY2UZC) |
+| 2025-09-20 | 충남 부여군 | 제조업 | [받침대 파손으로 콘크리트 구조물에 깔림](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=2025092617585464HEAK) |
+| 2025-09-09 | 경기 시흥시 | 건설현장 | [임시 고정한 철제계단이 탈락되어 맞음](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20250914175534CFHELJ) |
+| 2025-09-05 | 강원 태백시 | 농림축산 | [나무에서 열매 수확 작업 중 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20250911153513WGNBHZ) |
 
 ---
 

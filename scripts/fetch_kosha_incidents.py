@@ -193,18 +193,27 @@ def main() -> int:
         # Reprocessing re-derives fields from cache; it does not re-retrieve
         # anything, so the original fetch date must survive. Prefer the date
         # recorded in the cache, fall back to the existing store.
-        seen = {i.pst_no: i.fetched_at for i in load_incidents(out)}
+        stored = {i.pst_no: i for i in load_incidents(out)}
         rebuilt = []
         for p in cached:
             raw = json.loads(p.read_text(encoding="utf-8"))
             cached_at = raw.get("fetchedAt")
-            fetched_at = (
-                datetime.date.fromisoformat(cached_at)
-                if cached_at
-                else seen.get(raw["pstNo"], today)
-            )
+            prior = stored.get(raw["pstNo"])
+            if cached_at:
+                fetched_at = datetime.date.fromisoformat(cached_at)
+            elif prior:
+                fetched_at = prior.fetched_at
+            else:
+                fetched_at = today
             rebuilt.append(_record(raw, fetched_at))
+        # 캐시는 .gitignore 대상이라 저장소보다 짧을 수 있다. 자동 수집은 러너에서
+        # 돌고 캐시는 거기 남으므로, 다른 PC에서 재처리하면 그 기록들의 원문이
+        # 없다. 캐시에 있는 것만 쓰면 그 기록이 조용히 삭제된다.
+        kept = [i for pst_no, i in stored.items() if pst_no not in {r.pst_no for r in rebuilt}]
         print(f"캐시 {len(rebuilt)}건 재처리 (네트워크 호출 없음)")
+        if kept:
+            print(f"⚠️ 원문 캐시가 없어 재처리하지 못한 기존 기록 {len(kept)}건 — 그대로 둡니다")
+        rebuilt.extend(kept)
         if args.dry_run:
             print("dry-run: 저장하지 않음")
             return 0
