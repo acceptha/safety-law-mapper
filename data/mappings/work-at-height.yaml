@@ -35,6 +35,14 @@ applicable_laws:
         valid_from: "2011-07-06"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제44조
+      - article_ref: 제46조
+        article_title: 승강설비의 설치
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 높이 또는 깊이가 2m를 초과하는 장소에서 작업하는 경우 근로자가 안전하게 승강할 수 있는 건설용 리프트 등의 설비를 설치할 것. 다만 작업의 성질상 설치가 곤란한 경우는 예외
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제46조
 references:
   - title: KOSHA 추락재해 예방자료
     url: https://www.kosha.or.kr/kosha/data/guidanceC.do
