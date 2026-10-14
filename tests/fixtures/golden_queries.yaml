@@ -445,6 +445,13 @@
     keywords: [비계]
   must_include_mappings: [scaffold-assembly]
   top_mapping: scaffold-assembly
+- name: mobile-scaffold-query
+  query:
+    keywords: [이동식비계]
+  must_include_mappings: [mobile-scaffold-work]
+  top_mapping: mobile-scaffold-work
+  must_include_articles:
+    - { mapping_id: mobile-scaffold-work, law_id: osh-rule, article_ref: 제68조 }
 - name: demolition-not-asbestos
   query:
     keywords: [철거]

@@ -87,7 +87,9 @@ def test_build_incident_extracts_structured_facts(posts, lexicon, mapping_keywor
     assert inc.fatalities == 1
     assert inc.fall_height_m == 1.8
     assert AccidentType.FALL in inc.accident_type
-    assert "비계" in inc.work_keywords
+    # '이동식 비계'는 제68조를 가진 전용 매핑의 어휘로 옮겨진다. 맨 '비계'로
+    # 떨어뜨리면 비계 조립작업(제56~58조)으로 가 버린다.
+    assert inc.work_keywords == ["이동식비계"]
     assert inc.source_url.endswith(inc.pst_no)
 
 
