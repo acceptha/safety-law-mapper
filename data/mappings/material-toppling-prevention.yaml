@@ -1,0 +1,37 @@
+mapping_id: material-toppling-prevention
+work_type:
+  name_ko: 자재·부재 전도 방지
+  category: falling-object
+  # '전도'는 넣지 않는다. 지게차·크레인·굴착기 전도가 수집분에만 열 건이 넘고,
+  # 그 사고들은 각자의 전용 조문(제171·199조 등)이 있다. 여기서 다루는 것은
+  # 세워 두거나 기대어 놓은 물건이 넘어지는 쪽이다.
+  keywords: [전도방지, 지탱, 고임목, 받침대]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제3조
+        article_title: 전도의 방지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 제품·자재·부재 등이 넘어지지 않도록 붙들어 지탱하게 하는 등 안전 조치를 할 것. 다만 근로자가 접근하지 못하도록 조치한 경우는 예외(제2항). 작업장 바닥 등은 근로자가 넘어지거나 미끄러질 위험이 없도록 안전하고 청결한 상태로 유지할 것(제1항)
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제3조
+      - article_ref: 제20조
+        article_title: 출입의 금지 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 제3조제2항 단서의 '접근하지 못하도록 하는 조치'가 이 조의 방식이다. 해당 작업·장소에 울타리를 설치하는 등 관계 근로자가 아닌 사람의 출입을 금지할 것
+        valid_from: "2024-06-28"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제20조
+references:
+  - title: KOSHA 중량물·자재 취급 안전 자료
+    url: https://www.kosha.or.kr/kosha/data/industrialSafety.do
+last_verified: "2026-10-14"
+verified_by: acceptha
