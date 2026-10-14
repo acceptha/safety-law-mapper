@@ -175,8 +175,20 @@ function currentQuery() {
   };
 }
 
+// Reflect the current search in the address bar so a result can be shared or
+// bookmarked. replaceState, not pushState: typing in a search box should not
+// bury the page under a stack of history entries.
+function syncUrl(keywords, category) {
+  const p = new URLSearchParams();
+  if (keywords.length) p.set("q", keywords.join(" "));
+  if (category) p.set("category", category);
+  const qs = p.toString();
+  history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+}
+
 async function run() {
   const { keywords, category } = currentQuery();
+  syncUrl(keywords, category);
   if (!keywords.length && !category) {
     document.getElementById("status").textContent = "키워드를 입력하거나 분류를 선택하세요.";
     document.getElementById("results").innerHTML = "";
@@ -224,6 +236,7 @@ async function boot() {
       document.getElementById("cnt").textContent = info.mappings;
       const c = await (await fetch("categories")).json();
       fillCategories(c.categories.map(x => x.category));
+      applyUrlQuery();
       return;
     }
   } catch { /* no API here — static mode */ }
@@ -235,7 +248,24 @@ async function boot() {
     fillCategories(DATA.mappings.map(m => m.work_type.category));
   } catch {
     document.getElementById("status").textContent = "데이터 로드에 실패했습니다.";
+    return;
   }
+  applyUrlQuery();
+}
+
+// A shared link lands here: fill the controls from the URL and search, so the
+// visitor sees the result the sender meant, not an empty form.
+function applyUrlQuery() {
+  const p = new URLSearchParams(location.search);
+  const q = p.get("q");
+  const cat = p.get("category");
+  if (!q && !cat) return;
+  if (q) document.getElementById("q").value = q;
+  if (cat) {
+    const sel = document.getElementById("cat");
+    if ([...sel.options].some(o => o.value === cat)) sel.value = cat;
+  }
+  run();
 }
 
 document.getElementById("go").addEventListener("click", run);
