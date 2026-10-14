@@ -41,7 +41,7 @@ applicable_laws:
         obligation_type: general
         obligation_subject: employer
         summary_ko: 풍속 초당 10미터 이상, 강우량 시간당 1밀리미터 이상, 강설량 시간당 1센티미터 이상인 경우 철골작업 중지
-        valid_from: "2011-07-06"
+        valid_from: "2023-11-14"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제383조
       - article_ref: 제44조

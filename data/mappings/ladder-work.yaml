@@ -23,8 +23,8 @@ applicable_laws:
         article_title: 추락의 방지
         obligation_type: provision
         obligation_subject: employer
-        summary_ko: 추락 위험 장소에 작업발판 설치, 곤란 시 추락방호망 설치 또는 안전대 착용 등 조치
-        valid_from: "2021-05-28"
+        summary_ko: 추락 위험 장소에 작업발판 설치, 곤란 시 추락방호망 설치 또는 안전대 착용 등 조치. 작업발판·추락방호망 모두 곤란하면 버팀대 3개 이상의 이동식 사다리를 쓸 수 있으나, 평탄·견고·미끄럽지 않은 바닥에 설치하고 넘어짐 방지 조치(고정·아웃트리거·지지자)를 하며, 최대사용하중 이내로 바닥면에서 3.5m 이하에서만 작업하고, 최상부 발판과 그 아래 디딤대에는 올라서지 않으며(1m 이하 사다리는 제외), 안전모를 착용하되 2m 이상이면 안전대도 함께 착용(제4항)
+        valid_from: "2024-06-28"
         valid_until: null
         source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제42조
 references:
