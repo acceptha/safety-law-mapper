@@ -1,5 +1,6 @@
 import datetime
 import json
+import os
 import sys
 
 import pytest
@@ -229,6 +230,11 @@ def test_reprocess_preserves_original_fetch_date(tmp_path):
         [sys.executable, str(script), "--reprocess", "--cache-dir", str(cache), "--out", str(out)],
         capture_output=True,
         text=True,
+        # 이 스크립트는 한글을 찍는다. 양쪽 끝을 다 고정하지 않으면 Windows
+        # 기본 코덱(cp949)과 어긋나 파이프 디코딩이 깨지고, 깨지는 쪽이
+        # stderr라 스크립트가 실패한 바로 그 순간 이유가 사라진다.
+        encoding="utf-8",
+        env={**os.environ, "PYTHONIOENCODING": "utf-8"},
     )
     assert result.returncode == 0, result.stderr
     (incident,) = load_incidents(out)
