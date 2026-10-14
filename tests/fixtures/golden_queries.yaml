@@ -457,6 +457,26 @@
     keywords: [둥근톱]
   must_include_mappings: [woodworking-machine-work]
   top_mapping: woodworking-machine-work
+- name: rigging-gear-query
+  query:
+    keywords: [줄걸이]
+  must_include_mappings: [rigging-gear]
+  top_mapping: rigging-gear
+  must_include_articles:
+    - { mapping_id: rigging-gear, law_id: osh-rule, article_ref: 제163조 }
+    - { mapping_id: rigging-gear, law_id: osh-rule, article_ref: 제169조 }
+- name: wire-rope-query
+  query:
+    keywords: [와이어로프]
+  must_include_mappings: [rigging-gear]
+  top_mapping: rigging-gear
+- name: crane-stays-with-crane
+  query:
+    keywords: [크레인]
+  must_include_mappings: [crane-lifting]
+  top_mapping: crane-lifting
+  must_include_articles:
+    - { mapping_id: crane-lifting, law_id: osh-rule, article_ref: 제137조 }
   must_include_articles:
     - { mapping_id: woodworking-machine-work, law_id: osh-rule, article_ref: 제105조 }
     - { mapping_id: woodworking-machine-work, law_id: osh-rule, article_ref: 제106조 }

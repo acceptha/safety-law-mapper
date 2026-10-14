@@ -1,0 +1,84 @@
+mapping_id: rigging-gear
+work_type:
+  name_ko: 줄걸이·달기구 사용
+  category: lifting
+  # 제7관은 크레인뿐 아니라 호이스트·곤돌라·승강기 등 모든 양중기의 달기구에
+  # 적용된다. 그래서 crane-lifting 에 묻지 않고 따로 둔다.
+  keywords: [줄걸이, 달기구, 와이어로프, 섬유로프, 달기체인, 샤클, 고리걸이, 슬링, 안전계수]
+conditions:
+  min_employees: null
+  max_employees: null
+  substances: []
+  equipment: []
+applicable_laws:
+  - law_id: osh-rule
+    articles:
+      - article_ref: 제163조
+        article_title: 와이어로프 등 달기구의 안전계수
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 달기구의 안전계수(절단하중 ÷ 걸리는 하중의 최대값)가 기준에 미달하면 사용하지 말 것 — 근로자가 탑승하는 운반구를 지지하는 달기와이어로프·달기체인 10 이상, 화물의 하중을 직접 지지하는 것 5 이상, 훅·샤클·클램프·리프팅 빔 3 이상, 그 밖의 경우 4 이상. 달기구는 최대허용하중 등의 표식이 견고하게 붙어 있는 것을 사용할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제163조
+      - article_ref: 제169조
+        article_title: 꼬임이 끊어진 섬유로프 등의 사용금지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 양중기의 섬유로프는 제63조제2항제9호를 준용해, 꼬임이 끊어진 것, 심하게 손상되거나 부식된 것, 2개 이상을 연결한 것, 작업높이보다 길이가 짧은 것을 사용하지 말 것
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제169조
+      - article_ref: 제166조
+        article_title: 이음매가 있는 와이어로프 등의 사용 금지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 양중기의 와이어로프는 제63조제1항제1호를 준용해, 이음매가 있는 것, 한 꼬임에서 끊어진 소선의 수가 10% 이상인 것, 지름 감소가 공칭지름의 7%를 초과하는 것, 꼬인 것, 심하게 변형되거나 부식된 것, 열과 전기충격에 의해 손상된 것을 사용하지 말 것
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제166조
+      - article_ref: 제168조
+        article_title: 변형되어 있는 훅·샤클 등의 사용금지 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 변형되거나 균열이 있는 훅·샤클·클램프·링 등 철구를 크레인·이동식 크레인의 고리걸이용구로 사용하지 말 것. 중량물 운반용으로 제작하는 지그·훅은 운반 중 주변 구조물과 충돌해도 슬링이 이탈되지 않는 구조로 할 것. 안전성 시험을 거쳐 안전율 3 이상이 확보된 중량물 취급용구를 구매해 쓰거나, 자체 제작한 것은 비파괴시험을 할 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제168조
+      - article_ref: 제164조
+        article_title: 고리걸이 훅 등의 안전계수
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 달기 와이어로프·달기 체인과 일체형인 고리걸이 훅 또는 샤클의 안전계수는 그 달기 와이어로프·달기체인의 안전계수와 같은 값 이상일 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제164조
+      - article_ref: 제167조
+        article_title: 늘어난 달기체인 등의 사용 금지
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 양중기의 달기 체인은 제63조제1항제2호를 준용해, 제조된 때보다 길이가 5%를 초과해 늘어난 것, 링 단면지름이 제조된 때보다 10%를 초과해 감소한 것, 균열이 있거나 심하게 변형된 것을 사용하지 말 것
+        valid_from: "2022-10-18"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제167조
+      - article_ref: 제165조
+        article_title: 와이어로프의 절단방법 등
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 와이어로프를 절단해 양중작업용구를 제작할 때는 반드시 기계적인 방법으로 절단하고 가스용단 등 열에 의한 방법을 쓰지 말 것. 아크·화염·고온부 접촉 등으로 열영향을 받은 와이어로프를 사용하지 말 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제165조
+      - article_ref: 제170조
+        article_title: 링 등의 구비
+        obligation_type: general
+        obligation_subject: employer
+        summary_ko: 엔드리스가 아닌 와이어로프·달기 체인은 양단에 훅·샤클·링 또는 고리를 구비한 것만 크레인·이동식 크레인의 고리걸이용구로 사용할 것. 그 고리는 꼬아넣기·압축멈춤 또는 그와 같은 정도 이상의 힘을 유지하는 방법으로 제작된 것일 것
+        valid_from: "2011-07-06"
+        valid_until: null
+        source_url: https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제170조
+references:
+  - title: KOSHA 줄걸이 작업 안전 자료
+    url: https://www.kosha.or.kr/kosha/data/industrialSafety.do
+last_verified: "2026-10-14"
+verified_by: acceptha
