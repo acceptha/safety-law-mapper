@@ -33,9 +33,16 @@ Repository = "https://github.com/acceptha/safety-law-mapper"
 
 [project.scripts]
 slm = "safety_law_mapper.cli:app"
+slm-mcp = "safety_law_mapper.mcp_server:main"
+slm-serve = "safety_law_mapper.api:main"
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+# The servers are optional extras, kept out of `dev` so a transitive wheel
+# that lags a new Python release cannot turn the core test matrix red — both
+# test modules skip themselves when their dependency is absent.
+mcp = ["mcp>=2.0"]
+api = ["fastapi>=0.110", "uvicorn[standard]>=0.30"]
+dev = ["pytest>=8.0", "anyio>=4.0", "httpx>=0.27"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/safety_law_mapper"]

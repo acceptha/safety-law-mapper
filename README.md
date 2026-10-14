@@ -84,6 +84,38 @@ for r in results:
     print(r.mapping.work_type.name_ko, r.score)
 ```
 
+### AI 에이전트에 연결 (MCP)
+
+LLM이 안전 법규 질문에 조항을 **지어내지 않게** 하려면, 생성 대신 검증된 데이터를 조회하게 만들어야 합니다. `slm-mcp`는 매칭 엔진을 [MCP](https://modelcontextprotocol.io) 툴로 노출합니다.
+
+```bash
+pip install "safety-law-mapper[mcp]"
+claude mcp add safety-law-mapper -- slm-mcp
+```
+
+반환되는 모든 조항에 `source_url`(law.go.kr)과 사람이 검증한 날짜가 실리고, 미검증 항목은 그렇게 표시됩니다. 매핑에 없는 작업은 빈 결과를 반환합니다 — **추측하지 않습니다.**
+
+👉 [MCP 연동 가이드](docs/MCP.md) · [grounding 실측 기록](docs/MCP-grounding-실측.md)
+
+### REST API로 사용
+
+```bash
+pip install "safety-law-mapper[api]"
+slm-serve                                   # http://127.0.0.1:8000/docs
+
+curl "http://127.0.0.1:8000/search?q=밀폐공간&q=용접&limit=2"
+```
+
+```bash
+docker build -t safety-law-mapper . && docker run --rm -p 8000:8000 safety-law-mapper
+```
+
+전 경로 읽기 전용(GET)입니다 — 데이터는 HTTP가 아니라 PR로 바뀝니다.
+
+👉 [REST API 가이드](docs/API.md)
+
+> **네 인터페이스, 하나의 엔진** — CLI · 라이브러리 · MCP · REST가 모두 같은 `matcher.match()`를 호출하고, 두 서버는 같은 표현 계층(`view`)에서 응답을 만듭니다. 어떻게 물었는지에 따라 인용이 달라질 수 없고, 그 불변식은 테스트로 고정돼 있습니다.
+
 ## 데이터 현황
 
 고위험 작업 유형 **41종** 매핑 (12개 카테고리 전부 커버): 밀폐공간, 용접·용단, 밀폐공간×용접(조합), 고소작업, 지붕 위 작업, 철골 조립, 벌목, 잠수, 지게차, 크레인, 타워크레인 설치·해체, 굴착, 굴착기, 전기, 비계, 사다리, 중량물, 컨베이어, 프레스, 압축·파쇄 설비, 기계 정비·청소, 차량계 건설기계, 차량계 하역운반기계, 적재물 보관·하역, 거푸집·동바리, 구축물 안전, 연삭기, 산업용 로봇, 항타기, 세차장, MSDS 화학물질, 위험물질·도장(교차 인용), 석면 해체, 소음, 고열·폭염(2025년 신설 규정 반영) 등 — 전 조항 [국가법령정보센터](https://www.law.go.kr) 원문 대조 검증 완료.

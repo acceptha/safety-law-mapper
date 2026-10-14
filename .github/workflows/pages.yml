@@ -32,8 +32,19 @@ jobs:
       - name: Build site
         run: |
           mkdir -p _site
-          cp web/index.html _site/
+          # Copy the whole directory: index.html imports matcher.js, and
+          # naming files one by one is how the next asset gets forgotten.
+          cp web/*.html web/*.js _site/
           python scripts/export_web_data.py _site/data.json
+      - name: Check the demo has everything it needs
+        run: |
+          for f in index.html matcher.js data.json; do
+            test -s "_site/$f" || { echo "missing _site/$f"; exit 1; }
+          done
+          # Every module index.html imports must have been copied.
+          sed -n 's|.*from "\./\([^"]*\)".*|\1|p' _site/index.html | while read -r m; do
+            test -s "_site/$m" || { echo "index.html imports $m but it was not deployed"; exit 1; }
+          done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
