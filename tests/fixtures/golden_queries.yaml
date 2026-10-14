@@ -477,6 +477,13 @@
   top_mapping: crane-lifting
   must_include_articles:
     - { mapping_id: crane-lifting, law_id: osh-rule, article_ref: 제137조 }
+- name: material-toppling-query
+  query:
+    keywords: [전도방지]
+  must_include_mappings: [material-toppling-prevention]
+  top_mapping: material-toppling-prevention
+  must_include_articles:
+    - { mapping_id: material-toppling-prevention, law_id: osh-rule, article_ref: 제3조 }
   must_include_articles:
     - { mapping_id: woodworking-machine-work, law_id: osh-rule, article_ref: 제105조 }
     - { mapping_id: woodworking-machine-work, law_id: osh-rule, article_ref: 제106조 }
