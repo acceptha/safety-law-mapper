@@ -77,25 +77,56 @@ jobs:
           echo "::error::3회 재시도 후에도 push 하지 못했습니다"
           exit 1
 
-      # 알림은 '새 사고'가 아니라 '새 공백'에 울린다. 사고는 주 2~3건 들어오고
-      # 대부분은 이미 맞는 조문으로 가므로, 들어올 때마다 알리면 두 주 만에
-      # 아무도 보지 않게 되고 정작 손이 필요한 날의 알림까지 같이 묻힌다.
+      # 알림은 두 갈래다. 신호의 빈도가 16배 차이 나서 하나로 묶을 수 없다.
+      #
+      #   공백  주 0.32회 · 100% 가 손이 필요한 것  → 생기는 날 바로, 작업 이슈로
+      #   요약  주 5.9건 들어옴 · 대부분 이미 매핑됨 → 8건 또는 7일 중 먼저, 댓글로
+      #
+      # 수집될 때마다 알리면 주 1.96회 울리는데 그중 16%만 손댈 것이 있다.
+      # 두 주면 아무도 보지 않게 되고, 정작 필요한 날의 알림까지 같이 묻힌다.
+      # 상수의 근거는 scripts/simulate_alert_policies.py 의 소급 측정이다.
       #
       # 커밋 뒤에 둔다. 여기서 실패해도 수집한 데이터는 이미 안전하고, 실패가
       # 보이는 편이 알림이 조용히 끊긴 채로 도는 것보다 낫다.
-      - name: Open an issue for new gaps
+      - name: Notify
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          body=$(python scripts/report_new_gaps.py)
-          if [ -z "$body" ]; then
+
+          # 라벨이 없으면 --label 이 실패한다. 있으면 그대로 둔다.
+          gh label create data-gap --color B60205 --description "미매핑 사고 - 매핑 기여 대상" 2>/dev/null || true
+          gh label create digest --color 0E8A16 --description "수집 요약" 2>/dev/null || true
+
+          gaps=$(python scripts/report_new_gaps.py)
+          if [ -n "$gaps" ]; then
+            gh issue create --label data-gap               --title "데이터 공백: $(TZ=Asia/Seoul date +%F) 수집분" --body "$gaps"
+          else
             echo "새로 생긴 데이터 공백 없음 - 이슈를 만들지 않습니다."
+          fi
+
+          # 요약은 이슈 하나에 댓글로 쌓는다. 이슈가 늘지 않고, 마지막 댓글
+          # 시각이 그대로 '마지막 발송일'이 된다 - 상태 파일도, 커밋도 없다.
+          num=$(gh issue list --label digest --state open --limit 1 --json number --jq '.[0].number // empty')
+          if [ -z "$num" ]; then
+            url=$(gh issue create --label digest --title "사고속보 수집 요약"               --body "@acceptha 수집 요약이 이 이슈에 댓글로 쌓입니다. 보내는 기준은 **8건 또는 7일 중 먼저**이고, 근거는 \`scripts/simulate_alert_policies.py\` 입니다.")
+            echo "요약 이슈를 만들었습니다: $url"
+            # 방금 만들었으면 기준일이 오늘이라 보낼 것이 없다.
             exit 0
           fi
-          gh issue create \
-            --title "데이터 공백: $(TZ=Asia/Seoul date +%F) 수집분" \
-            --body "$body"
+          # --paginate 로 전부 받아 마지막을 쓴다. 매주 한 건씩 쌓이는 이슈라
+          # 한 페이지만 보면 몇 년 뒤 조용히 틀린 기준일을 집는다.
+          since=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/$num/comments" --jq '.[].created_at' | tail -1)
+          if [ -z "$since" ]; then
+            since=$(gh issue view "$num" --json createdAt --jq '.createdAt')
+          fi
+          since="${since%%T*}"
+          body=$(python scripts/report_new_incidents.py --since "$since")
+          if [ -n "$body" ]; then
+            gh issue comment "$num" --body "$body"
+          else
+            echo "요약을 보낼 때가 아닙니다 (기준일 $since)."
+          fi
 
       - name: Summary
         if: always()
