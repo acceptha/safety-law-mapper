@@ -91,7 +91,14 @@ def _envelope(service_id: str, data: dict) -> dict:
     }
 
 
-def fetch_list(page: int) -> list[dict]:
+def fetch_list(page: int) -> tuple[list[dict], int]:
+    """Return (rows, total post count).
+
+    The count matters: asking for a page past the end of the board returns a
+    response with no `bbsPstGrid` at all, which is indistinguishable from the
+    API having changed shape. `totalCnt` tells us where to stop, so we never
+    have to guess from a short page.
+    """
     resp = _post(
         _envelope(
             "basicAccess",
@@ -120,7 +127,7 @@ def fetch_list(page: int) -> list[dict]:
     grid = resp.get("bbsPstGrid")
     if grid is None:
         raise ApiError("list response has no bbsPstGrid — API shape changed")
-    return grid
+    return grid, int(resp.get("totalCnt") or 0)
 
 
 def fetch_detail(pst_no: str) -> str:
@@ -231,13 +238,17 @@ def main() -> int:
     posts: list[dict] = []
     truncated = False
     for page in range(1, args.pages + 1):
-        rows = fetch_list(page)
+        rows, total = fetch_list(page)
         if not rows:
             break
         fresh = [r for r in rows if r.get("pstNo") and r["pstNo"] not in existing]
         posts.extend(fresh)
         print(f"  p{page}: {len(rows)}건 중 신규 {len(fresh)}건")
         if not fresh:
+            break
+        # 게시판의 끝. 한 페이지만 더 요청하면 grid 자체가 없는 응답이 오고,
+        # 구조 변경 가드가 그걸 잡아 그때까지 모은 수집분을 전부 버린다.
+        if total and page * PAGE_SIZE >= total:
             break
         time.sleep(args.delay)
         if page == args.pages:

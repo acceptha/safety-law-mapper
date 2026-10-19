@@ -304,3 +304,71 @@ def test_coverage_counts_mapped_and_total(posts, lexicon, mapping_keywords, data
     mapped, total = coverage(matches)
     assert total == len(posts)
     assert 0 < mapped < total  # 버스 1건은 공백으로 남아야 한다
+
+
+def _load_collector():
+    """수집기는 scripts/ 아래라 패키지가 아니다. 파일에서 직접 읽는다."""
+    import importlib.util
+
+    path = REPO_ROOT / "scripts" / "fetch_kosha_incidents.py"
+    spec = importlib.util.spec_from_file_location("kosha_collector", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_scan_stops_at_the_last_page_of_the_board(tmp_path, monkeypatch):
+    """게시판의 끝을 한 페이지라도 넘겨 요청하면 grid 자체가 없는 응답이 온다.
+    그건 API 구조 변경이 아니라 정상적인 끝인데, 가드가 예외를 던지면 그때까지
+    모은 수집분이 **전부** 버려진다. 매일 도는 증분 수집은 '신규 없는 첫 페이지'
+    에서 멈춰 여기 닿지 않으므로, 고장 나 있는 것은 전량 백필 쪽이다.
+
+    응답의 totalCnt 가 끝을 알려 주므로 짧은 페이지로 추측할 필요가 없다.
+    """
+    collector = _load_collector()
+    total = collector.PAGE_SIZE + 2  # 2페이지가 마지막, 거기 2건
+
+    def row(n: int) -> dict:
+        return {
+            "pstNo": f"TESTPAGE{n:012d}",
+            "pstNm": f"[8/19, 부산 강서구] 이동식 비계가 넘어져 떨어짐 {n}",
+            "regYmd": "20260827",
+        }
+
+    pages = {
+        1: [row(n) for n in range(collector.PAGE_SIZE)],
+        2: [row(n) for n in range(collector.PAGE_SIZE, total)],
+    }
+
+    def fake_fetch_list(page: int):
+        if page not in pages:
+            raise collector.ApiError("list response has no bbsPstGrid — API shape changed")
+        return pages[page], total
+
+    monkeypatch.setattr(collector, "fetch_list", fake_fetch_list)
+    monkeypatch.setattr(
+        collector,
+        "fetch_detail",
+        lambda pst_no: "2026. 8. 19 (수), 14:08경\n부산 강서구 소재 공사현장에서\n"
+        "이동식 비계가 넘어지며 떨어짐 (사망1명)",
+    )
+
+    out = tmp_path / "alerts.jsonl"
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "fetch_kosha_incidents.py",
+            "--pages",
+            "250",
+            "--delay",
+            "0",
+            "--cache-dir",
+            str(tmp_path / "cache"),
+            "--out",
+            str(out),
+        ],
+    )
+
+    assert collector.main() == 0
+    assert len(load_incidents(out)) == total
