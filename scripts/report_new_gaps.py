@@ -50,6 +50,11 @@ MIN_SECTION = 3
 # 대괄호는 마크다운이 첫 ']' 에서 링크 텍스트를 끊어 링크를 깨뜨린다.
 _TITLE_PREFIX_RE = re.compile(r"^\s*\[[^\]]*\]\s*")
 
+#: 봇이 만든 이슈는 저장소 소유자에게 알림이 가지 않는다 — 기본 알림 설정은
+#: '참여 중이거나 멘션된 것'이고, 봇 이슈는 둘 다 아니다. 멘션이 유일하게
+#: 확실한 전달 경로다.
+MENTION = "@acceptha"
+
 
 def _blob_url(path: str) -> str:
     """이슈 본문의 상대 링크는 저장소 파일로 풀리지 않는다. 절대 주소를 쓴다."""
@@ -96,7 +101,7 @@ def render(gaps: list[Incident], sections: list[tuple[int, str, str]]) -> str:
     if not gaps:
         return ""
     lines = [
-        f"오늘 수집분 중 **{len(gaps)}건**이 어떤 조문도 가리키지 못했습니다.",
+        f"{MENTION} 오늘 수집분 중 **{len(gaps)}건**이 어떤 조문도 가리키지 못했습니다.",
         "",
         "| 발생 | 지역 | 업종 | 사고 |",
         "|---|---|---|---|",
