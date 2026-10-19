@@ -106,6 +106,24 @@ def test_only_counts_what_arrived_after_the_last_send(dataset):
     assert [i.pst_no for i in digest.pending_since([older, newer], SINCE)] == [newer.pst_no]
 
 
+
+def test_table_says_the_answer_is_a_ranked_set(dataset):
+    """1순위만 실으면 읽는 사람이 그것만 답으로 받는다.
+
+    추락 사망 사고에서 1순위가 '하던 작업'(용접·도장·철거)으로 가고 추락
+    조문이 2순위에 있는 경우가 수집분에 16건 있다. 답을 좁혀 보여주는
+    알림은 그 자체로 틀린 답을 만든다.
+    """
+    digest = _load_digest()
+    collected = SINCE + datetime.timedelta(days=1)
+    # '달비계'는 suspended-scaffold-work 와 scaffold-assembly 양쪽에 걸린다.
+    pending = [_incident(n, collected, keywords=["달비계"]) for n in range(digest.THRESHOLD)]
+
+    body = digest.render(pending, list(dataset.mappings.values()), SINCE, collected)
+
+    assert "외 " in body and "종</sub>" in body
+
+
 def test_simulation_shows_why_a_day_cap_is_needed():
     """정책 상수의 근거가 되는 시뮬레이터 자체를 고정한다.
 

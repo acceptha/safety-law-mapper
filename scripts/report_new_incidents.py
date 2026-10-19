@@ -54,6 +54,20 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from report_new_gaps import _link_label  # noqa: E402
 
 
+def _applied(match) -> str:
+    """1순위 매핑과, 뒤에 몇 종이 더 있는지.
+
+    순위는 하나가 아니라 목록이다. 1순위만 실으면 읽는 사람이 그것만 답으로
+    받는데, 추락 사망 사고에서 1순위가 '하던 작업'(용접·도장·철거)으로 가고
+    추락 조문이 2순위에 있는 경우가 수집분에 16건 있다. 답을 좁혀 보여주는
+    알림은 그 자체로 틀린 답을 만든다.
+    """
+    if match.is_gap:
+        return "**없음**"
+    lead = match.results[0].mapping.work_type.name_ko
+    return lead if len(match.results) == 1 else f"{lead} <sub>외 {len(match.results) - 1}종</sub>"
+
+
 def pending_since(incidents: list[Incident], since: datetime.date) -> list[Incident]:
     """`since` **다음날 이후**에 수집된 사고. 경계일은 이미 보냈으므로 뺀다."""
     return sorted(
@@ -95,7 +109,7 @@ def render(pending: list[Incident], mappings: list, since: datetime.date, today:
         match = matches[inc.pst_no]
         when = inc.occurred_at.date().isoformat() if inc.occurred_at else "-"
         site = inc.site_type.value if inc.site_type else "-"
-        applied = "**없음**" if match.is_gap else match.results[0].mapping.work_type.name_ko
+        applied = _applied(match)
         lines.append(
             f"| {when} | {inc.region or '-'} | {site} | "
             f"[{_link_label(inc.title)}]({inc.source_url}) | {applied} |"
