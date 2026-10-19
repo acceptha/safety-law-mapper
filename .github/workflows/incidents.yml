@@ -18,6 +18,7 @@ concurrency:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   collect:
@@ -75,6 +76,26 @@ jobs:
           done
           echo "::error::3회 재시도 후에도 push 하지 못했습니다"
           exit 1
+
+      # 알림은 '새 사고'가 아니라 '새 공백'에 울린다. 사고는 주 2~3건 들어오고
+      # 대부분은 이미 맞는 조문으로 가므로, 들어올 때마다 알리면 두 주 만에
+      # 아무도 보지 않게 되고 정작 손이 필요한 날의 알림까지 같이 묻힌다.
+      #
+      # 커밋 뒤에 둔다. 여기서 실패해도 수집한 데이터는 이미 안전하고, 실패가
+      # 보이는 편이 알림이 조용히 끊긴 채로 도는 것보다 낫다.
+      - name: Open an issue for new gaps
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          body=$(python scripts/report_new_gaps.py)
+          if [ -z "$body" ]; then
+            echo "새로 생긴 데이터 공백 없음 - 이슈를 만들지 않습니다."
+            exit 0
+          fi
+          gh issue create \
+            --title "데이터 공백: $(TZ=Asia/Seoul date +%F) 수집분" \
+            --body "$body"
 
       - name: Summary
         if: always()

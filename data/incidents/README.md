@@ -44,6 +44,15 @@ python scripts/fetch_kosha_incidents.py --no-store-titles
 
 **자동 수집**: `.github/workflows/incidents.yml`이 매일 07:00 KST에 실행합니다. 수집할 게 없는 날은 커밋하지 않고 조용히 끝납니다.
 
+**알림**: 수집 직후 `scripts/report_new_gaps.py`가 돌고, **그날 들어온 사고 중 어떤 조문도 받지 못한 것이 있을 때만** 이슈를 엽니다(`issues: write` 권한 사용). 이슈 본문에는 사고 목록·원문 링크, 아직 비어 있는 절, 그리고 Claude Code에 그대로 붙여넣을 작업 지시가 들어갑니다.
+
+새 사고마다 알리지 않는 것은 의도한 것입니다. 사고는 주 2~3건 들어오지만 대부분은 이미 맞는 조문으로 갑니다. 들어올 때마다 울리면 두 주 만에 아무도 보지 않게 되고, 그러면 정작 손이 필요한 날의 알림까지 같이 묻힙니다.
+
+```bash
+python scripts/report_new_gaps.py                 # 오늘 수집분의 공백 (없으면 출력 없음)
+python scripts/report_new_gaps.py --date 2026-10-09  # 특정 수집일로 확인
+```
+
 수동 실행:
 
 ```bash
