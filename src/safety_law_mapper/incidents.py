@@ -354,6 +354,38 @@ class IncidentMatch:
         return not self.results
 
 
+def _fall_first(incident: Incident, results: list[MatchResult]) -> list[MatchResult]:
+    """추락 사망 사고에서는 추락 방호 매핑을 앞으로 끌어올린다.
+
+    매처는 '무슨 작업을 하고 있었나'로만 순위를 매긴다. 그래서 지붕 철거 중
+    떨어진 사망 사고가 `demolition-work` 를, 작업발판 위 용접 중 떨어진
+    사망 사고가 `welding-cutting` 을 1순위로 받았다. 둘 다 실제로 하던
+    작업이지만, **사람이 죽은 경위는 추락**이고 그걸 규정하는 것은 제42·43조와
+    각 설비의 추락 방호 조문이다. 수집분에 이런 사고가 17건 있었다.
+
+    사고 유형은 사고의 사실이지 질의어가 아니므로, 매처(`match`)는 건드리지
+    않는다. `slm search` 와 MCP 는 사고 유형을 모르고, 알 필요도 없다.
+
+    **정확히 일치한 키워드가 있는 매핑만 올린다.** 부분 일치까지 올리면
+    `리프트` 가 `테이블리프트`·`시저리프트` 에 삼켜져 화물용 승강기 추락이
+    고소작업대(제186조)로 간다 — 근거가 약한 쪽이 강한 쪽을 밀어내는 셈이다.
+    화물용 승강기는 양중기이지 고소작업대가 아니다.
+
+    같은 묶음 안의 순서는 매처가 매긴 그대로 둔다.
+    """
+    if AccidentType.FALL not in (incident.accident_type or []):
+        return results
+    spoken = set(incident.work_keywords)
+    lifted, rest = [], []
+    for result in results:
+        work_type = result.mapping.work_type
+        exact = spoken & set(work_type.keywords)
+        (lifted if work_type.category == WorkCategory.WORK_AT_HEIGHT and exact else rest).append(
+            result
+        )
+    return lifted + rest
+
+
 def map_incident(incident: Incident, mappings: list[Mapping]) -> IncidentMatch:
     """Rank mappings that apply to this incident's work type.
 
@@ -363,7 +395,7 @@ def map_incident(incident: Incident, mappings: list[Mapping]) -> IncidentMatch:
     if not incident.work_keywords:
         return IncidentMatch(incident=incident, results=[])
     results = match(mappings, Query(keywords=list(incident.work_keywords)))
-    return IncidentMatch(incident=incident, results=results)
+    return IncidentMatch(incident=incident, results=_fall_first(incident, results))
 
 
 def map_incidents(incidents: list[Incident], mappings: list[Mapping]) -> list[IncidentMatch]:

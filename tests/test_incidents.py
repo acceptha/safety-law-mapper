@@ -372,3 +372,60 @@ def test_scan_stops_at_the_last_page_of_the_board(tmp_path, monkeypatch):
 
     assert collector.main() == 0
     assert len(load_incidents(out)) == total
+
+
+def test_a_fatal_fall_leads_with_the_fall_provision(dataset, lexicon, mapping_keywords):
+    """매처는 '무슨 작업을 하고 있었나'로만 순위를 매긴다. 그래서 지붕 철거 중
+    떨어진 사망 사고가 demolition-work 를 1순위로 받았다. 철거도 실제로 하던
+    작업이지만 **사람이 죽은 경위는 추락**이고, 그걸 규정하는 것은 제45조다."""
+    incident = _build(
+        {
+            "pstNo": "TESTFALLROOF00000001",
+            "pstNm": "[9/5, 경기 부천시] 지붕 철거 작업 중 떨어짐",
+            "pstCn": "2026. 9. 5 (금), 11:20경\n경기 부천시 소재 공사현장에서\n"
+            "지붕 철거 작업 중 떨어짐 (사망1명)",
+            "regYmd": "20260908",
+        },
+        lexicon,
+        mapping_keywords,
+    )
+    mappings = list(dataset.mappings.values())
+
+    ranked = [r.mapping.mapping_id for r in map_incident(incident, mappings).results]
+
+    assert ranked[0] == "roof-work"
+    # 하던 작업이 사라지는 것은 아니다. 뒤로 갈 뿐이다.
+    assert "demolition-work" in ranked
+
+
+def test_a_partial_keyword_hit_does_not_outrank_an_exact_one(dataset, lexicon, mapping_keywords):
+    """'리프트'는 '테이블리프트'·'시저리프트'에 부분 일치로 걸린다. 추락이라는
+    이유만으로 그걸 올리면 화물용 승강기 추락이 고소작업대(제186조)로 간다.
+    화물용 승강기는 양중기이지 고소작업대가 아니다."""
+    incident = _build(
+        {
+            "pstNo": "TESTFALLLIFT00000001",
+            "pstNm": "[5/13, 인천 미추홀구] 운반용 리프트에서 떨어짐",
+            "pstCn": "2026. 5. 13 (수), 09:40경\n인천 미추홀구 소재 공장에서\n"
+            "운반용 리프트에서 떨어짐 (사망1명)",
+            "regYmd": "20260520",
+        },
+        lexicon,
+        mapping_keywords,
+    )
+    mappings = list(dataset.mappings.values())
+
+    ranked = [r.mapping.mapping_id for r in map_incident(incident, mappings).results]
+
+    assert ranked[0] == "hoist-lift-operation"
+    assert ranked.index("hoist-lift-operation") < ranked.index("aerial-work-platform")
+
+
+def test_the_search_api_is_untouched_by_the_fall_rule(dataset):
+    """사고 유형은 사고의 사실이지 질의어가 아니다. slm search 와 MCP 는
+    사고 유형을 모르고, 알 필요도 없다 — 매처는 건드리지 않았다."""
+    from safety_law_mapper.matcher import Query, match
+
+    ranked = [r.mapping.mapping_id for r in match(list(dataset.mappings.values()), Query(keywords=["지붕", "철거"]))]
+
+    assert ranked[0] == "demolition-work"
