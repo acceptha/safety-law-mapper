@@ -57,6 +57,10 @@ python scripts/fetch_kosha_incidents.py --no-store-titles
 
 본문에는 저장소 소유자 멘션이 들어갑니다. **봇이 만든 이슈는 멘션 없이는 알림이 가지 않습니다** — 기본 알림 설정이 '참여 중이거나 멘션된 것'이기 때문입니다.
 
+**이슈에서 바로 작업 시키기**: 공백 이슈에 `@claude` 로 댓글을 달면 `.github/workflows/claude.yml` 이 CI 에서 Claude Code 를 돌리고 PR 까지 올립니다. 쓰기 권한이 있는 사람만 부를 수 있고(저장소가 공개라 중요합니다), **봇은 부를 수 없습니다** — 공백 이슈가 스스로 작업을 시작하지는 않는다는 뜻입니다. 조문은 사람이 law.go.kr 원문으로 확인해야 하므로 그게 맞습니다.
+
+쓰려면 `CLAUDE_CODE_OAUTH_TOKEN` 시크릿과 [Claude GitHub App](https://github.com/apps/claude) 설치가 필요합니다. 토큰은 로컬에서 `claude setup-token` 으로 만듭니다 — Pro·Max 구독에 포함되고, API 키를 쓰면 구독과 별개로 종량 과금됩니다.
+
 ```bash
 python scripts/report_new_gaps.py                      # 오늘 수집분의 공백 (없으면 출력 없음)
 python scripts/report_new_gaps.py --date 2026-10-09    # 특정 수집일로 확인

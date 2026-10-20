@@ -1,0 +1,45 @@
+name: Claude Assistant
+
+# 이슈·PR 에서 `@claude` 로 부르면 CI 에서 Claude Code 가 돌고 PR 까지 올린다.
+# 데이터 공백 이슈(`scripts/report_new_gaps.py` 가 여는 것)에 댓글로 부르는 것이
+# 주 용도다.
+#
+# **자동 실행이 아니다.** 공백 이슈는 `github-actions[bot]` 이 만들고, 이 액션은
+# 기본값으로 봇의 트리거를 받지 않는다(`allowed_bots`). 공개 저장소에서 그걸
+# 열면 외부 앱이 프롬프트를 쥐고 호출할 수 있다 — 문서가 명시적으로 경고한다.
+#
+# 사람이 불러야 도는 쪽이 이 저장소에는 맞다. 조문은 law.go.kr 원문으로 사람이
+# 확인해야 하고(PROJECT_SPEC: 법령 조문 자동 생성 금지), 공백 이슈 본문에도 그
+# 지시가 들어 있다.
+#
+# 트리거할 수 있는 사람은 **쓰기 권한이 있는 사용자**로 제한된다. 저장소가
+# 공개라 이 점이 중요하다 — 액션이 이슈·PR·댓글·리뷰 이벤트마다 확인한다.
+#
+# permissions 블록은 두지 않는다. Claude GitHub App 이 저장소에 한정된
+# 단기 토큰을 따로 발급하므로, 워크플로의 GITHUB_TOKEN 을 넓힐 이유가 없다.
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  issues:
+    types: [opened, assigned, labeled]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  claude-response:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anthropics/claude-code-action@v1
+        with:
+          # Pro·Max 구독 토큰. 로컬에서 `claude setup-token` 으로 만들어
+          # `gh secret set CLAUDE_CODE_OAUTH_TOKEN` 으로 등록한다.
+          # API 키(`anthropic_api_key`)를 쓰면 구독과 별개로 종량 과금된다.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+
+          # 한 번에 도는 횟수를 제한하려면 여기에 건다. 매핑 작업은 조문을
+          # 여러 번 대조해야 해서 낮게 잡으면 일이 잘린 채 끝난다.
+          # claude_args: |
+          #   --max-turns 40
