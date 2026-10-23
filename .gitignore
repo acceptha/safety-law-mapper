@@ -10,3 +10,6 @@ build/
 
 # 사고속보 원문 캐시 — 재처리용 로컬 사본, 재배포하지 않음
 data/incidents/.cache/
+
+# 포트폴리오 산출물 — 공개 저장소에 올리지 않음
+portfolio/
