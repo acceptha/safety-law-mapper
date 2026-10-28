@@ -391,51 +391,13 @@
       "version": "0.1.2"
     },
     {
-      "bom-ref": "pip==26.0.1",
-      "description": "The PyPA recommended tool for installing Python packages.",
-      "externalReferences": [
-        {
-          "comment": "from packaging metadata Project-URL: Documentation",
-          "type": "documentation",
-          "url": "https://pip.pypa.io"
-        },
-        {
-          "comment": "from packaging metadata Project-URL: Source",
-          "type": "other",
-          "url": "https://github.com/pypa/pip"
-        },
-        {
-          "comment": "from packaging metadata Project-URL: Changelog",
-          "type": "release-notes",
-          "url": "https://pip.pypa.io/en/stable/news/"
-        },
-        {
-          "comment": "from packaging metadata Project-URL: Homepage",
-          "type": "website",
-          "url": "https://pip.pypa.io/"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "acknowledgement": "declared",
-            "id": "MIT"
-          }
-        }
-      ],
-      "name": "pip",
-      "purl": "pkg:pypi/pip@26.0.1",
-      "type": "library",
-      "version": "26.0.1"
-    },
-    {
-      "bom-ref": "pydantic==2.13.4",
+      "bom-ref": "pydantic==2.14.1",
       "description": "Data validation using Python type hints",
       "externalReferences": [
         {
           "comment": "from packaging metadata Project-URL: Documentation",
           "type": "documentation",
-          "url": "https://docs.pydantic.dev"
+          "url": "https://pydantic.dev/docs/validation/latest/get-started/"
         },
         {
           "comment": "from packaging metadata Project-URL: Source",
@@ -450,7 +412,7 @@
         {
           "comment": "from packaging metadata Project-URL: Changelog",
           "type": "release-notes",
-          "url": "https://docs.pydantic.dev/latest/changelog/"
+          "url": "https://pydantic.dev/docs/validation/latest/get-started/changelog/"
         },
         {
           "comment": "from packaging metadata Project-URL: Homepage",
@@ -467,12 +429,12 @@
         }
       ],
       "name": "pydantic",
-      "purl": "pkg:pypi/pydantic@2.13.4",
+      "purl": "pkg:pypi/pydantic@2.14.1",
       "type": "library",
-      "version": "2.13.4"
+      "version": "2.14.1"
     },
     {
-      "bom-ref": "pydantic_core==2.46.4",
+      "bom-ref": "pydantic_core==2.50.1",
       "description": "Core functionality for Pydantic validation and serialization",
       "externalReferences": [
         {
@@ -505,9 +467,9 @@
         }
       ],
       "name": "pydantic_core",
-      "purl": "pkg:pypi/pydantic-core@2.46.4",
+      "purl": "pkg:pypi/pydantic-core@2.50.1",
       "type": "library",
-      "version": "2.46.4"
+      "version": "2.50.1"
     },
     {
       "bom-ref": "referencing==0.37.0",
@@ -591,7 +553,7 @@
       "version": "15.0.0"
     },
     {
-      "bom-ref": "rpds-py==2026.6.3",
+      "bom-ref": "rpds-py==2026.9.1",
       "description": "Python bindings to Rust's persistent data structures (rpds)",
       "externalReferences": [
         {
@@ -639,14 +601,19 @@
         }
       ],
       "name": "rpds-py",
-      "purl": "pkg:pypi/rpds-py@2026.6.3",
+      "purl": "pkg:pypi/rpds-py@2026.9.1",
       "type": "library",
-      "version": "2026.6.3"
+      "version": "2026.9.1"
     },
     {
-      "bom-ref": "safety-law-mapper==0.2.0",
+      "bom-ref": "safety-law-mapper==0.3.0",
       "description": "\uc791\uc5c5 \uc0c1\ud669\uc744 \uc785\ub825\ud558\uba74 \uc801\uc6a9\ub418\ub294 \ud55c\uad6d \uc548\uc804 \ubc95\ub839\u00b7\uc870\ud56d\uc744 \ucc3e\uc544\uc8fc\ub294 \uaddc\uce59 \uae30\ubc18 \ub9e4\ud551 \uc5d4\uc9c4",
       "externalReferences": [
+        {
+          "comment": "PackageSource: Local",
+          "type": "distribution",
+          "url": "file:///D:/git/acceptha/safety-law-mapper"
+        },
         {
           "comment": "from packaging metadata Project-URL: Repository",
           "type": "vcs",
@@ -662,9 +629,8 @@
         }
       ],
       "name": "safety-law-mapper",
-      "purl": "pkg:pypi/safety-law-mapper@0.2.0",
       "type": "library",
-      "version": "0.2.0"
+      "version": "0.3.0"
     },
     {
       "bom-ref": "shellingham==1.5.4",
@@ -690,7 +656,7 @@
       "version": "1.5.4"
     },
     {
-      "bom-ref": "typer==0.27.1",
+      "bom-ref": "typer==0.27.3",
       "description": "Typer, build great CLIs. Easy to code. Based on Python type hints.",
       "externalReferences": [
         {
@@ -728,9 +694,9 @@
         }
       ],
       "name": "typer",
-      "purl": "pkg:pypi/typer@0.27.1",
+      "purl": "pkg:pypi/typer@0.27.3",
       "type": "library",
-      "version": "0.27.1"
+      "version": "0.27.3"
     },
     {
       "bom-ref": "typing-inspection==0.4.4",
@@ -852,7 +818,7 @@
         "attrs==26.1.0",
         "jsonschema-specifications==2025.9.1",
         "referencing==0.37.0",
-        "rpds-py==2026.6.3"
+        "rpds-py==2026.9.1"
       ],
       "ref": "jsonschema==4.26.0"
     },
@@ -867,27 +833,24 @@
       "ref": "mdurl==0.1.2"
     },
     {
-      "ref": "pip==26.0.1"
-    },
-    {
       "dependsOn": [
         "annotated-types==0.8.0",
-        "pydantic_core==2.46.4",
+        "pydantic_core==2.50.1",
         "typing-inspection==0.4.4",
         "typing_extensions==4.16.0"
       ],
-      "ref": "pydantic==2.13.4"
+      "ref": "pydantic==2.14.1"
     },
     {
       "dependsOn": [
         "typing_extensions==4.16.0"
       ],
-      "ref": "pydantic_core==2.46.4"
+      "ref": "pydantic_core==2.50.1"
     },
     {
       "dependsOn": [
         "attrs==26.1.0",
-        "rpds-py==2026.6.3",
+        "rpds-py==2026.9.1",
         "typing_extensions==4.16.0"
       ],
       "ref": "referencing==0.37.0"
@@ -900,16 +863,16 @@
       "ref": "rich==15.0.0"
     },
     {
-      "ref": "rpds-py==2026.6.3"
+      "ref": "rpds-py==2026.9.1"
     },
     {
       "dependsOn": [
         "PyYAML==6.0.3",
         "jsonschema==4.26.0",
-        "pydantic==2.13.4",
-        "typer==0.27.1"
+        "pydantic==2.14.1",
+        "typer==0.27.3"
       ],
-      "ref": "safety-law-mapper==0.2.0"
+      "ref": "safety-law-mapper==0.3.0"
     },
     {
       "ref": "shellingham==1.5.4"
@@ -921,7 +884,7 @@
         "rich==15.0.0",
         "shellingham==1.5.4"
       ],
-      "ref": "typer==0.27.1"
+      "ref": "typer==0.27.3"
     },
     {
       "dependsOn": [
@@ -934,7 +897,7 @@
     }
   ],
   "metadata": {
-    "timestamp": "2026-08-27T06:13:31.367861+00:00",
+    "timestamp": "2026-10-28T06:20:28.817845+00:00",
     "tools": {
       "components": [
         {
@@ -984,7 +947,7 @@
           ],
           "name": "cyclonedx-py",
           "type": "application",
-          "version": "7.3.1"
+          "version": "7.5.0"
         },
         {
           "description": "Python library for CycloneDX",
@@ -1038,7 +1001,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:20b12646-e702-4c36-89dc-e7f63eb0e1e0",
+  "serialNumber": "urn:uuid:4f5771c4-6fad-411e-86d9-90b1f2f7b464",
   "version": 1,
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
