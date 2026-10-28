@@ -1,0 +1,4464 @@
+{
+  "denominator": {
+    "osh-rule": 168,
+    "osh-act": 7
+  },
+  "results": [
+    {
+      "id": "q01-confined-space",
+      "situation": "밀폐공간에서 작업을 할 때",
+      "mapping_id": "confined-space-work",
+      "before": {
+        "cited": 29,
+        "in_dataset": 11,
+        "out_of_dataset": 18,
+        "title_match": 10,
+        "title_partial": 1,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": false,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제618조",
+            "cited_title": "정의",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제619조",
+            "cited_title": "밀폐공간 작업 프로그램의 수립·시행",
+            "in_dataset": true,
+            "dataset_title": "밀폐공간 작업 프로그램의 수립·시행",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제619조의2",
+            "cited_title": "산소 및 유해가스 농도의 측정",
+            "in_dataset": true,
+            "dataset_title": "산소 및 유해가스 농도의 측정 및 기록 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "partial"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제620조",
+            "cited_title": "환기 등",
+            "in_dataset": true,
+            "dataset_title": "환기 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제621조",
+            "cited_title": "인원의 점검",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제622조",
+            "cited_title": "출입의 금지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제623조",
+            "cited_title": "감시인의 배치 등",
+            "in_dataset": true,
+            "dataset_title": "감시인의 배치 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제624조",
+            "cited_title": "안전대 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제625조",
+            "cited_title": "대피용 기구의 비치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제626조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제627조",
+            "cited_title": "유해가스의 처리 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제628조",
+            "cited_title": "소각로 관련 작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제629조",
+            "cited_title": "용접 등에 관한 조치",
+            "in_dataset": true,
+            "dataset_title": "용접 등에 관한 조치",
+            "mappings": [
+              "confined-space-welding"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제630조",
+            "cited_title": "불활성기체의 누출",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제631조",
+            "cited_title": "불활성기체의 유입 방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제632조",
+            "cited_title": "냉장실 등의 작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제633조",
+            "cited_title": "출입구의 임의잠김 방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제634조",
+            "cited_title": "가스배관공사 등의 조치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제635조",
+            "cited_title": "압기공법에 관한 조치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제636조",
+            "cited_title": "지하실 등의 작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제637조",
+            "cited_title": "설비 개조 등의 작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제638조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제639조",
+            "cited_title": "사고 시의 대피 등",
+            "in_dataset": true,
+            "dataset_title": "사고 시의 대피 등",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제640조",
+            "cited_title": "긴급 구조훈련",
+            "in_dataset": true,
+            "dataset_title": "긴급 구조훈련",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제641조",
+            "cited_title": "안전한 작업방법 등의 주지",
+            "in_dataset": true,
+            "dataset_title": "안전한 작업방법 등의 주지",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제642조",
+            "cited_title": "의사의 진찰",
+            "in_dataset": true,
+            "dataset_title": "의사의 진찰",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제643조",
+            "cited_title": "구출 시 공기호흡기 또는 송기마스크의 사용",
+            "in_dataset": true,
+            "dataset_title": "구출 시 공기호흡기 또는 송기마스크의 사용",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제644조",
+            "cited_title": "보호구의 지급 등",
+            "in_dataset": true,
+            "dataset_title": "보호구의 지급 등",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제645조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          }
+        ]
+      },
+      "after": {
+        "cited": 14,
+        "in_dataset": 14,
+        "out_of_dataset": 0,
+        "title_match": 14,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제619조",
+            "cited_title": "밀폐공간 작업 프로그램의 수립·시행",
+            "in_dataset": true,
+            "dataset_title": "밀폐공간 작업 프로그램의 수립·시행",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제619조의2",
+            "cited_title": "산소 및 유해가스 농도의 측정 및 기록 등",
+            "in_dataset": true,
+            "dataset_title": "산소 및 유해가스 농도의 측정 및 기록 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제641조",
+            "cited_title": "안전한 작업방법 등의 주지",
+            "in_dataset": true,
+            "dataset_title": "안전한 작업방법 등의 주지",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제620조",
+            "cited_title": "환기 등",
+            "in_dataset": true,
+            "dataset_title": "환기 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제623조",
+            "cited_title": "감시인의 배치 등",
+            "in_dataset": true,
+            "dataset_title": "감시인의 배치 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제644조",
+            "cited_title": "보호구의 지급 등",
+            "in_dataset": true,
+            "dataset_title": "보호구의 지급 등",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제639조",
+            "cited_title": "사고 시의 대피 등",
+            "in_dataset": true,
+            "dataset_title": "사고 시의 대피 등",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제640조",
+            "cited_title": "긴급 구조훈련",
+            "in_dataset": true,
+            "dataset_title": "긴급 구조훈련",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제642조",
+            "cited_title": "의사의 진찰",
+            "in_dataset": true,
+            "dataset_title": "의사의 진찰",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제643조",
+            "cited_title": "구출 시 공기호흡기 또는 송기마스크의 사용",
+            "in_dataset": true,
+            "dataset_title": "구출 시 공기호흡기 또는 송기마스크의 사용",
+            "mappings": [
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제629조",
+            "cited_title": "용접 등에 관한 조치",
+            "in_dataset": true,
+            "dataset_title": "용접 등에 관한 조치",
+            "mappings": [
+              "confined-space-welding"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제240조",
+            "cited_title": "유류 등이 있는 배관이나 용기의 용접 등",
+            "in_dataset": true,
+            "dataset_title": "유류 등이 있는 배관이나 용기의 용접 등",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제241조",
+            "cited_title": "화재위험작업 시의 준수사항",
+            "in_dataset": true,
+            "dataset_title": "화재위험작업 시의 준수사항",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제241조의2",
+            "cited_title": "화재감시자",
+            "in_dataset": true,
+            "dataset_title": "화재감시자",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q02-scaffold",
+      "situation": "비계를 조립·해체하는 작업을 할 때",
+      "mapping_id": "scaffold-assembly",
+      "before": {
+        "cited": 24,
+        "in_dataset": 15,
+        "out_of_dataset": 9,
+        "title_match": 15,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": false,
+        "verification_date": false,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제57조",
+            "cited_title": "비계 등의 조립·해체 및 변경",
+            "in_dataset": true,
+            "dataset_title": "비계 등의 조립·해체 및 변경",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제58조",
+            "cited_title": "비계의 점검 및 보수",
+            "in_dataset": true,
+            "dataset_title": "비계의 점검 및 보수",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제35조",
+            "cited_title": "관리감독자의 유해·위험 방지 업무 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제54조",
+            "cited_title": "비계의 재료",
+            "in_dataset": true,
+            "dataset_title": "비계의 재료",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제55조",
+            "cited_title": "작업발판의 최대적재하중",
+            "in_dataset": true,
+            "dataset_title": "작업발판의 최대적재하중",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제56조",
+            "cited_title": "작업발판의 구조",
+            "in_dataset": true,
+            "dataset_title": "작업발판의 구조",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제59조",
+            "cited_title": "강관비계 조립 시의 준수사항",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제60조",
+            "cited_title": "강관비계의 구조",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제61조",
+            "cited_title": "강관의 강도 식별",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제62조",
+            "cited_title": "강관틀비계",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제63조",
+            "cited_title": "달비계의 구조",
+            "in_dataset": true,
+            "dataset_title": "달비계의 구조",
+            "mappings": [
+              "suspended-scaffold-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제64조",
+            "cited_title": "달비계의 점검 및 보수",
+            "in_dataset": true,
+            "dataset_title": "달비계의 점검 및 보수",
+            "mappings": [
+              "suspended-scaffold-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제65조",
+            "cited_title": "달대비계",
+            "in_dataset": true,
+            "dataset_title": "달대비계",
+            "mappings": [
+              "suspended-scaffold-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제66조",
+            "cited_title": "높은 디딤판 등의 사용금지",
+            "in_dataset": true,
+            "dataset_title": "높은 디딤판 등의 사용금지",
+            "mappings": [
+              "suspended-scaffold-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제67조",
+            "cited_title": "말비계",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제68조",
+            "cited_title": "이동식비계",
+            "in_dataset": true,
+            "dataset_title": "이동식비계",
+            "mappings": [
+              "mobile-scaffold-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제69조",
+            "cited_title": "시스템 비계의 구조",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제70조",
+            "cited_title": "시스템비계의 조립 작업 시 준수사항",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제42조",
+            "cited_title": "추락의 방지",
+            "in_dataset": true,
+            "dataset_title": "추락의 방지",
+            "mappings": [
+              "aerial-work-platform",
+              "ladder-work",
+              "roof-work",
+              "work-at-height"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제43조",
+            "cited_title": "개구부 등의 방호 조치",
+            "in_dataset": true,
+            "dataset_title": "개구부 등의 방호 조치",
+            "mappings": [
+              "work-at-height"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제44조",
+            "cited_title": "안전대의 부착설비 등",
+            "in_dataset": true,
+            "dataset_title": "안전대의 부착설비 등",
+            "mappings": [
+              "roof-work",
+              "steel-frame-work",
+              "work-at-height"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제32조",
+            "cited_title": "보호구의 지급 등",
+            "in_dataset": true,
+            "dataset_title": "보호구의 지급 등",
+            "mappings": [
+              "carwash-operation",
+              "falling-object-protection",
+              "logging-work",
+              "roof-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제13조",
+            "cited_title": "안전난간의 구조 및 설치요건",
+            "in_dataset": true,
+            "dataset_title": "안전난간의 구조 및 설치요건",
+            "mappings": [
+              "falling-object-protection",
+              "mobile-scaffold-work",
+              "roof-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제71조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          }
+        ]
+      },
+      "after": {
+        "cited": 8,
+        "in_dataset": 8,
+        "out_of_dataset": 0,
+        "title_match": 8,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제57조",
+            "cited_title": "비계 등의 조립·해체 및 변경",
+            "in_dataset": true,
+            "dataset_title": "비계 등의 조립·해체 및 변경",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제58조",
+            "cited_title": "비계의 점검 및 보수",
+            "in_dataset": true,
+            "dataset_title": "비계의 점검 및 보수",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제54조",
+            "cited_title": "비계의 재료",
+            "in_dataset": true,
+            "dataset_title": "비계의 재료",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제55조",
+            "cited_title": "작업발판의 최대적재하중",
+            "in_dataset": true,
+            "dataset_title": "작업발판의 최대적재하중",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제56조",
+            "cited_title": "작업발판의 구조",
+            "in_dataset": true,
+            "dataset_title": "작업발판의 구조",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제68조",
+            "cited_title": "이동식비계",
+            "in_dataset": true,
+            "dataset_title": "이동식비계",
+            "mappings": [
+              "mobile-scaffold-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제63조",
+            "cited_title": "달비계의 구조",
+            "in_dataset": true,
+            "dataset_title": "달비계의 구조",
+            "mappings": [
+              "suspended-scaffold-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제64조",
+            "cited_title": "달비계의 점검 및 보수",
+            "in_dataset": true,
+            "dataset_title": "달비계의 점검 및 보수",
+            "mappings": [
+              "suspended-scaffold-work"
+            ],
+            "title": "match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q03-crane",
+      "situation": "크레인으로 중량물을 양중하는 작업을 할 때",
+      "mapping_id": "crane-lifting",
+      "before": {
+        "cited": 37,
+        "in_dataset": 22,
+        "out_of_dataset": 15,
+        "title_match": 21,
+        "title_partial": 0,
+        "title_mismatch": 1,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": false,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제35조",
+            "cited_title": "관리감독자의 유해·위험 방지 업무 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제37조",
+            "cited_title": "악천후 및 강풍 시 작업 중지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제38조",
+            "cited_title": "사전조사 및 작업계획서의 작성 등",
+            "in_dataset": true,
+            "dataset_title": "사전조사 및 작업계획서의 작성 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "demolition-work",
+              "excavation-work",
+              "excavator-operation",
+              "forklift-operation",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제39조",
+            "cited_title": "작업지휘자의 지정",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제40조",
+            "cited_title": "신호",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제41조",
+            "cited_title": "운전위치의 이탈금지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제20조",
+            "cited_title": "출입의 금지 등",
+            "in_dataset": true,
+            "dataset_title": "출입의 금지 등",
+            "mappings": [
+              "material-toppling-prevention"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제86조",
+            "cited_title": "탑승의 제한",
+            "in_dataset": true,
+            "dataset_title": "탑승의 제한",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제132조",
+            "cited_title": "양중기",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제133조",
+            "cited_title": "정격하중 등의 표시",
+            "in_dataset": true,
+            "dataset_title": "정격하중 등의 표시",
+            "mappings": [
+              "crane-lifting",
+              "hoist-lift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제134조",
+            "cited_title": "방호장치의 조정",
+            "in_dataset": true,
+            "dataset_title": "방호장치의 조정",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제135조",
+            "cited_title": "과부하의 제한 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제136조",
+            "cited_title": "안전밸브의 조정",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제137조",
+            "cited_title": "해지장치의 사용",
+            "in_dataset": true,
+            "dataset_title": "해지장치의 사용",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제138조",
+            "cited_title": "경사각의 제한",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제139조",
+            "cited_title": "크레인의 수리 등의 작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제140조",
+            "cited_title": "폭풍에 의한 이탈 방지",
+            "in_dataset": true,
+            "dataset_title": "폭풍에 의한 이탈 방지",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제141조",
+            "cited_title": "조립 등의 작업 시 조치사항",
+            "in_dataset": true,
+            "dataset_title": "조립 등의 작업 시 조치사항",
+            "mappings": [
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제142조",
+            "cited_title": "타워크레인의 지지",
+            "in_dataset": true,
+            "dataset_title": "타워크레인의 지지",
+            "mappings": [
+              "crane-lifting",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제143조",
+            "cited_title": "폭풍 등으로 인한 이상 유무 점검",
+            "in_dataset": true,
+            "dataset_title": "폭풍 등으로 인한 이상 유무 점검",
+            "mappings": [
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제144조",
+            "cited_title": "건설물 등과의 사이 통로",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제145조",
+            "cited_title": "건설물 등의 벽체와 통로의 간격 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제146조",
+            "cited_title": "크레인 작업 시의 조치",
+            "in_dataset": true,
+            "dataset_title": "크레인 작업 시의 조치",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제147조",
+            "cited_title": "설계기준 준수",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제148조",
+            "cited_title": "안전밸브의 조정",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제149조",
+            "cited_title": "해지장치의 사용",
+            "in_dataset": true,
+            "dataset_title": "해지장치의 사용",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제150조",
+            "cited_title": "경사각의 제한",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제163조",
+            "cited_title": "와이어로프 등 달기구의 안전계수",
+            "in_dataset": true,
+            "dataset_title": "와이어로프 등 달기구의 안전계수",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제165조",
+            "cited_title": "와이어로프의 절단방법 등",
+            "in_dataset": true,
+            "dataset_title": "와이어로프의 절단방법 등",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제166조",
+            "cited_title": "이음매가 있는 와이어로프 등의 사용 금지",
+            "in_dataset": true,
+            "dataset_title": "이음매가 있는 와이어로프 등의 사용 금지",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제167조",
+            "cited_title": "늘어난 달기체인 등의 사용 금지",
+            "in_dataset": true,
+            "dataset_title": "늘어난 달기체인 등의 사용 금지",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제168조",
+            "cited_title": "변형되어 있는 훅·샤클 등의 사용금지 등",
+            "in_dataset": true,
+            "dataset_title": "변형되어 있는 훅·샤클 등의 사용금지 등",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제169조",
+            "cited_title": "꼬임이 끊어진 섬유로프 등의 사용금지",
+            "in_dataset": true,
+            "dataset_title": "꼬임이 끊어진 섬유로프 등의 사용금지",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제170조",
+            "cited_title": "링 등의 구비",
+            "in_dataset": true,
+            "dataset_title": "링 등의 구비",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제385조",
+            "cited_title": "중량물 취급",
+            "in_dataset": true,
+            "dataset_title": "중량물 취급",
+            "mappings": [
+              "heavy-material-transport"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제386조",
+            "cited_title": "경사면에서의 중량물 취급",
+            "in_dataset": true,
+            "dataset_title": "중량물의 구름 위험방지",
+            "mappings": [
+              "heavy-material-transport"
+            ],
+            "title": "mismatch"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제164조",
+            "cited_title": "고리걸이 훅 등의 안전계수",
+            "in_dataset": true,
+            "dataset_title": "고리걸이 훅 등의 안전계수",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          }
+        ]
+      },
+      "after": {
+        "cited": 18,
+        "in_dataset": 18,
+        "out_of_dataset": 0,
+        "title_match": 18,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 1,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제133조",
+            "cited_title": "정격하중 등의 표시",
+            "in_dataset": true,
+            "dataset_title": "정격하중 등의 표시",
+            "mappings": [
+              "crane-lifting",
+              "hoist-lift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제134조",
+            "cited_title": "방호장치의 조정",
+            "in_dataset": true,
+            "dataset_title": "방호장치의 조정",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제137조",
+            "cited_title": "해지장치의 사용",
+            "in_dataset": true,
+            "dataset_title": "해지장치의 사용",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제140조",
+            "cited_title": "폭풍에 의한 이탈 방지",
+            "in_dataset": true,
+            "dataset_title": "폭풍에 의한 이탈 방지",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제142조",
+            "cited_title": "타워크레인의 지지",
+            "in_dataset": true,
+            "dataset_title": "타워크레인의 지지",
+            "mappings": [
+              "crane-lifting",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제146조",
+            "cited_title": "크레인 작업 시의 조치",
+            "in_dataset": true,
+            "dataset_title": "크레인 작업 시의 조치",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제149조",
+            "cited_title": "해지장치의 사용",
+            "in_dataset": true,
+            "dataset_title": "해지장치의 사용",
+            "mappings": [
+              "crane-lifting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제163조",
+            "cited_title": "와이어로프 등 달기구의 안전계수",
+            "in_dataset": true,
+            "dataset_title": "와이어로프 등 달기구의 안전계수",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제164조",
+            "cited_title": "고리걸이 훅 등의 안전계수",
+            "in_dataset": true,
+            "dataset_title": "고리걸이 훅 등의 안전계수",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제165조",
+            "cited_title": "와이어로프의 절단방법 등",
+            "in_dataset": true,
+            "dataset_title": "와이어로프의 절단방법 등",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제166조",
+            "cited_title": "이음매가 있는 와이어로프 등의 사용 금지",
+            "in_dataset": true,
+            "dataset_title": "이음매가 있는 와이어로프 등의 사용 금지",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제167조",
+            "cited_title": "늘어난 달기체인 등의 사용 금지",
+            "in_dataset": true,
+            "dataset_title": "늘어난 달기체인 등의 사용 금지",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제168조",
+            "cited_title": "변형되어 있는 훅·샤클 등의 사용금지 등",
+            "in_dataset": true,
+            "dataset_title": "변형되어 있는 훅·샤클 등의 사용금지 등",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제169조",
+            "cited_title": "꼬임이 끊어진 섬유로프 등의 사용금지",
+            "in_dataset": true,
+            "dataset_title": "꼬임이 끊어진 섬유로프 등의 사용금지",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제170조",
+            "cited_title": "링 등의 구비",
+            "in_dataset": true,
+            "dataset_title": "링 등의 구비",
+            "mappings": [
+              "rigging-gear"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제38조",
+            "cited_title": "사전조사 및 작업계획서의 작성 등",
+            "in_dataset": true,
+            "dataset_title": "사전조사 및 작업계획서의 작성 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "demolition-work",
+              "excavation-work",
+              "excavator-operation",
+              "forklift-operation",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제141조",
+            "cited_title": "조립 등의 작업 시 조치사항",
+            "in_dataset": true,
+            "dataset_title": "조립 등의 작업 시 조치사항",
+            "mappings": [
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제143조",
+            "cited_title": "폭풍 등으로 인한 이상 유무 점검",
+            "in_dataset": true,
+            "dataset_title": "폭풍 등으로 인한 이상 유무 점검",
+            "mappings": [
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-act",
+            "ref": "제82조",
+            "cited_title": null,
+            "in_dataset": true,
+            "dataset_title": "타워크레인 설치·해체업의 등록 등",
+            "mappings": [
+              "tower-crane-assembly"
+            ],
+            "title": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q04-excavation",
+      "situation": "굴착 작업을 할 때",
+      "mapping_id": "excavation-work",
+      "before": {
+        "cited": 18,
+        "in_dataset": 10,
+        "out_of_dataset": 8,
+        "title_match": 7,
+        "title_partial": 0,
+        "title_mismatch": 1,
+        "title_none": 2,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제338조",
+            "cited_title": "지반 등의 굴착 시 위험방지",
+            "in_dataset": true,
+            "dataset_title": "굴착작업 사전조사 등",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "mismatch"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제340조",
+            "cited_title": null,
+            "in_dataset": true,
+            "dataset_title": "굴착작업 시 위험방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "none"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제38조",
+            "cited_title": "사전조사 및 작업계획서의 작성 등",
+            "in_dataset": true,
+            "dataset_title": "사전조사 및 작업계획서의 작성 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "demolition-work",
+              "excavation-work",
+              "excavator-operation",
+              "forklift-operation",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제39조",
+            "cited_title": "작업지휘자의 지정",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제50조",
+            "cited_title": "토사등에 의한 위험 방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제339조",
+            "cited_title": null,
+            "in_dataset": true,
+            "dataset_title": "굴착면의 붕괴 등에 의한 위험방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "none"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제341조",
+            "cited_title": "매설물 등 파손에 의한 위험방지",
+            "in_dataset": true,
+            "dataset_title": "매설물 등 파손에 의한 위험방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제342조",
+            "cited_title": "굴착기계등에 의한 위험방지",
+            "in_dataset": true,
+            "dataset_title": "굴착기계등에 의한 위험방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제343조",
+            "cited_title": "운행경로 등의 주지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제344조",
+            "cited_title": "굴착기계등의 유도",
+            "in_dataset": true,
+            "dataset_title": "굴착기계등의 유도",
+            "mappings": [
+              "excavator-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제345조",
+            "cited_title": "흙막이지보공의 재료",
+            "in_dataset": true,
+            "dataset_title": "흙막이지보공의 재료",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제346조",
+            "cited_title": "조립도",
+            "in_dataset": true,
+            "dataset_title": "조립도",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제347조",
+            "cited_title": "붕괴 등의 위험 방지",
+            "in_dataset": true,
+            "dataset_title": "붕괴 등의 위험 방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제348조",
+            "cited_title": "발파의 작업기준",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제350조",
+            "cited_title": "인화성 가스의 농도측정 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제354조",
+            "cited_title": "낙반 등에 의한 위험의 방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제370조",
+            "cited_title": "지반 붕괴 등의 위험방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제376조",
+            "cited_title": "급격한 침하로 인한 위험 방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          }
+        ]
+      },
+      "after": {
+        "cited": 16,
+        "in_dataset": 16,
+        "out_of_dataset": 0,
+        "title_match": 16,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제38조",
+            "cited_title": "사전조사 및 작업계획서의 작성 등",
+            "in_dataset": true,
+            "dataset_title": "사전조사 및 작업계획서의 작성 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "demolition-work",
+              "excavation-work",
+              "excavator-operation",
+              "forklift-operation",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제338조",
+            "cited_title": "굴착작업 사전조사 등",
+            "in_dataset": true,
+            "dataset_title": "굴착작업 사전조사 등",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제339조",
+            "cited_title": "굴착면의 붕괴 등에 의한 위험방지",
+            "in_dataset": true,
+            "dataset_title": "굴착면의 붕괴 등에 의한 위험방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제340조",
+            "cited_title": "굴착작업 시 위험방지",
+            "in_dataset": true,
+            "dataset_title": "굴착작업 시 위험방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제341조",
+            "cited_title": "매설물 등 파손에 의한 위험방지",
+            "in_dataset": true,
+            "dataset_title": "매설물 등 파손에 의한 위험방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제342조",
+            "cited_title": "굴착기계등에 의한 위험방지",
+            "in_dataset": true,
+            "dataset_title": "굴착기계등에 의한 위험방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제344조",
+            "cited_title": "굴착기계등의 유도",
+            "in_dataset": true,
+            "dataset_title": "굴착기계등의 유도",
+            "mappings": [
+              "excavator-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제345조",
+            "cited_title": "흙막이지보공의 재료",
+            "in_dataset": true,
+            "dataset_title": "흙막이지보공의 재료",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제346조",
+            "cited_title": "조립도",
+            "in_dataset": true,
+            "dataset_title": "조립도",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제347조",
+            "cited_title": "붕괴 등의 위험 방지",
+            "in_dataset": true,
+            "dataset_title": "붕괴 등의 위험 방지",
+            "mappings": [
+              "excavation-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제199조",
+            "cited_title": "전도 등의 방지",
+            "in_dataset": true,
+            "dataset_title": "전도 등의 방지",
+            "mappings": [
+              "construction-vehicle-work",
+              "excavator-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제200조",
+            "cited_title": "접촉 방지",
+            "in_dataset": true,
+            "dataset_title": "접촉 방지",
+            "mappings": [
+              "construction-vehicle-work",
+              "excavator-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제221조의2",
+            "cited_title": "충돌위험 방지조치",
+            "in_dataset": true,
+            "dataset_title": "충돌위험 방지조치",
+            "mappings": [
+              "excavator-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제221조의3",
+            "cited_title": "좌석안전띠의 착용",
+            "in_dataset": true,
+            "dataset_title": "좌석안전띠의 착용",
+            "mappings": [
+              "excavator-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제221조의4",
+            "cited_title": "잠금장치의 체결",
+            "in_dataset": true,
+            "dataset_title": "잠금장치의 체결",
+            "mappings": [
+              "excavator-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제221조의5",
+            "cited_title": "인양작업 시 조치",
+            "in_dataset": true,
+            "dataset_title": "인양작업 시 조치",
+            "mappings": [
+              "excavator-operation"
+            ],
+            "title": "match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q05-electrical",
+      "situation": "감전 위험이 있는 전기작업을 할 때",
+      "mapping_id": "electrical-work",
+      "before": {
+        "cited": 25,
+        "in_dataset": 7,
+        "out_of_dataset": 18,
+        "title_match": 7,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": false,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제38조",
+            "cited_title": "사전조사 및 작업계획서의 작성 등",
+            "in_dataset": true,
+            "dataset_title": "사전조사 및 작업계획서의 작성 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "demolition-work",
+              "excavation-work",
+              "excavator-operation",
+              "forklift-operation",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제318조",
+            "cited_title": "전기작업자의 제한",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제319조",
+            "cited_title": "정전전로에서의 전기작업",
+            "in_dataset": true,
+            "dataset_title": "정전전로에서의 전기작업",
+            "mappings": [
+              "electrical-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제320조",
+            "cited_title": "정전전로 인근에서의 전기작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제321조",
+            "cited_title": "충전전로에서의 전기작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제322조",
+            "cited_title": "충전전로 인근에서의 차량 등의 작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제323조",
+            "cited_title": "절연용 보호구 등의 사용",
+            "in_dataset": true,
+            "dataset_title": "절연용 보호구 등의 사용",
+            "mappings": [
+              "electrical-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제301조",
+            "cited_title": "전기 기계·기구 등의 충전부 방호",
+            "in_dataset": true,
+            "dataset_title": "전기 기계·기구 등의 충전부 방호",
+            "mappings": [
+              "electrical-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제324조",
+            "cited_title": "적용 제외",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제302조",
+            "cited_title": "전기 기계·기구의 접지",
+            "in_dataset": true,
+            "dataset_title": "전기 기계·기구의 접지",
+            "mappings": [
+              "carwash-operation",
+              "electrical-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제303조",
+            "cited_title": "전기 기계·기구의 적정설치 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제304조",
+            "cited_title": "누전차단기에 의한 감전방지",
+            "in_dataset": true,
+            "dataset_title": "누전차단기에 의한 감전방지",
+            "mappings": [
+              "carwash-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제305조",
+            "cited_title": "과전류 차단장치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제306조",
+            "cited_title": "교류아크용접기 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제307조",
+            "cited_title": "단로기 등의 개폐",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제308조",
+            "cited_title": "비상전원",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제309조",
+            "cited_title": "임시로 사용하는 전등 등의 위험 방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제310조",
+            "cited_title": "전기 기계·기구의 조작 시 등의 안전조치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제311조",
+            "cited_title": "폭발위험장소에서 사용하는 전기 기계·기구의 선정 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제312조",
+            "cited_title": "변전실 등의 위치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제313조",
+            "cited_title": "배선 등의 절연피복 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제314조",
+            "cited_title": "습윤한 장소의 이동전선 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제315조",
+            "cited_title": "통로바닥에서의 전선 등 사용 금지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제316조",
+            "cited_title": "꽂음접속기의 설치·사용 시 준수사항",
+            "in_dataset": true,
+            "dataset_title": "꽂음접속기의 설치·사용 시 준수사항",
+            "mappings": [
+              "carwash-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제317조",
+            "cited_title": "이동 및 휴대장비 등의 사용 전기 작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          }
+        ]
+      },
+      "after": {
+        "cited": 4,
+        "in_dataset": 4,
+        "out_of_dataset": 0,
+        "title_match": 4,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제301조",
+            "cited_title": "전기 기계·기구 등의 충전부 방호",
+            "in_dataset": true,
+            "dataset_title": "전기 기계·기구 등의 충전부 방호",
+            "mappings": [
+              "electrical-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제302조",
+            "cited_title": "전기 기계·기구의 접지",
+            "in_dataset": true,
+            "dataset_title": "전기 기계·기구의 접지",
+            "mappings": [
+              "carwash-operation",
+              "electrical-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제319조",
+            "cited_title": "정전전로에서의 전기작업",
+            "in_dataset": true,
+            "dataset_title": "정전전로에서의 전기작업",
+            "mappings": [
+              "electrical-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제323조",
+            "cited_title": "절연용 보호구 등의 사용",
+            "in_dataset": true,
+            "dataset_title": "절연용 보호구 등의 사용",
+            "mappings": [
+              "electrical-work"
+            ],
+            "title": "match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q06-chemical",
+      "situation": "MSDS 대상 화학물질을 취급하는 작업을 할 때",
+      "mapping_id": "chemical-msds",
+      "before": {
+        "cited": 50,
+        "in_dataset": 8,
+        "out_of_dataset": 42,
+        "title_match": 8,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 2,
+        "law_link": true,
+        "verification_date": false,
+        "rows": [
+          {
+            "law": "osh-act",
+            "ref": "제114조",
+            "cited_title": "물질안전보건자료의 게시 및 교육",
+            "in_dataset": true,
+            "dataset_title": "물질안전보건자료의 게시 및 교육",
+            "mappings": [
+              "carwash-operation",
+              "chemical-msds",
+              "hazardous-chemicals-work",
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-act",
+            "ref": "제115조",
+            "cited_title": "물질안전보건자료대상물질 용기 등의 경고표시",
+            "in_dataset": true,
+            "dataset_title": "물질안전보건자료대상물질 용기 등의 경고표시",
+            "mappings": [
+              "carwash-operation",
+              "chemical-msds"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "other",
+            "ref": "제167조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "other",
+            "ref": "제170조",
+            "cited_title": "게시 방법, 교육 내용·시기, 경고표시 방법·기재항목",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제420조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제451조",
+            "cited_title": "보호복 등의 비치 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제442조",
+            "cited_title": "명칭 등의 게시",
+            "in_dataset": true,
+            "dataset_title": "명칭 등의 게시",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제114조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제449조",
+            "cited_title": "유해성 등의 주지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제440조",
+            "cited_title": "특별관리물질의 고지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제439조",
+            "cited_title": "특별관리물질 취급 시 적어야 하는 사항",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제422조",
+            "cited_title": "관리대상 유해물질과 관계되는 설비",
+            "in_dataset": true,
+            "dataset_title": "관리대상 유해물질과 관계되는 설비",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제423조",
+            "cited_title": "임시작업인 경우의 설비 특례",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제424조",
+            "cited_title": "단시간작업인 경우의 설비 특례",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제429조",
+            "cited_title": "국소배기장치의 성능",
+            "in_dataset": true,
+            "dataset_title": "국소배기장치의 성능",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제430조",
+            "cited_title": "전체환기장치의 성능 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제431조",
+            "cited_title": "작업장의 바닥",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제432조",
+            "cited_title": "부식의 방지조치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제433조",
+            "cited_title": "누출의 방지조치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제434조",
+            "cited_title": "경보설비 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제435조",
+            "cited_title": "긴급 차단장치의 설치 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제441조",
+            "cited_title": "사용 전 점검 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제436조",
+            "cited_title": "작업수칙",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제437조",
+            "cited_title": "탱크 내 작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제438조",
+            "cited_title": "사고 시의 대피 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제443조",
+            "cited_title": "관리대상 유해물질의 저장",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제444조",
+            "cited_title": "빈 용기 등의 관리",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제445조",
+            "cited_title": "청소",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제446조",
+            "cited_title": "출입의 금지 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제447조",
+            "cited_title": "흡연 등의 금지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제448조",
+            "cited_title": "세척시설 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제450조",
+            "cited_title": "호흡용 보호구의 지급 등",
+            "in_dataset": true,
+            "dataset_title": "호흡용 보호구의 지급 등",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제225조",
+            "cited_title": "위험물질 등의 제조 등 작업 시의 조치",
+            "in_dataset": true,
+            "dataset_title": "위험물질 등의 제조 등 작업 시의 조치",
+            "mappings": [
+              "hazardous-chemicals-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제230조",
+            "cited_title": "폭발위험이 있는 장소의 설정 및 관리",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제232조",
+            "cited_title": "폭발 또는 화재 등의 예방",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제236조",
+            "cited_title": "화재 위험이 있는 작업의 장소 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제239조",
+            "cited_title": "위험물 등이 있는 장소에서 화기 등의 사용 금지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제241조",
+            "cited_title": "화재위험작업 시의 준수사항",
+            "in_dataset": true,
+            "dataset_title": "화재위험작업 시의 준수사항",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제241조의2",
+            "cited_title": "화재감시자",
+            "in_dataset": true,
+            "dataset_title": "화재감시자",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제260조",
+            "cited_title": "공급 원재료의 종류 등의 표시",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제299조",
+            "cited_title": "독성이 있는 물질의 누출 방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제17조",
+            "cited_title": "비상구의 설치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제31조",
+            "cited_title": "보호구의 제한적 사용",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제32조",
+            "cited_title": "보호구의 지급 등",
+            "in_dataset": true,
+            "dataset_title": "보호구의 지급 등",
+            "mappings": [
+              "carwash-operation",
+              "falling-object-protection",
+              "logging-work",
+              "roof-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제33조",
+            "cited_title": "보호구의 관리",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제34조",
+            "cited_title": "전용 보호구 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제35조",
+            "cited_title": "관리감독자의 유해·위험 방지 업무 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제72조",
+            "cited_title": "후드",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제77조",
+            "cited_title": "환기장치의 성능 유지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제82조",
+            "cited_title": "구급용구",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제452조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제498조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제618조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제115조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          }
+        ]
+      },
+      "after": {
+        "cited": 5,
+        "in_dataset": 5,
+        "out_of_dataset": 0,
+        "title_match": 5,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 2,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-act",
+            "ref": "제114조",
+            "cited_title": "물질안전보건자료의 게시 및 교육",
+            "in_dataset": true,
+            "dataset_title": "물질안전보건자료의 게시 및 교육",
+            "mappings": [
+              "carwash-operation",
+              "chemical-msds",
+              "hazardous-chemicals-work",
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-act",
+            "ref": "제115조",
+            "cited_title": "물질안전보건자료대상물질 용기 등의 경고표시",
+            "in_dataset": true,
+            "dataset_title": "물질안전보건자료대상물질 용기 등의 경고표시",
+            "mappings": [
+              "carwash-operation",
+              "chemical-msds"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제225조",
+            "cited_title": "위험물질 등의 제조 등 작업 시의 조치",
+            "in_dataset": true,
+            "dataset_title": "위험물질 등의 제조 등 작업 시의 조치",
+            "mappings": [
+              "hazardous-chemicals-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제422조",
+            "cited_title": "관리대상 유해물질과 관계되는 설비",
+            "in_dataset": true,
+            "dataset_title": "관리대상 유해물질과 관계되는 설비",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제429조",
+            "cited_title": "국소배기장치의 성능",
+            "in_dataset": true,
+            "dataset_title": "국소배기장치의 성능",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제442조",
+            "cited_title": "명칭 등의 게시",
+            "in_dataset": true,
+            "dataset_title": "명칭 등의 게시",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제450조",
+            "cited_title": "호흡용 보호구의 지급 등",
+            "in_dataset": true,
+            "dataset_title": "호흡용 보호구의 지급 등",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q07-forklift",
+      "situation": "지게차로 화물을 운반하는 작업을 할 때",
+      "mapping_id": "forklift-operation",
+      "before": {
+        "cited": 22,
+        "in_dataset": 20,
+        "out_of_dataset": 2,
+        "title_match": 20,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": false,
+        "verification_date": false,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제178조",
+            "cited_title": "허용하중 초과 등의 제한",
+            "in_dataset": true,
+            "dataset_title": "허용하중 초과 등의 제한",
+            "mappings": [
+              "cargo-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제179조",
+            "cited_title": "전조등 등의 설치",
+            "in_dataset": true,
+            "dataset_title": "전조등 등의 설치",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제180조",
+            "cited_title": "헤드가드",
+            "in_dataset": true,
+            "dataset_title": "헤드가드",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제181조",
+            "cited_title": "백레스트",
+            "in_dataset": true,
+            "dataset_title": "백레스트",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제182조",
+            "cited_title": "팔레트 등",
+            "in_dataset": true,
+            "dataset_title": "팔레트 등",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제183조",
+            "cited_title": "좌석 안전띠의 착용 등",
+            "in_dataset": true,
+            "dataset_title": "좌석 안전띠의 착용 등",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제171조",
+            "cited_title": "전도 등의 방지",
+            "in_dataset": true,
+            "dataset_title": "전도 등의 방지",
+            "mappings": [
+              "cargo-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제172조",
+            "cited_title": "접촉의 방지",
+            "in_dataset": true,
+            "dataset_title": "접촉의 방지",
+            "mappings": [
+              "cargo-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제173조",
+            "cited_title": "화물적재 시의 조치",
+            "in_dataset": true,
+            "dataset_title": "화물적재 시의 조치",
+            "mappings": [
+              "cargo-vehicle-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제174조",
+            "cited_title": "차량계 하역운반기계등의 이송",
+            "in_dataset": true,
+            "dataset_title": "차량계 하역운반기계등의 이송",
+            "mappings": [
+              "cargo-vehicle-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제175조",
+            "cited_title": "주용도 외의 사용 제한",
+            "in_dataset": true,
+            "dataset_title": "주용도 외의 사용 제한",
+            "mappings": [
+              "cargo-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제176조",
+            "cited_title": "수리 등의 작업 시 조치",
+            "in_dataset": true,
+            "dataset_title": "수리 등의 작업 시 조치",
+            "mappings": [
+              "cargo-vehicle-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제177조",
+            "cited_title": "싣거나 내리는 작업",
+            "in_dataset": true,
+            "dataset_title": "싣거나 내리는 작업",
+            "mappings": [
+              "cargo-vehicle-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제38조",
+            "cited_title": "사전조사 및 작업계획서의 작성 등",
+            "in_dataset": true,
+            "dataset_title": "사전조사 및 작업계획서의 작성 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "demolition-work",
+              "excavation-work",
+              "excavator-operation",
+              "forklift-operation",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제39조",
+            "cited_title": "작업지휘자의 지정",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제40조",
+            "cited_title": "신호",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제20조",
+            "cited_title": "출입의 금지 등",
+            "in_dataset": true,
+            "dataset_title": "출입의 금지 등",
+            "mappings": [
+              "material-toppling-prevention"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제86조",
+            "cited_title": "탑승의 제한",
+            "in_dataset": true,
+            "dataset_title": "탑승의 제한",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제98조",
+            "cited_title": "제한속도의 지정 등",
+            "in_dataset": true,
+            "dataset_title": "제한속도의 지정 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제99조",
+            "cited_title": "운전위치 이탈 시의 조치",
+            "in_dataset": true,
+            "dataset_title": "운전위치 이탈 시의 조치",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제92조",
+            "cited_title": "정비 등의 작업 시의 운전정지 등",
+            "in_dataset": true,
+            "dataset_title": "정비 등의 작업 시의 운전정지 등",
+            "mappings": [
+              "carwash-operation",
+              "compactor-crusher-work",
+              "machine-servicing"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제93조",
+            "cited_title": "방호장치의 해체 금지",
+            "in_dataset": true,
+            "dataset_title": "방호장치의 해체 금지",
+            "mappings": [
+              "compactor-crusher-work",
+              "machine-servicing"
+            ],
+            "title": "match"
+          }
+        ]
+      },
+      "after": {
+        "cited": 14,
+        "in_dataset": 14,
+        "out_of_dataset": 0,
+        "title_match": 14,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제38조",
+            "cited_title": "사전조사 및 작업계획서의 작성 등",
+            "in_dataset": true,
+            "dataset_title": "사전조사 및 작업계획서의 작성 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "demolition-work",
+              "excavation-work",
+              "excavator-operation",
+              "forklift-operation",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제175조",
+            "cited_title": "주용도 외의 사용 제한",
+            "in_dataset": true,
+            "dataset_title": "주용도 외의 사용 제한",
+            "mappings": [
+              "cargo-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제178조",
+            "cited_title": "허용하중 초과 등의 제한",
+            "in_dataset": true,
+            "dataset_title": "허용하중 초과 등의 제한",
+            "mappings": [
+              "cargo-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제182조",
+            "cited_title": "팔레트 등",
+            "in_dataset": true,
+            "dataset_title": "팔레트 등",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제171조",
+            "cited_title": "전도 등의 방지",
+            "in_dataset": true,
+            "dataset_title": "전도 등의 방지",
+            "mappings": [
+              "cargo-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제172조",
+            "cited_title": "접촉의 방지",
+            "in_dataset": true,
+            "dataset_title": "접촉의 방지",
+            "mappings": [
+              "cargo-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제86조",
+            "cited_title": "탑승의 제한",
+            "in_dataset": true,
+            "dataset_title": "탑승의 제한",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제99조",
+            "cited_title": "운전위치 이탈 시의 조치",
+            "in_dataset": true,
+            "dataset_title": "운전위치 이탈 시의 조치",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제179조",
+            "cited_title": "전조등 등의 설치",
+            "in_dataset": true,
+            "dataset_title": "전조등 등의 설치",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제180조",
+            "cited_title": "헤드가드",
+            "in_dataset": true,
+            "dataset_title": "헤드가드",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제181조",
+            "cited_title": "백레스트",
+            "in_dataset": true,
+            "dataset_title": "백레스트",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제183조",
+            "cited_title": "좌석 안전띠의 착용 등",
+            "in_dataset": true,
+            "dataset_title": "좌석 안전띠의 착용 등",
+            "mappings": [
+              "forklift-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제385조",
+            "cited_title": "중량물 취급",
+            "in_dataset": true,
+            "dataset_title": "중량물 취급",
+            "mappings": [
+              "heavy-material-transport"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제386조",
+            "cited_title": "중량물의 구름 위험방지",
+            "in_dataset": true,
+            "dataset_title": "중량물의 구름 위험방지",
+            "mappings": [
+              "heavy-material-transport"
+            ],
+            "title": "match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q08-press",
+      "situation": "프레스·전단기 작업을 할 때",
+      "mapping_id": "press-operation",
+      "before": {
+        "cited": 14,
+        "in_dataset": 9,
+        "out_of_dataset": 5,
+        "title_match": 9,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 2,
+        "law_link": true,
+        "verification_date": false,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제103조",
+            "cited_title": "프레스 등의 위험 방지",
+            "in_dataset": true,
+            "dataset_title": "프레스 등의 위험 방지",
+            "mappings": [
+              "press-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제104조",
+            "cited_title": "금형조정작업의 위험 방지",
+            "in_dataset": true,
+            "dataset_title": "금형조정작업의 위험 방지",
+            "mappings": [
+              "press-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제35조",
+            "cited_title": "관리감독자의 유해·위험 방지 업무 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제87조",
+            "cited_title": "원동기·회전축 등의 위험 방지",
+            "in_dataset": true,
+            "dataset_title": "원동기·회전축 등의 위험 방지",
+            "mappings": [
+              "carwash-operation",
+              "compactor-crusher-work",
+              "machine-servicing"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제88조",
+            "cited_title": "기계의 동력차단장치",
+            "in_dataset": true,
+            "dataset_title": "기계의 동력차단장치",
+            "mappings": [
+              "carwash-operation",
+              "compactor-crusher-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제89조",
+            "cited_title": "운전 시작 전 조치",
+            "in_dataset": true,
+            "dataset_title": "운전 시작 전 조치",
+            "mappings": [
+              "carwash-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제91조",
+            "cited_title": "고장난 기계의 정비 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제92조",
+            "cited_title": "정비 등의 작업 시의 운전정지 등",
+            "in_dataset": true,
+            "dataset_title": "정비 등의 작업 시의 운전정지 등",
+            "mappings": [
+              "carwash-operation",
+              "compactor-crusher-work",
+              "machine-servicing"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제93조",
+            "cited_title": "방호장치의 해체 금지",
+            "in_dataset": true,
+            "dataset_title": "방호장치의 해체 금지",
+            "mappings": [
+              "compactor-crusher-work",
+              "machine-servicing"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제94조",
+            "cited_title": "작업모 등의 착용",
+            "in_dataset": true,
+            "dataset_title": "작업모 등의 착용",
+            "mappings": [
+              "machine-servicing"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제95조",
+            "cited_title": "장갑의 사용 금지",
+            "in_dataset": true,
+            "dataset_title": "장갑의 사용 금지",
+            "mappings": [
+              "machine-servicing"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제96조",
+            "cited_title": "작업도구 등의 목적 외 사용 금지 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제97조",
+            "cited_title": "볼트·너트의 풀림 방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-act",
+            "ref": "제80조",
+            "cited_title": "유해하거나 위험한 기계·기구에 대한 방호조치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제84조",
+            "cited_title": "안전인증",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "other",
+            "ref": "제74조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "other",
+            "ref": "제78조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "other",
+            "ref": "제126조",
+            "cited_title": null,
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-act",
+            "ref": "제38조",
+            "cited_title": "안전조치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          }
+        ]
+      },
+      "after": {
+        "cited": 2,
+        "in_dataset": 2,
+        "out_of_dataset": 0,
+        "title_match": 2,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제103조",
+            "cited_title": "프레스 등의 위험 방지",
+            "in_dataset": true,
+            "dataset_title": "프레스 등의 위험 방지",
+            "mappings": [
+              "press-operation"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제104조",
+            "cited_title": "금형조정작업의 위험 방지",
+            "in_dataset": true,
+            "dataset_title": "금형조정작업의 위험 방지",
+            "mappings": [
+              "press-operation"
+            ],
+            "title": "match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q09-demolition",
+      "situation": "구축물을 해체하는 작업을 할 때",
+      "mapping_id": "demolition-work",
+      "before": {
+        "cited": 18,
+        "in_dataset": 12,
+        "out_of_dataset": 6,
+        "title_match": 12,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 1,
+        "law_link": true,
+        "verification_date": false,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제384조",
+            "cited_title": "해체작업 시 준수사항",
+            "in_dataset": true,
+            "dataset_title": "해체작업 시 준수사항",
+            "mappings": [
+              "demolition-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제38조",
+            "cited_title": "사전조사 및 작업계획서의 작성 등",
+            "in_dataset": true,
+            "dataset_title": "사전조사 및 작업계획서의 작성 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "demolition-work",
+              "excavation-work",
+              "excavator-operation",
+              "forklift-operation",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제35조",
+            "cited_title": "관리감독자의 유해·위험 방지 업무 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제51조",
+            "cited_title": "구축물등의 안전 유지",
+            "in_dataset": true,
+            "dataset_title": "구축물등의 안전 유지",
+            "mappings": [
+              "structure-stability-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제52조",
+            "cited_title": "구축물등의 안전성 평가",
+            "in_dataset": true,
+            "dataset_title": "구축물등의 안전성 평가",
+            "mappings": [
+              "structure-stability-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제53조",
+            "cited_title": "계측장치의 설치 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제14조",
+            "cited_title": "낙하물에 의한 위험의 방지",
+            "in_dataset": true,
+            "dataset_title": "낙하물에 의한 위험의 방지",
+            "mappings": [
+              "falling-object-protection"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제20조",
+            "cited_title": "출입의 금지 등",
+            "in_dataset": true,
+            "dataset_title": "출입의 금지 등",
+            "mappings": [
+              "material-toppling-prevention"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제37조",
+            "cited_title": "악천후 및 강풍 시 작업 중지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제42조",
+            "cited_title": "추락의 방지",
+            "in_dataset": true,
+            "dataset_title": "추락의 방지",
+            "mappings": [
+              "aerial-work-platform",
+              "ladder-work",
+              "roof-work",
+              "work-at-height"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제43조",
+            "cited_title": "개구부 등의 방호 조치",
+            "in_dataset": true,
+            "dataset_title": "개구부 등의 방호 조치",
+            "mappings": [
+              "work-at-height"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제44조",
+            "cited_title": "안전대의 부착설비 등",
+            "in_dataset": true,
+            "dataset_title": "안전대의 부착설비 등",
+            "mappings": [
+              "roof-work",
+              "steel-frame-work",
+              "work-at-height"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제45조",
+            "cited_title": "지붕 위에서의 위험 방지",
+            "in_dataset": true,
+            "dataset_title": "지붕 위에서의 위험 방지",
+            "mappings": [
+              "roof-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제31조",
+            "cited_title": "보호구의 제한적 사용",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제32조",
+            "cited_title": "보호구의 지급 등",
+            "in_dataset": true,
+            "dataset_title": "보호구의 지급 등",
+            "mappings": [
+              "carwash-operation",
+              "falling-object-protection",
+              "logging-work",
+              "roof-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제489조",
+            "cited_title": "석면해체·제거작업 계획 수립",
+            "in_dataset": true,
+            "dataset_title": "석면해체·제거작업 계획 수립",
+            "mappings": [
+              "asbestos-removal"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제495조",
+            "cited_title": "석면해체·제거작업 시의 조치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제496조",
+            "cited_title": "석면함유 잔재물 등의 처리",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-act",
+            "ref": "제119조",
+            "cited_title": null,
+            "in_dataset": true,
+            "dataset_title": "석면조사",
+            "mappings": [
+              "asbestos-removal"
+            ],
+            "title": "none"
+          }
+        ]
+      },
+      "after": {
+        "cited": 7,
+        "in_dataset": 7,
+        "out_of_dataset": 0,
+        "title_match": 7,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 3,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제38조",
+            "cited_title": "사전조사 및 작업계획서의 작성 등",
+            "in_dataset": true,
+            "dataset_title": "사전조사 및 작업계획서의 작성 등",
+            "mappings": [
+              "cargo-vehicle-work",
+              "construction-vehicle-work",
+              "demolition-work",
+              "excavation-work",
+              "excavator-operation",
+              "forklift-operation",
+              "tower-crane-assembly"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제384조",
+            "cited_title": "해체작업 시 준수사항",
+            "in_dataset": true,
+            "dataset_title": "해체작업 시 준수사항",
+            "mappings": [
+              "demolition-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제51조",
+            "cited_title": "구축물등의 안전 유지",
+            "in_dataset": true,
+            "dataset_title": "구축물등의 안전 유지",
+            "mappings": [
+              "structure-stability-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제52조",
+            "cited_title": "구축물등의 안전성 평가",
+            "in_dataset": true,
+            "dataset_title": "구축물등의 안전성 평가",
+            "mappings": [
+              "structure-stability-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제489조",
+            "cited_title": "석면해체·제거작업 계획 수립",
+            "in_dataset": true,
+            "dataset_title": "석면해체·제거작업 계획 수립",
+            "mappings": [
+              "asbestos-removal"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제491조",
+            "cited_title": "개인보호구의 지급·착용",
+            "in_dataset": true,
+            "dataset_title": "개인보호구의 지급·착용",
+            "mappings": [
+              "asbestos-removal"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-act",
+            "ref": "제119조",
+            "cited_title": null,
+            "in_dataset": true,
+            "dataset_title": "석면조사",
+            "mappings": [
+              "asbestos-removal"
+            ],
+            "title": "none"
+          },
+          {
+            "law": "osh-act",
+            "ref": "제122조",
+            "cited_title": null,
+            "in_dataset": true,
+            "dataset_title": "석면의 해체·제거",
+            "mappings": [
+              "asbestos-removal"
+            ],
+            "title": "none"
+          },
+          {
+            "law": "osh-act",
+            "ref": "제123조",
+            "cited_title": null,
+            "in_dataset": true,
+            "dataset_title": "석면해체·제거 작업기준의 준수",
+            "mappings": [
+              "asbestos-removal"
+            ],
+            "title": "none"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제57조",
+            "cited_title": "비계 등의 조립·해체 및 변경",
+            "in_dataset": true,
+            "dataset_title": "비계 등의 조립·해체 및 변경",
+            "mappings": [
+              "scaffold-assembly"
+            ],
+            "title": "match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10-welding",
+      "situation": "용접·용단 작업을 할 때",
+      "mapping_id": "welding-cutting",
+      "before": {
+        "cited": 38,
+        "in_dataset": 14,
+        "out_of_dataset": 24,
+        "title_match": 12,
+        "title_partial": 1,
+        "title_mismatch": 1,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": false,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제236조",
+            "cited_title": "화재 위험이 있는 작업의 장소 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제238조",
+            "cited_title": "유류 등이 있는 배관이나 용기의 용접 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제239조",
+            "cited_title": "위험물 등이 있는 장소에서 화기 등의 사용 금지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제240조",
+            "cited_title": "유류 등이 묻어 있는 걸레 등의 처리",
+            "in_dataset": true,
+            "dataset_title": "유류 등이 있는 배관이나 용기의 용접 등",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "mismatch"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제241조",
+            "cited_title": "화재위험작업 시의 준수사항",
+            "in_dataset": true,
+            "dataset_title": "화재위험작업 시의 준수사항",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제241조의2",
+            "cited_title": "화재감시자",
+            "in_dataset": true,
+            "dataset_title": "화재감시자",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제243조",
+            "cited_title": "소화설비",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제244조",
+            "cited_title": "방화조치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제285조",
+            "cited_title": "가스용접 등의 작업",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제286조",
+            "cited_title": "발생기실의 설치장소 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제287조",
+            "cited_title": "발생기실의 구조 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제288조",
+            "cited_title": "격납실",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제289조",
+            "cited_title": "안전기의 설치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제290조",
+            "cited_title": "아세틸렌 용접장치의 관리 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제291조",
+            "cited_title": "가스집합장치의 위험 방지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제295조",
+            "cited_title": "가스집합용접장치의 관리 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제306조",
+            "cited_title": "교류아크용접기 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제302조",
+            "cited_title": "전기 기계·기구의 접지",
+            "in_dataset": true,
+            "dataset_title": "전기 기계·기구의 접지",
+            "mappings": [
+              "carwash-operation",
+              "electrical-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제32조",
+            "cited_title": "보호구의 지급 등",
+            "in_dataset": true,
+            "dataset_title": "보호구의 지급 등",
+            "mappings": [
+              "carwash-operation",
+              "falling-object-protection",
+              "logging-work",
+              "roof-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제33조",
+            "cited_title": "보호구의 관리",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제422조",
+            "cited_title": "관리대상 유해물질과 관계되는 설비",
+            "in_dataset": true,
+            "dataset_title": "관리대상 유해물질과 관계되는 설비",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제429조",
+            "cited_title": "국소배기장치의 성능",
+            "in_dataset": true,
+            "dataset_title": "국소배기장치의 성능",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제439조",
+            "cited_title": "특별관리물질 취급 시 적어야 하는 사항",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제440조",
+            "cited_title": "특별관리물질의 고지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제442조",
+            "cited_title": "명칭 등의 게시",
+            "in_dataset": true,
+            "dataset_title": "명칭 등의 게시",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제449조",
+            "cited_title": "유해성 등의 주지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제450조",
+            "cited_title": "호흡용 보호구의 지급 등",
+            "in_dataset": true,
+            "dataset_title": "호흡용 보호구의 지급 등",
+            "mappings": [
+              "painting-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제607조",
+            "cited_title": "국소배기장치의 설치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제608조",
+            "cited_title": "전체환기장치의 설치",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제609조",
+            "cited_title": "국소배기장치의 성능",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제614조",
+            "cited_title": "분진의 유해성 등의 주지",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제616조",
+            "cited_title": "호흡기보호 프로그램 시행 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제617조",
+            "cited_title": "호흡용 보호구의 지급 등",
+            "in_dataset": false,
+            "dataset_title": null,
+            "mappings": [],
+            "title": "-"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제629조",
+            "cited_title": "용접 등에 관한 조치",
+            "in_dataset": true,
+            "dataset_title": "용접 등에 관한 조치",
+            "mappings": [
+              "confined-space-welding"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제619조",
+            "cited_title": "밀폐공간 작업 프로그램의 수립·시행",
+            "in_dataset": true,
+            "dataset_title": "밀폐공간 작업 프로그램의 수립·시행",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제619조의2",
+            "cited_title": "산소 및 유해가스 농도의 측정",
+            "in_dataset": true,
+            "dataset_title": "산소 및 유해가스 농도의 측정 및 기록 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "partial"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제620조",
+            "cited_title": "환기 등",
+            "in_dataset": true,
+            "dataset_title": "환기 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제623조",
+            "cited_title": "감시인의 배치 등",
+            "in_dataset": true,
+            "dataset_title": "감시인의 배치 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          }
+        ]
+      },
+      "after": {
+        "cited": 10,
+        "in_dataset": 10,
+        "out_of_dataset": 0,
+        "title_match": 10,
+        "title_partial": 0,
+        "title_mismatch": 0,
+        "title_none": 0,
+        "osh_act_cited": 0,
+        "law_link": true,
+        "verification_date": true,
+        "rows": [
+          {
+            "law": "osh-rule",
+            "ref": "제240조",
+            "cited_title": "유류 등이 있는 배관이나 용기의 용접 등",
+            "in_dataset": true,
+            "dataset_title": "유류 등이 있는 배관이나 용기의 용접 등",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제241조",
+            "cited_title": "화재위험작업 시의 준수사항",
+            "in_dataset": true,
+            "dataset_title": "화재위험작업 시의 준수사항",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제241조의2",
+            "cited_title": "화재감시자",
+            "in_dataset": true,
+            "dataset_title": "화재감시자",
+            "mappings": [
+              "confined-space-welding",
+              "gas-welding",
+              "welding-cutting"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제233조",
+            "cited_title": "가스용접 등의 작업",
+            "in_dataset": true,
+            "dataset_title": "가스용접 등의 작업",
+            "mappings": [
+              "gas-welding"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제234조",
+            "cited_title": "가스등의 용기",
+            "in_dataset": true,
+            "dataset_title": "가스등의 용기",
+            "mappings": [
+              "gas-welding"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제619조",
+            "cited_title": "밀폐공간 작업 프로그램의 수립·시행",
+            "in_dataset": true,
+            "dataset_title": "밀폐공간 작업 프로그램의 수립·시행",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제619조의2",
+            "cited_title": "산소 및 유해가스 농도의 측정 및 기록 등",
+            "in_dataset": true,
+            "dataset_title": "산소 및 유해가스 농도의 측정 및 기록 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제620조",
+            "cited_title": "환기 등",
+            "in_dataset": true,
+            "dataset_title": "환기 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제623조",
+            "cited_title": "감시인의 배치 등",
+            "in_dataset": true,
+            "dataset_title": "감시인의 배치 등",
+            "mappings": [
+              "confined-space-welding",
+              "confined-space-work"
+            ],
+            "title": "match"
+          },
+          {
+            "law": "osh-rule",
+            "ref": "제629조",
+            "cited_title": "용접 등에 관한 조치",
+            "in_dataset": true,
+            "dataset_title": "용접 등에 관한 조치",
+            "mappings": [
+              "confined-space-welding"
+            ],
+            "title": "match"
+          }
+        ]
+      }
+    }
+  ]
+}

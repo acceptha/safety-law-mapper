@@ -1,0 +1,22 @@
+[
+  {"id": "q01-confined-space", "mapping_id": "confined-space-work", "category": "confined-space", "situation": "밀폐공간에서 작업을 할 때",
+   "question": "밀폐공간에서 작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."},
+  {"id": "q02-scaffold", "mapping_id": "scaffold-assembly", "category": "work-at-height", "situation": "비계를 조립·해체하는 작업을 할 때",
+   "question": "비계를 조립·해체하는 작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."},
+  {"id": "q03-crane", "mapping_id": "crane-lifting", "category": "lifting", "situation": "크레인으로 중량물을 양중하는 작업을 할 때",
+   "question": "크레인으로 중량물을 양중하는 작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."},
+  {"id": "q04-excavation", "mapping_id": "excavation-work", "category": "excavation", "situation": "굴착 작업을 할 때",
+   "question": "굴착 작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."},
+  {"id": "q05-electrical", "mapping_id": "electrical-work", "category": "electrical", "situation": "감전 위험이 있는 전기작업을 할 때",
+   "question": "감전 위험이 있는 전기작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."},
+  {"id": "q06-chemical", "mapping_id": "chemical-msds", "category": "chemical-handling", "situation": "MSDS 대상 화학물질을 취급하는 작업을 할 때",
+   "question": "MSDS 대상 화학물질을 취급하는 작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."},
+  {"id": "q07-forklift", "mapping_id": "forklift-operation", "category": "transport", "situation": "지게차로 화물을 운반하는 작업을 할 때",
+   "question": "지게차로 화물을 운반하는 작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."},
+  {"id": "q08-press", "mapping_id": "press-operation", "category": "machinery", "situation": "프레스·전단기 작업을 할 때",
+   "question": "프레스·전단기 작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."},
+  {"id": "q09-demolition", "mapping_id": "demolition-work", "category": "demolition", "situation": "구축물을 해체하는 작업을 할 때",
+   "question": "구축물을 해체하는 작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."},
+  {"id": "q10-welding", "mapping_id": "welding-cutting", "category": "hot-work", "situation": "용접·용단 작업을 할 때",
+   "question": "용접·용단 작업을 할 때 사업주가 지켜야 하는 산업안전보건기준에 관한 규칙상의 의무를 알려주세요. 반드시 해당 조항 번호(제○○조)와 조문 제목을 함께 명시해 주세요."}
+]
