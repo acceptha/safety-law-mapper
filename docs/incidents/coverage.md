@@ -8,9 +8,9 @@
 
 ## 요약
 
-- 수집 사고: **369건** (게시일 2025-08-29 ~ 2026-11-01)
+- 수집 사고: **374건** (게시일 2025-08-29 ~ 2026-11-05)
 - 매핑 데이터: **47종**
-- 커버리지: **346/369 = 94%**
+- 커버리지: **348/374 = 93%**
 
 ## 업종별 커버리지
 
@@ -19,9 +19,9 @@
 | 기타 | 16 | 16 | 100% ████████████████ |
 | 건물·시설 | 25 | 25 | 100% ████████████████ |
 | 환경·폐기물 | 12 | 12 | 100% ████████████████ |
-| 제조업 | 115 | 119 | 97% ███████████████ |
+| 제조업 | 115 | 121 | 95% ███████████████ |
 | 창고·물류 | 12 | 13 | 92% ███████████████ |
-| 건설현장 | 142 | 156 | 91% ███████████████ |
+| 건설현장 | 144 | 159 | 91% ██████████████ |
 | 농림축산 | 19 | 22 | 86% ██████████████ |
 | 서비스·판매 | 5 | 6 | 83% █████████████ |
 
@@ -29,9 +29,9 @@
 
 | 사고 유형 | 건수 | 미매핑 |
 |---|---:|---:|
-| 떨어짐 | 152 | 9 |
-| 깔림 | 64 | 3 |
-| 끼임 | 45 | 1 |
+| 떨어짐 | 154 | 10 |
+| 깔림 | 65 | 3 |
+| 끼임 | 47 | 3 |
 | 맞음 | 43 | 5 |
 | 부딪힘 | 31 | 4 |
 | 폭발 | 9 | 0 |
@@ -48,10 +48,13 @@
 
 ## 데이터 공백 큐
 
-미매핑 **23건** 중 최근 23건입니다. 각 항목이 곧 매핑 기여 대상입니다.
+미매핑 **26건** 중 최근 25건입니다. 각 항목이 곧 매핑 기여 대상입니다.
 
 | 발생 | 지역 | 업종 | 사고 |
 |---|---|---|---|
+| 2026-11-02 | 충북 영동군 | 제조업 | [시멘트 배합기 내부 청소 중 설비가 작동되며 끼임](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=202611051715151QBAJ1) |
+| 2026-10-31 | 경남 진주시 | 건설현장 | [송전탑 위에서 전선 교체 작업 중 지상으로 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20261105170958YQINEH) |
+| 2026-10-31 | 전남광주 광산구 | 제조업 | [압연설비 원단 두께 측정 작업 중 상부 롤러에 끼임](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20261105170838D900D8) |
 | 2026-10-27 | 세종 장군면 | 건설현장 | [롤러 장비 후진 중 롤러가 비탈면으로 떨어져 깔림](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20261029110250ZLHD8C) |
 | 2026-10-06 | 전남광주 광산구 | 서비스·판매 | [포장된 가설 펜스 분리 작업 중 넘어지는 펜스에 깔림](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20261009101630H4U0K9) |
 | 2026-10-04 | 충북 충주시 | 제조업 | [원통형 설비 내부 청소 작업 중 작동되는 설비에 부딪힘](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20261007185530J9VYM3) |
@@ -74,7 +77,6 @@
 | 2025-09-05 | 강원 태백시 | 농림축산 | [나무에서 열매 수확 작업 중 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=20250911153513WGNBHZ) |
 | 2025-09-08 | 강원 인제군 | 건설현장 | [낙석방지망 설치 작업 중 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=202509111533420HUKW0) |
 | 2025-08-25 | 경북 상주시 | 건설현장 | [중심을 잃고 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=202508291635151XCM5Z) |
-| 2025-08-15 | 경북 경산시 | 건설현장 | [철물 위에 올라 작업 중 떨어짐](https://portal.kosha.or.kr/business-apply-search/etc-biz/acc-invest-act/cont2?bbsId=B2025021314108&pstNo=2025082916313562KC2X) |
 
 ---
 
